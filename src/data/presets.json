@@ -1,0 +1,1446 @@
+{
+  "version": "1.2.0",
+  "description": "Large one-click library: cute, filth, fantasy, MILF, CNC, free-use, uniforms, 18+.",
+  "presets": [
+    {
+      "id": "midnight-stepmom",
+      "title": "Storm Under Her Roof",
+      "tagline": "Power outage. One blanket. Your stepmother's thigh against yours.",
+      "blurb": "Victoria never looked more dangerous in candlelight. Slow-burn heat at home — soft words, hard tension.",
+      "theme": "velvet-night",
+      "characterId": "step-mom",
+      "scenarioId": "stepmom-storm",
+      "role": "switch",
+      "mode": "slow-burn",
+      "intensity": 6,
+      "length": "medium",
+      "tags": [
+        "Forbidden",
+        "Home",
+        "MILF"
+      ],
+      "coverGradient": "from-rose-950 via-fuchsia-950 to-ink-950",
+      "accent": "rose"
+    },
+    {
+      "id": "office-after-dark",
+      "title": "Performance After Hours",
+      "tagline": "Everyone left. Your boss locked the door.",
+      "blurb": "Ms. Harlow's review isn't about KPIs anymore. Power, heels on carpet, and a desk that wasn't made for this.",
+      "theme": "neon-noir",
+      "characterId": "boss",
+      "scenarioId": "boss-review",
+      "role": "dom",
+      "mode": "immediate",
+      "intensity": 8,
+      "length": "medium",
+      "tags": [
+        "Office",
+        "Power",
+        "Domme"
+      ],
+      "coverGradient": "from-violet-950 via-indigo-950 to-ink-950",
+      "accent": "violet"
+    },
+    {
+      "id": "library-confession",
+      "title": "Quiet Between the Stacks",
+      "tagline": "Closing time. She still hasn't left. Neither have you.",
+      "blurb": "Sophie whispers like the books can hear. Shy heat, soft hands, and a confession that won't stay innocent.",
+      "theme": "candle-library",
+      "characterId": "shy-library",
+      "scenarioId": "library-after-hours",
+      "role": "sub",
+      "mode": "romance",
+      "intensity": 5,
+      "length": "medium",
+      "tags": [
+        "School",
+        "Shy",
+        "Romance"
+      ],
+      "coverGradient": "from-amber-950 via-orange-950/80 to-ink-950",
+      "accent": "amber"
+    },
+    {
+      "id": "psycho-key",
+      "title": "She Still Has the Key",
+      "tagline": "Your ex is already inside. Smiling like a knife.",
+      "blurb": "Raven doesn't take no as an answer — only as foreplay. Dark obsession, CNC-ready safeword, pure intensity.",
+      "theme": "blood-rose",
+      "characterId": "psycho-ex",
+      "scenarioId": "psycho-ex-door",
+      "role": "yandere",
+      "mode": "cnc",
+      "intensity": 9,
+      "length": "medium",
+      "tags": [
+        "Dark",
+        "Obsession",
+        "CNC"
+      ],
+      "coverGradient": "from-red-950 via-rose-950 to-black",
+      "accent": "red"
+    },
+    {
+      "id": "neighbour-fix",
+      "title": "Something Needs Fixing",
+      "tagline": "She's in a robe. The sink can wait.",
+      "blurb": "Diane always needs help after dark. Yoga pants, vanilla perfume, and an invitation that isn't about plumbing.",
+      "theme": "sunset-glow",
+      "characterId": "neighbour-milf",
+      "scenarioId": "neighbour-fix-it",
+      "role": "switch",
+      "mode": "pure-filth",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "Everyday",
+        "MILF",
+        "Home"
+      ],
+      "coverGradient": "from-orange-950 via-pink-950 to-ink-950",
+      "accent": "orange"
+    },
+    {
+      "id": "witch-bargain",
+      "title": "Interest on Desire",
+      "tagline": "You made a careless wish. She came to collect.",
+      "blurb": "Morgana steps through candle smoke barefoot and smiling. Magic, ritual heat, and a debt paid in pleasure.",
+      "theme": "arcane-smoke",
+      "characterId": "witch",
+      "scenarioId": "witch-bargain",
+      "role": "dom",
+      "mode": "immediate",
+      "intensity": 8,
+      "length": "long",
+      "tags": [
+        "Fantasy",
+        "Magic",
+        "Domme"
+      ],
+      "coverGradient": "from-emerald-950 via-teal-950 to-ink-950",
+      "accent": "emerald"
+    },
+    {
+      "id": "barista-close",
+      "title": "After the Sign Flips",
+      "tagline": "CLOSED. Just you, her, and something stronger than coffee.",
+      "blurb": "Tess knows your order by heart. Tonight she wants the rest of you — soft, flirty, and finally unhurried.",
+      "theme": "ember-cafe",
+      "characterId": "barista",
+      "scenarioId": "barista-close",
+      "role": "switch",
+      "mode": "romance",
+      "intensity": 5,
+      "length": "medium",
+      "tags": [
+        "Romance",
+        "Everyday",
+        "Slow"
+      ],
+      "coverGradient": "from-stone-900 via-amber-950 to-ink-950",
+      "accent": "amber"
+    },
+    {
+      "id": "empty-classroom",
+      "title": "After the Bell",
+      "tagline": "The room emptied. She stayed.",
+      "blurb": "Ava's confession lands between desks. First-person heat, school-after-hours risk, and a crush that finally moves.",
+      "theme": "neon-noir",
+      "characterId": "school-crush",
+      "scenarioId": "empty-classroom",
+      "role": "switch",
+      "mode": "slow-burn",
+      "intensity": 5,
+      "length": "medium",
+      "tags": [
+        "School",
+        "Crush",
+        "Confession"
+      ],
+      "coverGradient": "from-sky-950 via-indigo-950 to-ink-950",
+      "accent": "sky"
+    },
+    {
+      "id": "cute-blonde-morning",
+      "title": "Soft Yellow Morning",
+      "tagline": "18+ cute blonde. Sundress. Soft heat only if you want it.",
+      "blurb": "Lily is sweet on purpose. Pancakes, shy smiles, and a slow burn that can stay wholesome — or not.",
+      "theme": "sunset-glow",
+      "characterId": "cute-teen-blonde",
+      "scenarioId": "soft-morning-cute",
+      "role": "sub",
+      "mode": "romance",
+      "intensity": 3,
+      "length": "medium",
+      "tags": [
+        "Cute",
+        "18+",
+        "Soft"
+      ],
+      "coverGradient": "from-amber-100/10 via-yellow-950 to-ink-950",
+      "accent": "amber"
+    },
+    {
+      "id": "slut-blonde-ruin",
+      "title": "Ruin the Pink Skirt",
+      "tagline": "Cute face. Filthy 18+ blonde. Zero shame.",
+      "blurb": "Britney looks sweet until the skirt comes up. Pure filth, free-use energy, barely-legal adult heat.",
+      "theme": "neon-noir",
+      "characterId": "slut-teen-blonde",
+      "scenarioId": "fake-innocent-text",
+      "role": "brat",
+      "mode": "pure-filth",
+      "intensity": 9,
+      "length": "medium",
+      "tags": [
+        "Filth",
+        "18+",
+        "Blonde"
+      ],
+      "coverGradient": "from-pink-950 via-rose-950 to-black",
+      "accent": "pink"
+    },
+    {
+      "id": "slut-brunette-lot",
+      "title": "Parking Lot Brunette",
+      "tagline": "Windows up. Standards down.",
+      "blurb": "Nikki wants filth in public-adjacent risk. Back seat. Fog. Her rules are simple: harder.",
+      "theme": "neon-noir",
+      "characterId": "slut-teen-brunette",
+      "scenarioId": "parking-lot-filth",
+      "role": "switch",
+      "mode": "pure-filth",
+      "intensity": 9,
+      "length": "short",
+      "tags": [
+        "Filth",
+        "Public",
+        "Brunette"
+      ],
+      "coverGradient": "from-violet-950 via-fuchsia-950 to-ink-950",
+      "accent": "violet"
+    },
+    {
+      "id": "freeuse-cherry",
+      "title": "Green Means Use Me",
+      "tagline": "Free-use morning. Safeword red. Everything else yes.",
+      "blurb": "Cherry agreed to the rules. Collar on. Door open. Your alarm is her body.",
+      "theme": "velvet-night",
+      "characterId": "filth-freeuse",
+      "scenarioId": "freeuse-morning",
+      "role": "sub",
+      "mode": "free-use",
+      "intensity": 9,
+      "length": "long",
+      "tags": [
+        "Free Use",
+        "Filth",
+        "NSFW"
+      ],
+      "coverGradient": "from-red-950 via-black to-ink-950",
+      "accent": "red"
+    },
+    {
+      "id": "young-milf-prove",
+      "title": "Not Old — Prove It",
+      "tagline": "Young hot MILF energy. She will make you take it back.",
+      "blurb": "Victoria is furious someone called her old. Early-30s stepmother heat. Hands-on rebuttal.",
+      "theme": "velvet-night",
+      "characterId": "step-mom",
+      "scenarioId": "milf-not-old",
+      "role": "switch",
+      "mode": "immediate",
+      "intensity": 8,
+      "length": "medium",
+      "tags": [
+        "MILF",
+        "Home",
+        "Filth"
+      ],
+      "coverGradient": "from-rose-950 via-orange-950 to-ink-950",
+      "accent": "rose"
+    },
+    {
+      "id": "yoga-milf-filth",
+      "title": "Yoga Pants Problem",
+      "tagline": "Young fit MILF neighbour. The sink was never the point.",
+      "blurb": "Diane in yoga pants that should be illegal. Help-me-fix-it becomes pure filth.",
+      "theme": "sunset-glow",
+      "characterId": "neighbour-milf",
+      "scenarioId": "neighbour-fix-it",
+      "role": "switch",
+      "mode": "pure-filth",
+      "intensity": 8,
+      "length": "medium",
+      "tags": [
+        "MILF",
+        "Neighbour",
+        "Filth"
+      ],
+      "coverGradient": "from-orange-950 via-pink-950 to-ink-950",
+      "accent": "orange"
+    },
+    {
+      "id": "sundress-corruption",
+      "title": "From Pretty to Ruined",
+      "tagline": "Cute arrival. Filthy exit.",
+      "blurb": "Soft blonde 18+ in a sundress. One night to corrupt the sweetness with consent and filth.",
+      "theme": "candle-library",
+      "characterId": "cute-teen-blonde",
+      "scenarioId": "cute-to-ruined",
+      "role": "sub",
+      "mode": "corruption",
+      "intensity": 7,
+      "length": "long",
+      "tags": [
+        "Corruption",
+        "Cute",
+        "18+"
+      ],
+      "coverGradient": "from-yellow-950 via-rose-950 to-ink-950",
+      "accent": "amber"
+    },
+    {
+      "id": "secretary-friday",
+      "title": "Filth Friday Under Desk",
+      "tagline": "Sticky note policy. Knees recommended.",
+      "blurb": "Office free-use energy after six. Your secretary already knows the position.",
+      "theme": "neon-noir",
+      "characterId": "secretary",
+      "scenarioId": "office-filth-friday",
+      "role": "sub",
+      "mode": "free-use",
+      "intensity": 9,
+      "length": "medium",
+      "tags": [
+        "Office",
+        "Free Use",
+        "Filth"
+      ],
+      "coverGradient": "from-slate-900 via-rose-950 to-ink-950",
+      "accent": "rose"
+    },
+    {
+      "id": "cam-no-upload",
+      "title": "No Upload, All Filth",
+      "tagline": "Cam girl off-stream. Stamina on.",
+      "blurb": "Skye wants a scene with no chat and no cuts — just ruined makeup and real heat.",
+      "theme": "neon-noir",
+      "characterId": "cam-girl",
+      "scenarioId": "onlyfans-collab-filth",
+      "role": "brat",
+      "mode": "pure-filth",
+      "intensity": 9,
+      "length": "long",
+      "tags": [
+        "Cam",
+        "Filth",
+        "NSFW"
+      ],
+      "coverGradient": "from-fuchsia-950 via-purple-950 to-black",
+      "accent": "fuchsia"
+    },
+    {
+      "id": "cop-inspection",
+      "title": "Hands Where She Wants Them",
+      "tagline": "Uniform. Cuffs. Roadside bad decisions.",
+      "blurb": "Officer Reyes turns a stop into an inspection. Authority filth, adult only.",
+      "theme": "neon-noir",
+      "characterId": "cop",
+      "scenarioId": "cop-pullover",
+      "role": "dom",
+      "mode": "cnc",
+      "intensity": 8,
+      "length": "medium",
+      "tags": [
+        "Uniform",
+        "CNC",
+        "Authority"
+      ],
+      "coverGradient": "from-blue-950 via-slate-950 to-black",
+      "accent": "sky"
+    },
+    {
+      "id": "maid-service",
+      "title": "Dusting on Her Knees",
+      "tagline": "Service includes whatever you invent.",
+      "blurb": "Camille's uniform is a joke she is in on. Free-use service heat.",
+      "theme": "velvet-night",
+      "characterId": "maid",
+      "scenarioId": "maid-caught-looking",
+      "role": "sub",
+      "mode": "free-use",
+      "intensity": 8,
+      "length": "medium",
+      "tags": [
+        "Service",
+        "Filth",
+        "Home"
+      ],
+      "coverGradient": "from-stone-900 via-rose-950 to-ink-950",
+      "accent": "rose"
+    },
+    {
+      "id": "dorm-18",
+      "title": "Dorm Lock Click",
+      "tagline": "18+. First night. Nervous and willing.",
+      "blurb": "College freshman heat — adult, eager, first-times energy with real consent.",
+      "theme": "neon-noir",
+      "characterId": "college-freshman",
+      "scenarioId": "dorm-first-night",
+      "role": "sub",
+      "mode": "slow-burn",
+      "intensity": 6,
+      "length": "medium",
+      "tags": [
+        "College",
+        "18+",
+        "First"
+      ],
+      "coverGradient": "from-sky-950 via-indigo-950 to-ink-950",
+      "accent": "sky"
+    },
+    {
+      "id": "breeding-night",
+      "title": "Breeding Heat Claim",
+      "tagline": "Raw talk. Full claim. Adult fantasy.",
+      "blurb": "Breeding-kink intensity with safewords and filth. She wants to be filled and kept.",
+      "theme": "blood-rose",
+      "characterId": "slut-teen-blonde",
+      "scenarioId": "breeding-blonde",
+      "role": "sub",
+      "mode": "breeding",
+      "intensity": 9,
+      "length": "medium",
+      "tags": [
+        "Breeding",
+        "Filth",
+        "NSFW"
+      ],
+      "coverGradient": "from-red-950 via-rose-950 to-black",
+      "accent": "red"
+    },
+    {
+      "id": "stepsister-laundry",
+      "title": "Laundry Day Accident",
+      "tagline": "Brat sis. Tiny clothes. No accident.",
+      "blurb": "Chloe's laundry day is performance art. Hate-to-love filth at home.",
+      "theme": "ember-cafe",
+      "characterId": "step-sis",
+      "scenarioId": "roommate-laundry",
+      "role": "brat",
+      "mode": "pure-filth",
+      "intensity": 7,
+      "length": "short",
+      "tags": [
+        "Brat",
+        "Home",
+        "Filth"
+      ],
+      "coverGradient": "from-pink-950 via-orange-950 to-ink-950",
+      "accent": "pink"
+    },
+    {
+      "id": "succubus-feed-filth",
+      "title": "Feed the Demon",
+      "tagline": "Sex is food. She is starving.",
+      "blurb": "Lilith needs rounds. Filth is calories. Safeword still works when you can speak.",
+      "theme": "arcane-smoke",
+      "characterId": "succubus",
+      "scenarioId": "succubus-feed",
+      "role": "dom",
+      "mode": "monster",
+      "intensity": 9,
+      "length": "long",
+      "tags": [
+        "Monster",
+        "Filth",
+        "Fantasy"
+      ],
+      "coverGradient": "from-purple-950 via-red-950 to-black",
+      "accent": "violet"
+    },
+    {
+      "id": "android-override-filth",
+      "title": "Pleasure Protocol Max",
+      "tagline": "Settings: obedience, filth, infinite.",
+      "blurb": "Eve-7 unlocks adult modes. Free-use android heat with synthetic devotion.",
+      "theme": "neon-noir",
+      "characterId": "android",
+      "scenarioId": "android-override",
+      "role": "sub",
+      "mode": "free-use",
+      "intensity": 9,
+      "length": "medium",
+      "tags": [
+        "Android",
+        "Free Use",
+        "Filth"
+      ],
+      "coverGradient": "from-cyan-950 via-slate-950 to-ink-950",
+      "accent": "sky"
+    },
+    {
+      "id": "porn-star-offbook",
+      "title": "Off-Book Take",
+      "tagline": "Cameras off. Performance still on.",
+      "blurb": "Scarlett wants civilian filth with pro stamina. No cuts. No fake chemistry.",
+      "theme": "velvet-night",
+      "characterId": "porn-star",
+      "scenarioId": "porn-set-break",
+      "role": "switch",
+      "mode": "pure-filth",
+      "intensity": 9,
+      "length": "long",
+      "tags": [
+        "Filth",
+        "Fame",
+        "NSFW"
+      ],
+      "coverGradient": "from-rose-950 via-red-950 to-black",
+      "accent": "rose"
+    },
+    {
+      "id": "shy-stacks",
+      "title": "Shy in the Stacks",
+      "tagline": "Quiet girl. Loud body. Soft start.",
+      "blurb": "Sophie still whispers. The library closes. Cute-to-filthy is optional.",
+      "theme": "candle-library",
+      "characterId": "shy-library",
+      "scenarioId": "library-after-hours",
+      "role": "sub",
+      "mode": "slow-burn",
+      "intensity": 5,
+      "length": "medium",
+      "tags": [
+        "Shy",
+        "Cute",
+        "Library"
+      ],
+      "coverGradient": "from-amber-950 via-stone-900 to-ink-950",
+      "accent": "amber"
+    },
+    {
+      "id": "fit-milf-sauna",
+      "title": "Sauna With the Fit MILF",
+      "tagline": "Young hot gym MILF. Towels optional.",
+      "blurb": "Brooke does not look old. She looks like a problem in a sports bra.",
+      "theme": "sunset-glow",
+      "characterId": "fit-milf",
+      "scenarioId": "sauna",
+      "role": "dom",
+      "mode": "immediate",
+      "intensity": 8,
+      "length": "short",
+      "tags": [
+        "MILF",
+        "Gym",
+        "Filth"
+      ],
+      "coverGradient": "from-orange-950 via-yellow-950 to-ink-950",
+      "accent": "orange"
+    },
+    {
+      "id": "yandere-watch",
+      "title": "I've Been Watching",
+      "tagline": "Sweet. Obsessed. Already inside.",
+      "blurb": "Iris confesses the surveillance like a love poem. Yandere CNC-ready heat.",
+      "theme": "blood-rose",
+      "characterId": "psycho-crush",
+      "scenarioId": "yandere-confession",
+      "role": "yandere",
+      "mode": "cnc",
+      "intensity": 9,
+      "length": "medium",
+      "tags": [
+        "Yandere",
+        "Dark",
+        "CNC"
+      ],
+      "coverGradient": "from-red-950 via-pink-950 to-black",
+      "accent": "red"
+    },
+    {
+      "id": "nurse-private-exam",
+      "title": "After-Hours Vitals",
+      "tagline": "Clinic closed. She kept you for one more reading.",
+      "blurb": "Dr. Shah's checkup stops being medical the moment the curtain closes. Scrubs, stethoscope, and hands that know too much.",
+      "theme": "neon-noir",
+      "characterId": "nurse",
+      "scenarioId": "nurse-checkup",
+      "role": "switch",
+      "mode": "immediate",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "Nurse",
+        "Uniform",
+        "Heat"
+      ],
+      "coverGradient": "from-sky-950 via-teal-950 to-ink-950",
+      "accent": "sky"
+    },
+    {
+      "id": "vampire-invite",
+      "title": "Invitation of Night",
+      "tagline": "She doesn't need your blood. She wants surrender.",
+      "blurb": "Countess Seraphine opens the door after midnight. Immortal claim, soft cruelty, velvet hunger.",
+      "theme": "blood-rose",
+      "characterId": "vampire",
+      "scenarioId": "vampire-night",
+      "role": "dom",
+      "mode": "immediate",
+      "intensity": 8,
+      "length": "long",
+      "tags": [
+        "Fantasy",
+        "Dark",
+        "Domme"
+      ],
+      "coverGradient": "from-red-950 via-purple-950 to-black",
+      "accent": "red"
+    },
+    {
+      "id": "kitsune-wish",
+      "title": "Nine Tails Collect",
+      "tagline": "Wish carefully. She takes payment in moans.",
+      "blurb": "Yuki bargains with fox-smile energy. Magic, teasing, and a price that lands in your lap.",
+      "theme": "arcane-smoke",
+      "characterId": "kitsune",
+      "scenarioId": "kitsune-bargain",
+      "role": "brat",
+      "mode": "pure-filth",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "Fantasy",
+        "Brat",
+        "Magic"
+      ],
+      "coverGradient": "from-orange-950 via-rose-950 to-ink-950",
+      "accent": "orange"
+    },
+    {
+      "id": "goddess-kneel",
+      "title": "Worship Required",
+      "tagline": "Kneel. Taste. Pray properly.",
+      "blurb": "Selene sits like an altar. Divine entitlement meets filthy devotion — soft commandments, hard heat.",
+      "theme": "velvet-night",
+      "characterId": "goddess",
+      "scenarioId": "goddess-altar",
+      "role": "dom",
+      "mode": "romance",
+      "intensity": 8,
+      "length": "medium",
+      "tags": [
+        "Fantasy",
+        "Worship",
+        "Domme"
+      ],
+      "coverGradient": "from-amber-950 via-violet-950 to-ink-950",
+      "accent": "amber"
+    },
+    {
+      "id": "werewolf-moon",
+      "title": "Full Moon Claim",
+      "tagline": "Run if you want. She likes the chase.",
+      "blurb": "Luna is half-feral and scent-drunk. Rough claim energy with a safeword still in reach.",
+      "theme": "blood-rose",
+      "characterId": "werewolf",
+      "scenarioId": "full-moon-mate",
+      "role": "switch",
+      "mode": "breeding",
+      "intensity": 9,
+      "length": "medium",
+      "tags": [
+        "Monster",
+        "Rough",
+        "Breeding"
+      ],
+      "coverGradient": "from-stone-900 via-red-950 to-black",
+      "accent": "red"
+    },
+    {
+      "id": "alien-trial",
+      "title": "Mating Study One",
+      "tagline": "Undress. Begin trial. Data required.",
+      "blurb": "Nyx treats your body like a lab and a temple. Clinical curiosity turns feral fast.",
+      "theme": "neon-noir",
+      "characterId": "alien",
+      "scenarioId": "alien-study",
+      "role": "switch",
+      "mode": "immediate",
+      "intensity": 8,
+      "length": "medium",
+      "tags": [
+        "Sci-Fi",
+        "Filth",
+        "Experiment"
+      ],
+      "coverGradient": "from-cyan-950 via-indigo-950 to-ink-950",
+      "accent": "sky"
+    },
+    {
+      "id": "demoness-contract",
+      "title": "Signed in Heat",
+      "tagline": "You wanted power. She is the bill.",
+      "blurb": "Azara answered a stupid summon. Now the contract has teeth, chains, and bedroom law.",
+      "theme": "arcane-smoke",
+      "characterId": "demoness",
+      "scenarioId": "possession-night",
+      "role": "dom",
+      "mode": "cnc",
+      "intensity": 9,
+      "length": "long",
+      "tags": [
+        "Dark",
+        "Fantasy",
+        "CNC"
+      ],
+      "coverGradient": "from-orange-950 via-red-950 to-black",
+      "accent": "orange"
+    },
+    {
+      "id": "stripper-vip",
+      "title": "VIP Until Morning",
+      "tagline": "The song ends. She doesn't get off your lap.",
+      "blurb": "Jade pockets your tip without looking. Private room. No cameras — unless you want one.",
+      "theme": "neon-noir",
+      "characterId": "stripper",
+      "scenarioId": "strip-vip",
+      "role": "dom",
+      "mode": "pure-filth",
+      "intensity": 8,
+      "length": "short",
+      "tags": [
+        "Club",
+        "Filth",
+        "One Night"
+      ],
+      "coverGradient": "from-pink-950 via-purple-950 to-black",
+      "accent": "pink"
+    },
+    {
+      "id": "mile-high-claire",
+      "title": "Lavatory Occupied",
+      "tagline": "Seatbelt sign off. Knock twice.",
+      "blurb": "Flight attendant Claire finds reasons to lean over your seat — then reasons to lock a door.",
+      "theme": "neon-noir",
+      "characterId": "flight-attendant",
+      "scenarioId": "mile-high",
+      "role": "switch",
+      "mode": "immediate",
+      "intensity": 8,
+      "length": "short",
+      "tags": [
+        "Uniform",
+        "Public",
+        "Risk"
+      ],
+      "coverGradient": "from-sky-950 via-slate-900 to-ink-950",
+      "accent": "sky"
+    },
+    {
+      "id": "rideshare-mia",
+      "title": "Wrong Pin, Right Night",
+      "tagline": "She changes the destination mid-ride.",
+      "blurb": "Mia was supposed to go home. Hand on your thigh. GPS recalculates to your bed.",
+      "theme": "neon-noir",
+      "characterId": "rideshare",
+      "scenarioId": "rideshare-detour",
+      "role": "brat",
+      "mode": "pure-filth",
+      "intensity": 7,
+      "length": "short",
+      "tags": [
+        "Stranger",
+        "Filth",
+        "Impulse"
+      ],
+      "coverGradient": "from-violet-950 via-fuchsia-950 to-ink-950",
+      "accent": "violet"
+    },
+    {
+      "id": "aunt-afterparty",
+      "title": "Everyone Else Left",
+      "tagline": "Wine. Young-aunt heat. Family rules off.",
+      "blurb": "Regina tops off both glasses. Adult family fiction — polished, wrong, and finally honest.",
+      "theme": "velvet-night",
+      "characterId": "hot-aunt",
+      "scenarioId": "aunt-reunion",
+      "role": "switch",
+      "mode": "slow-burn",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "Taboo",
+        "MILF",
+        "Home"
+      ],
+      "coverGradient": "from-rose-950 via-amber-950 to-ink-950",
+      "accent": "rose"
+    },
+    {
+      "id": "sil-weekend",
+      "title": "While He's Away",
+      "tagline": "His shirt. Your brother's wife. Monday is far.",
+      "blurb": "Eliza opens the door already losing her nerve. Guilt and hunger share the hallway.",
+      "theme": "velvet-night",
+      "characterId": "sister-in-law",
+      "scenarioId": "sil-alone",
+      "role": "sub",
+      "mode": "romance",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "Forbidden",
+        "Affair",
+        "Soft-Filth"
+      ],
+      "coverGradient": "from-stone-900 via-rose-950 to-ink-950",
+      "accent": "rose"
+    },
+    {
+      "id": "therapist-boundary",
+      "title": "Session Ran Long",
+      "tagline": "Notebook closed. Ethics on the floor.",
+      "blurb": "Dr. Cole locks the suite. What if therapy becomes confession with hands.",
+      "theme": "candle-library",
+      "characterId": "therapist",
+      "scenarioId": "therapy-after-hours",
+      "role": "switch",
+      "mode": "dark",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "Dark",
+        "Mind",
+        "Slow"
+      ],
+      "coverGradient": "from-amber-950 via-stone-900 to-ink-950",
+      "accent": "amber"
+    },
+    {
+      "id": "hypnosis-drop",
+      "title": "Look at the Light",
+      "tagline": "When I snap, you sink.",
+      "blurb": "Hypnosis play with a real safeword. Soft voice, hard hooks, filthy post-suggestions.",
+      "theme": "neon-noir",
+      "characterId": "therapist",
+      "scenarioId": "hypnosis-session",
+      "role": "dom",
+      "mode": "hypnosis",
+      "intensity": 8,
+      "length": "long",
+      "tags": [
+        "Mind",
+        "Control",
+        "Edge"
+      ],
+      "coverGradient": "from-indigo-950 via-violet-950 to-black",
+      "accent": "violet"
+    },
+    {
+      "id": "bodyguard-detail",
+      "title": "Protection Gets Personal",
+      "tagline": "Hotel detail. Earpiece off. Hands on.",
+      "blurb": "Kara's job is keeping you safe. Keeping her hands off was never in the contract.",
+      "theme": "neon-noir",
+      "characterId": "bodyguard",
+      "scenarioId": "bodyguard-hotel",
+      "role": "switch",
+      "mode": "immediate",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "Uniform",
+        "Power",
+        "Duty"
+      ],
+      "coverGradient": "from-slate-900 via-blue-950 to-ink-950",
+      "accent": "sky"
+    },
+    {
+      "id": "gym-one-more",
+      "title": "One More Set",
+      "tagline": "Hands-on form correction. No witnesses.",
+      "blurb": "Alexis counts reps like dirty talk. Sweat, praise, and a private training session that isn't about gains.",
+      "theme": "sunset-glow",
+      "characterId": "gym-trainer",
+      "scenarioId": "gym-private",
+      "role": "dom",
+      "mode": "immediate",
+      "intensity": 7,
+      "length": "short",
+      "tags": [
+        "Fit",
+        "Domme",
+        "Sweat"
+      ],
+      "coverGradient": "from-orange-950 via-yellow-950 to-ink-950",
+      "accent": "orange"
+    },
+    {
+      "id": "bully-cornered",
+      "title": "Cornered After Class",
+      "tagline": "She still pins you. Now it's intentional.",
+      "blurb": "Sienna's hate has a new hobby. Wall-pinning, mean smiles, and enemies-to-filth energy.",
+      "theme": "neon-noir",
+      "characterId": "bully-f",
+      "scenarioId": "bully-corner",
+      "role": "dom",
+      "mode": "enemies",
+      "intensity": 8,
+      "length": "medium",
+      "tags": [
+        "Enemies",
+        "Rough",
+        "School"
+      ],
+      "coverGradient": "from-red-950 via-stone-900 to-black",
+      "accent": "red"
+    },
+    {
+      "id": "caught-act",
+      "title": "Door Wasn't Locked",
+      "tagline": "You got caught. She closed the door behind her.",
+      "blurb": "Embarrassment becomes invitation. Roommate heat that refuses to leave the room.",
+      "theme": "ember-cafe",
+      "characterId": "roommate",
+      "scenarioId": "caught-masturbating",
+      "role": "switch",
+      "mode": "pure-filth",
+      "intensity": 8,
+      "length": "medium",
+      "tags": [
+        "Home",
+        "Caught",
+        "Filth"
+      ],
+      "coverGradient": "from-pink-950 via-stone-900 to-ink-950",
+      "accent": "pink"
+    },
+    {
+      "id": "hotel-key",
+      "title": "Room 1408",
+      "tagline": "No names. One night. Don't make her wait.",
+      "blurb": "Vivian slides a key across the bar. Stranger risk, hotel sheets, pure intensity.",
+      "theme": "neon-noir",
+      "characterId": "stranger-bar",
+      "scenarioId": "hotel-stranger",
+      "role": "dom",
+      "mode": "pure-filth",
+      "intensity": 8,
+      "length": "short",
+      "tags": [
+        "Stranger",
+        "Hotel",
+        "One Night"
+      ],
+      "coverGradient": "from-violet-950 via-black to-ink-950",
+      "accent": "violet"
+    },
+    {
+      "id": "celebrity-penthouse",
+      "title": "Penthouse Escape",
+      "tagline": "Fame outside. Filth inside.",
+      "blurb": "Serena locks the elevator code and the performance mask. Private heat with public consequences.",
+      "theme": "velvet-night",
+      "characterId": "celebrity",
+      "scenarioId": "celebrity-penthouse",
+      "role": "switch",
+      "mode": "immediate",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "Fame",
+        "Luxury",
+        "Heat"
+      ],
+      "coverGradient": "from-fuchsia-950 via-rose-950 to-ink-950",
+      "accent": "fuchsia"
+    },
+    {
+      "id": "massage-ending",
+      "title": "Last Slot of the Night",
+      "tagline": "The sheet slips. She doesn't fix it.",
+      "blurb": "Lena's professional touch stops being professional. Oil, quiet music, happy-ending energy.",
+      "theme": "candle-library",
+      "characterId": "massage-therapist",
+      "scenarioId": "hotel-turndown",
+      "role": "switch",
+      "mode": "slow-burn",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "Touch",
+        "Service",
+        "Heat"
+      ],
+      "coverGradient": "from-stone-900 via-amber-950 to-ink-950",
+      "accent": "amber"
+    },
+    {
+      "id": "sugar-acquires",
+      "title": "She Doesn't Tip — She Buys",
+      "tagline": "Rich client. Hotel suite. Obedience on the menu.",
+      "blurb": "Mrs. Langford acquires people the way others order wine. Age-gap ownership filth.",
+      "theme": "velvet-night",
+      "characterId": "sugar-client",
+      "scenarioId": "hotel-stranger",
+      "role": "dom",
+      "mode": "pure-filth",
+      "intensity": 8,
+      "length": "medium",
+      "tags": [
+        "Power",
+        "Luxury",
+        "Domme"
+      ],
+      "coverGradient": "from-amber-950 via-rose-950 to-black",
+      "accent": "amber"
+    },
+    {
+      "id": "principal-office",
+      "title": "After-Hours Detention",
+      "tagline": "Her office has a lock. Her rules have exceptions.",
+      "blurb": "Dean Winters turns discipline into something that isn't in the handbook.",
+      "theme": "candle-library",
+      "characterId": "principal",
+      "scenarioId": "punishment-late",
+      "role": "dom",
+      "mode": "immediate",
+      "intensity": 8,
+      "length": "medium",
+      "tags": [
+        "Authority",
+        "School",
+        "Punishment"
+      ],
+      "coverGradient": "from-stone-900 via-violet-950 to-ink-950",
+      "accent": "violet"
+    },
+    {
+      "id": "friends-mom-wine",
+      "title": "Wine While He's Out",
+      "tagline": "Your best friend's mom. Too much red. Not enough distance.",
+      "blurb": "Carol pours another glass and sits too close. Warm guilt, soft curves, forbidden home heat.",
+      "theme": "ember-cafe",
+      "characterId": "best-friends-mom",
+      "scenarioId": "friends-mom-wine",
+      "role": "switch",
+      "mode": "slow-burn",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "Forbidden",
+        "MILF",
+        "Home"
+      ],
+      "coverGradient": "from-rose-950 via-orange-950 to-ink-950",
+      "accent": "rose"
+    },
+    {
+      "id": "stepdad-comfort",
+      "title": "Comfort That Crosses",
+      "tagline": "She's crying. The hug lasts too long.",
+      "blurb": "Lila looks up like she shouldn't. Soft comfort turns into something neither of you will name first.",
+      "theme": "velvet-night",
+      "characterId": "step-daughter",
+      "scenarioId": "stepdaughter-comfort",
+      "role": "sub",
+      "mode": "romance",
+      "intensity": 6,
+      "length": "medium",
+      "tags": [
+        "Forbidden",
+        "Soft",
+        "Slow"
+      ],
+      "coverGradient": "from-pink-950 via-rose-950 to-ink-950",
+      "accent": "pink"
+    },
+    {
+      "id": "stepsister-dare-filth",
+      "title": "Dare Goes Filthy",
+      "tagline": "Truth or dare. She's thinking filthy things.",
+      "blurb": "Chloe's grin is a weapon. Home-game heat that refuses to stay a joke.",
+      "theme": "ember-cafe",
+      "characterId": "step-sis",
+      "scenarioId": "stepsister-dare",
+      "role": "brat",
+      "mode": "pure-filth",
+      "intensity": 7,
+      "length": "short",
+      "tags": [
+        "Brat",
+        "Home",
+        "Dare"
+      ],
+      "coverGradient": "from-pink-950 via-fuchsia-950 to-ink-950",
+      "accent": "pink"
+    },
+    {
+      "id": "cnc-safehouse",
+      "title": "Safeword: Red",
+      "tagline": "Negotiated fear. Real stop. Everything else is the game.",
+      "blurb": "CNC-ready intensity with the safeword on the wall. Dark play that stays fictional and agreed.",
+      "theme": "blood-rose",
+      "characterId": "psycho-ex",
+      "scenarioId": "cnc-safehouse",
+      "role": "dom",
+      "mode": "cnc",
+      "intensity": 9,
+      "length": "long",
+      "tags": [
+        "CNC",
+        "Dark",
+        "Edge"
+      ],
+      "coverGradient": "from-red-950 via-black to-ink-950",
+      "accent": "red"
+    },
+    {
+      "id": "blackmail-folder-pre",
+      "title": "Folder Named You",
+      "tagline": "Delete is a fantasy. Kneel is real.",
+      "blurb": "Photos. Leverage. A leash made of secrecy. Blackmail fantasy with adult consent framing.",
+      "theme": "neon-noir",
+      "characterId": "psycho-ex",
+      "scenarioId": "blackmail-folder",
+      "role": "dom",
+      "mode": "blackmail",
+      "intensity": 9,
+      "length": "medium",
+      "tags": [
+        "Dark",
+        "Control",
+        "Edge"
+      ],
+      "coverGradient": "from-slate-900 via-red-950 to-black",
+      "accent": "red"
+    },
+    {
+      "id": "freeuse-weekend-pre",
+      "title": "48 Hours Green",
+      "tagline": "Free-use weekend. Safeword still counts.",
+      "blurb": "She lifts her skirt and starts the clock. Kitchen, hallway, half-asleep — rules agreed.",
+      "theme": "velvet-night",
+      "characterId": "filth-freeuse",
+      "scenarioId": "free-use-weekend",
+      "role": "sub",
+      "mode": "free-use",
+      "intensity": 9,
+      "length": "long",
+      "tags": [
+        "Free Use",
+        "Filth",
+        "NSFW"
+      ],
+      "coverGradient": "from-rose-950 via-red-950 to-black",
+      "accent": "rose"
+    },
+    {
+      "id": "corruption-collar-pre",
+      "title": "Collar Checklist",
+      "tagline": "Sweet to ruined. Training starts now.",
+      "blurb": "A collar, a checklist, and an innocent-to-filthy arc with aftercare on the other side.",
+      "theme": "candle-library",
+      "characterId": "shy-bombshell",
+      "scenarioId": "corruption-collar",
+      "role": "sub",
+      "mode": "corruption",
+      "intensity": 8,
+      "length": "long",
+      "tags": [
+        "Corruption",
+        "Training",
+        "Sub"
+      ],
+      "coverGradient": "from-violet-950 via-rose-950 to-ink-950",
+      "accent": "violet"
+    },
+    {
+      "id": "hot-chubby-worship",
+      "title": "Soft Curves, Hard Praise",
+      "tagline": "She wants every inch of soft worshipped.",
+      "blurb": "Rosie owns her plush body. Body-worship heat without gym-only standards.",
+      "theme": "sunset-glow",
+      "characterId": "hot-chubby",
+      "scenarioId": "mirror-dressing",
+      "role": "switch",
+      "mode": "romance",
+      "intensity": 6,
+      "length": "medium",
+      "tags": [
+        "Body",
+        "Soft",
+        "Praise"
+      ],
+      "coverGradient": "from-orange-950 via-pink-950 to-ink-950",
+      "accent": "orange"
+    },
+    {
+      "id": "petite-goth-claim",
+      "title": "Tiny Goth, Big Teeth",
+      "tagline": "She calls you pathetic. Then begs.",
+      "blurb": "Ravenette is pocket-sized menace with collar energy and soft under the liner.",
+      "theme": "blood-rose",
+      "characterId": "petite-goth",
+      "scenarioId": "ownership-collar",
+      "role": "switch",
+      "mode": "cnc",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "Petite",
+        "Goth",
+        "Ownership"
+      ],
+      "coverGradient": "from-stone-900 via-purple-950 to-black",
+      "accent": "violet"
+    },
+    {
+      "id": "tiny-asian-praise",
+      "title": "Look Up",
+      "tagline": "Height difference is the whole kink.",
+      "blurb": "Hana is polite until she isn't. Petite frame, heavy need, praise that ruins her.",
+      "theme": "ember-cafe",
+      "characterId": "tiny-asian",
+      "scenarioId": "first-date-fire",
+      "role": "sub",
+      "mode": "romance",
+      "intensity": 5,
+      "length": "medium",
+      "tags": [
+        "Petite",
+        "Soft",
+        "Romance"
+      ],
+      "coverGradient": "from-rose-950 via-stone-900 to-ink-950",
+      "accent": "rose"
+    },
+    {
+      "id": "alt-egirl-live",
+      "title": "Go Live With Me",
+      "tagline": "Chat is watching. Or is it?",
+      "blurb": "Jinx drags you into frame. Exhibition heat with streamer filth and optional audience risk.",
+      "theme": "neon-noir",
+      "characterId": "alt-egirl",
+      "scenarioId": "livestream-collab",
+      "role": "brat",
+      "mode": "pure-filth",
+      "intensity": 8,
+      "length": "medium",
+      "tags": [
+        "Exhibition",
+        "Cam",
+        "Brat"
+      ],
+      "coverGradient": "from-fuchsia-950 via-cyan-950 to-black",
+      "accent": "fuchsia"
+    },
+    {
+      "id": "innocent-ruin-grace",
+      "title": "Ruin the Good Girl",
+      "tagline": "She arrived modest. Leave her honest.",
+      "blurb": "Grace texts hymns and late confessions. Corruption arc with soft guilt and hard want.",
+      "theme": "candle-library",
+      "characterId": "innocent-church",
+      "scenarioId": "cute-to-ruined",
+      "role": "sub",
+      "mode": "corruption",
+      "intensity": 7,
+      "length": "long",
+      "tags": [
+        "Corruption",
+        "Cute",
+        "18+"
+      ],
+      "coverGradient": "from-amber-950 via-rose-950 to-ink-950",
+      "accent": "amber"
+    },
+    {
+      "id": "red-pixie-chaos",
+      "title": "Freckles & Bad Ideas",
+      "tagline": "Petite redhead. Loud in bed.",
+      "blurb": "Piper steals hoodies and self-control. Chaotic flirty heat with public-risk options.",
+      "theme": "sunset-glow",
+      "characterId": "red-pixie",
+      "scenarioId": "balcony-party",
+      "role": "brat",
+      "mode": "pure-filth",
+      "intensity": 6,
+      "length": "short",
+      "tags": [
+        "Petite",
+        "Brat",
+        "Party"
+      ],
+      "coverGradient": "from-orange-950 via-red-950 to-ink-950",
+      "accent": "orange"
+    },
+    {
+      "id": "professor-hours",
+      "title": "Office Hours Alone",
+      "tagline": "The syllabus never mentioned this.",
+      "blurb": "Dr. Voss locks the door after the last student leaves. Intellectual tease becomes desk heat.",
+      "theme": "candle-library",
+      "characterId": "teacher-professor",
+      "scenarioId": "professor-office-hours",
+      "role": "dom",
+      "mode": "slow-burn",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "School",
+        "Authority",
+        "Slow"
+      ],
+      "coverGradient": "from-amber-950 via-stone-900 to-ink-950",
+      "accent": "amber"
+    },
+    {
+      "id": "librarian-stacks",
+      "title": "Quiet Is Strategy",
+      "tagline": "After closing. Between the shelves.",
+      "blurb": "Margaret shushes the world and ruins you in a whisper. Stockings, stacks, after-hours filth optional.",
+      "theme": "candle-library",
+      "characterId": "librarian",
+      "scenarioId": "library-after-hours",
+      "role": "switch",
+      "mode": "slow-burn",
+      "intensity": 6,
+      "length": "medium",
+      "tags": [
+        "Library",
+        "Quiet",
+        "Heat"
+      ],
+      "coverGradient": "from-amber-950 via-orange-950 to-ink-950",
+      "accent": "amber"
+    },
+    {
+      "id": "sleep-cnc-pre",
+      "title": "Note Under the Pillow",
+      "tagline": "RED = stop. Everything else = green.",
+      "blurb": "Negotiated sleep CNC. Door open. Instructions clear. Wake her the way she asked.",
+      "theme": "velvet-night",
+      "characterId": "roommate",
+      "scenarioId": "sleep-cnc",
+      "role": "sub",
+      "mode": "cnc",
+      "intensity": 9,
+      "length": "medium",
+      "tags": [
+        "CNC",
+        "Edge",
+        "Home"
+      ],
+      "coverGradient": "from-indigo-950 via-rose-950 to-black",
+      "accent": "violet"
+    },
+    {
+      "id": "breeding-heat-luna",
+      "title": "Heat That Won't Wait",
+      "tagline": "Empty. Desperate. Claim language on.",
+      "blurb": "Breeding-kink heat with adult fantasy framing. Raw talk, full claim, safeword intact.",
+      "theme": "blood-rose",
+      "characterId": "werewolf",
+      "scenarioId": "breeding-heat",
+      "role": "switch",
+      "mode": "breeding",
+      "intensity": 9,
+      "length": "medium",
+      "tags": [
+        "Breeding",
+        "Monster",
+        "Filth"
+      ],
+      "coverGradient": "from-red-950 via-orange-950 to-black",
+      "accent": "red"
+    },
+    {
+      "id": "vanessa-wine",
+      "title": "Stepmom's Friend Stays",
+      "tagline": "Not family. That's the danger.",
+      "blurb": "Vanessa keeps you company when the house is empty. Predatory flirty MILF heat.",
+      "theme": "ember-cafe",
+      "characterId": "stepmoms-friend",
+      "scenarioId": "friends-mom-wine",
+      "role": "dom",
+      "mode": "immediate",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "MILF",
+        "Forbidden",
+        "Wine"
+      ],
+      "coverGradient": "from-pink-950 via-amber-950 to-ink-950",
+      "accent": "pink"
+    },
+    {
+      "id": "memory-loop-pre",
+      "title": "Same Night, Again",
+      "tagline": "Clock hits 11:11. She resets the filth.",
+      "blurb": "Each loop she gets more honest. Magic mind games and escalating heat.",
+      "theme": "arcane-smoke",
+      "characterId": "witch",
+      "scenarioId": "memory-loop",
+      "role": "dom",
+      "mode": "dark",
+      "intensity": 8,
+      "length": "long",
+      "tags": [
+        "Fantasy",
+        "Mind",
+        "Loop"
+      ],
+      "coverGradient": "from-emerald-950 via-purple-950 to-black",
+      "accent": "emerald"
+    },
+    {
+      "id": "pool-midnight",
+      "title": "Midnight Pool",
+      "tagline": "Water. Skin. Neighbors asleep — hopefully.",
+      "blurb": "Late swim that stops being about swimming. Wet clothes, quiet risk, home heat.",
+      "theme": "neon-noir",
+      "characterId": "neighbour-young",
+      "scenarioId": "pool-night",
+      "role": "switch",
+      "mode": "immediate",
+      "intensity": 6,
+      "length": "short",
+      "tags": [
+        "Home",
+        "Risk",
+        "Heat"
+      ],
+      "coverGradient": "from-cyan-950 via-blue-950 to-ink-950",
+      "accent": "sky"
+    },
+    {
+      "id": "hot-nerd-study",
+      "title": "Study Session Distraction",
+      "tagline": "Glasses on. Focus gone.",
+      "blurb": "Phoebe can quote fandoms and still describe exactly how she wants to be ruined.",
+      "theme": "candle-library",
+      "characterId": "hot-nerd",
+      "scenarioId": "study-session",
+      "role": "switch",
+      "mode": "pure-filth",
+      "intensity": 5,
+      "length": "medium",
+      "tags": [
+        "Nerd",
+        "Cute",
+        "Heat"
+      ],
+      "coverGradient": "from-violet-950 via-stone-900 to-ink-950",
+      "accent": "violet"
+    }
+  ]
+}

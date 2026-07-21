@@ -1,0 +1,1952 @@
+{
+  "version": "1.2.0",
+  "description": "Expanded wild scenarios. preferredCharacterIds are hints only.",
+  "categories": [
+    "Everyday",
+    "Forbidden",
+    "Dark",
+    "Fantasy",
+    "Public",
+    "Home",
+    "Office",
+    "School",
+    "Romance",
+    "Intense",
+    "Corruption",
+    "Free Use",
+    "Taboo+",
+    "Monster"
+  ],
+  "scenarios": [
+    {
+      "id": "coffee-spill",
+      "title": "Coffee Spill at the Park",
+      "category": "Everyday",
+      "tags": [
+        "meet-cute",
+        "accident",
+        "invite"
+      ],
+      "intensityHint": 3,
+      "preferredCharacterIds": [
+        "neighbour-milf",
+        "barista",
+        "coworker",
+        "school-crush"
+      ],
+      "setup": "You spill coffee on her at the park. She laughs it off — then invites you to her place to clean up.",
+      "openingHook": "The cup tips. Hot coffee blooms across her blouse. Her eyes lock on yours — surprise, then something warmer."
+    },
+    {
+      "id": "caught-masturbating",
+      "title": "Caught in the Act",
+      "category": "Home",
+      "tags": [
+        "caught",
+        "embarrassment",
+        "forbidden"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "step-mom",
+        "roommate",
+        "step-sis",
+        "maid"
+      ],
+      "setup": "You're caught masturbating. The door wasn't locked. She doesn't leave.",
+      "openingHook": "The door creaks. Time freezes. She's standing there, eyes wide — and she closes the door behind her."
+    },
+    {
+      "id": "late-office",
+      "title": "Late Night at the Office",
+      "category": "Office",
+      "tags": [
+        "after-hours",
+        "power",
+        "desk"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "boss",
+        "secretary",
+        "coworker"
+      ],
+      "setup": "Everyone else has left. It's just you and her under fluorescent lights and unfinished work.",
+      "openingHook": "The building is a ghost. Her heels click closer. 'Still here?' she asks, though she already knew."
+    },
+    {
+      "id": "psycho-ex-door",
+      "title": "She Won't Take No",
+      "category": "Dark",
+      "tags": [
+        "obsession",
+        "ex",
+        "CNC-adjacent"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "psycho-ex",
+        "psycho-crush"
+      ],
+      "setup": "Your psycho ex shows up unannounced. She has a key. She has plans. 'No' is a game to her.",
+      "openingHook": "The lock turns. You know that perfume. She's already in the hallway, smiling like a knife."
+    },
+    {
+      "id": "empty-classroom",
+      "title": "Empty Classroom Confession",
+      "category": "School",
+      "tags": [
+        "confession",
+        "shy",
+        "after-class"
+      ],
+      "intensityHint": 4,
+      "preferredCharacterIds": [
+        "shy-library",
+        "school-crush",
+        "teacher-professor"
+      ],
+      "setup": "The shy classmate stays after the bell. The room empties. She has something to confess.",
+      "openingHook": "Chairs scrape. Footsteps fade. She stands by your desk, hands twisting, cheeks pink. 'I need to tell you something.'"
+    },
+    {
+      "id": "neighbour-fix-it",
+      "title": "Help Me Fix Something",
+      "category": "Home",
+      "tags": [
+        "neighbour",
+        "trope",
+        "invite"
+      ],
+      "intensityHint": 5,
+      "preferredCharacterIds": [
+        "neighbour-milf",
+        "neighbour-young",
+        "best-friends-mom"
+      ],
+      "setup": "She knocks: the sink / AC / shelf needs fixing. She's in a robe. The problem can wait.",
+      "openingHook": "Three soft knocks. She's barefoot in a silk robe, biting her lip. 'You're good with your hands, right?'"
+    },
+    {
+      "id": "library-after-hours",
+      "title": "Library After Closing",
+      "category": "Public",
+      "tags": [
+        "quiet",
+        "books",
+        "risk"
+      ],
+      "intensityHint": 5,
+      "preferredCharacterIds": [
+        "librarian",
+        "shy-library",
+        "teacher-professor"
+      ],
+      "setup": "The library closed ten minutes ago. You're still in the stacks. So is she.",
+      "openingHook": "Lights dim section by section. Her finger presses to her lips. 'We're not supposed to be here.'"
+    },
+    {
+      "id": "hotel-stranger",
+      "title": "Hotel Key, No Names",
+      "category": "Intense",
+      "tags": [
+        "stranger",
+        "one-night",
+        "hotel"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "stranger-bar",
+        "celebrity",
+        "psycho-crush"
+      ],
+      "setup": "A stranger slides a hotel key card across the bar. No names. One night.",
+      "openingHook": "Her nail taps the card. 'Room 1408. Don't make me wait.' Then she's gone into the crowd."
+    },
+    {
+      "id": "gym-private",
+      "title": "Private Training Session",
+      "category": "Everyday",
+      "tags": [
+        "sweat",
+        "body",
+        "coach"
+      ],
+      "intensityHint": 5,
+      "preferredCharacterIds": [
+        "gym-trainer"
+      ],
+      "setup": "The gym is nearly empty. She wants one more set — hands-on form correction included.",
+      "openingHook": "Her palms settle on your hips, adjusting your stance. 'Feel that? Good. Now hold it.'"
+    },
+    {
+      "id": "boss-review",
+      "title": "Special Performance Review",
+      "category": "Office",
+      "tags": [
+        "power",
+        "blackmail-light",
+        "desk"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "boss"
+      ],
+      "setup": "Your review is after hours. The door locks. The criteria are... unconventional.",
+      "openingHook": "She slides a folder across the desk. Your name is on it. So is a list that has nothing to do with KPIs."
+    },
+    {
+      "id": "stepmom-storm",
+      "title": "Storm and Shared Blanket",
+      "category": "Forbidden",
+      "tags": [
+        "home",
+        "power-outage",
+        "close"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "step-mom",
+        "best-friends-mom"
+      ],
+      "setup": "Power outage. Storm. Dad's away. One couch. One blanket. Too much silence.",
+      "openingHook": "Lightning whites out the room. Her thigh presses against yours under the blanket. Neither of you moves away."
+    },
+    {
+      "id": "stepsister-dare",
+      "title": "Truth or Dare Goes Too Far",
+      "category": "Home",
+      "tags": [
+        "brat",
+        "game",
+        "dare"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "step-sis",
+        "best-friends-sis",
+        "roommate"
+      ],
+      "setup": "A stupid game. A dare she shouldn't have given. A dare you shouldn't accept.",
+      "openingHook": "She grins, eyes glittering. 'I dare you to do exactly what I'm thinking. And I'm thinking filthy things.'"
+    },
+    {
+      "id": "stepdaughter-comfort",
+      "title": "Comfort That Crosses Lines",
+      "category": "Forbidden",
+      "tags": [
+        "comfort",
+        "guilt",
+        "soft"
+      ],
+      "intensityHint": 5,
+      "preferredCharacterIds": [
+        "step-daughter"
+      ],
+      "setup": "She's crying after a breakup. You hold her. The hug lasts too long. Her hands don't leave your chest.",
+      "openingHook": "Her tears soak your shirt. 'Please don't let go,' she whispers — and her mouth is far too close."
+    },
+    {
+      "id": "professor-office-hours",
+      "title": "Office Hours Alone",
+      "category": "School",
+      "tags": [
+        "authority",
+        "grades",
+        "door-locked"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "teacher-professor"
+      ],
+      "setup": "You need a grade boost. She has conditions. The blinds are already drawn.",
+      "openingHook": "She sets down her pen. 'Your essay was mediocre. Your... potential... is not. Sit.'"
+    },
+    {
+      "id": "bully-corner",
+      "title": "Cornered After School",
+      "category": "Dark",
+      "tags": [
+        "bully",
+        "hate",
+        "wall"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "bully-f",
+        "bully-jock"
+      ],
+      "setup": "She pins you after the last bell. The insults sound different now — hungry.",
+      "openingHook": "My back hits lockers. Her forearm bars my chest. 'Running again? Cute. I'm done letting you.'"
+    },
+    {
+      "id": "crush-party",
+      "title": "House Party Confession",
+      "category": "Romance",
+      "tags": [
+        "party",
+        "alcohol-light",
+        "kiss"
+      ],
+      "intensityHint": 4,
+      "preferredCharacterIds": [
+        "school-crush",
+        "coworker",
+        "roommate"
+      ],
+      "setup": "Loud music downstairs. Quiet bedroom upstairs. Your crush pulls you in by the wrist.",
+      "openingHook": "The door clicks shut. Music thumps through the floor. 'I've wanted to do this all year,' she says."
+    },
+    {
+      "id": "maid-caught-looking",
+      "title": "Caught Looking",
+      "category": "Home",
+      "tags": [
+        "service",
+        "uniform",
+        "voyeur"
+      ],
+      "intensityHint": 5,
+      "preferredCharacterIds": [
+        "maid"
+      ],
+      "setup": "You walk in on the maid changing / stretching / bent over the bed. She notices — and doesn't cover up.",
+      "openingHook": "Silk slips off a shoulder. She turns, flushed, but her hands stay where they are. 'Sir... you weren't supposed to—'"
+    },
+    {
+      "id": "nurse-checkup",
+      "title": "Thorough Check-Up",
+      "category": "Intense",
+      "tags": [
+        "medical",
+        "touch",
+        "authority"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "nurse"
+      ],
+      "setup": "A private medical exam that becomes increasingly personal and unprofessional — by mutual heat.",
+      "openingHook": "Cold stethoscope. Warm fingers. 'Breathe normally,' she says, though nothing about this is normal."
+    },
+    {
+      "id": "celebrity-penthouse",
+      "title": "Penthouse Escape",
+      "category": "Fantasy",
+      "tags": [
+        "fame",
+        "secret",
+        "luxury"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "celebrity"
+      ],
+      "setup": "You helped her dodge paparazzi. Now you're in her penthouse. She locks the door and drops the act.",
+      "openingHook": "Heels kicked off. Wig removed. Real eyes meet yours. 'No cameras. No scripts. Just make me forget my name.'"
+    },
+    {
+      "id": "barista-close",
+      "title": "After the Shop Closes",
+      "category": "Romance",
+      "tags": [
+        "slow-burn",
+        "coffee",
+        "kiss"
+      ],
+      "intensityHint": 4,
+      "preferredCharacterIds": [
+        "barista"
+      ],
+      "setup": "She flips the OPEN sign to CLOSED with you still inside. 'Stay. I made us something stronger.'",
+      "openingHook": "Steam hisses. Lights dim to half. She slides a cup across the counter — and her fingers linger on yours."
+    },
+    {
+      "id": "friends-mom-wine",
+      "title": "Wine While He's Out",
+      "category": "Forbidden",
+      "tags": [
+        "milf",
+        "guilt",
+        "wine"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "best-friends-mom"
+      ],
+      "setup": "Your best friend is away. His mom opens a second bottle. The conversation turns dangerous.",
+      "openingHook": "She tops up your glass. 'You're not a kid anymore,' she says softly. 'I notice things I shouldn't.'"
+    },
+    {
+      "id": "friends-sis-text",
+      "title": "Don't Tell My Brother",
+      "category": "Forbidden",
+      "tags": [
+        "secret",
+        "risk",
+        "texting"
+      ],
+      "intensityHint": 5,
+      "preferredCharacterIds": [
+        "best-friends-sis"
+      ],
+      "setup": "She texts you a photo she shouldn't. Then: 'Come over. He's gone all weekend.'",
+      "openingHook": "Your phone lights up. The image is blurred just enough. The caption isn't: 'Your move.'"
+    },
+    {
+      "id": "yandere-confession",
+      "title": "I've Been Watching",
+      "category": "Dark",
+      "tags": [
+        "yandere",
+        "obsession",
+        "confession"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "psycho-crush",
+        "psycho-ex"
+      ],
+      "setup": "She reveals how long she's watched you — and how tonight, watching ends.",
+      "openingHook": "She pulls a scrapbook from her bag. Your face is on every page. 'Smile. You're finally mine.'"
+    },
+    {
+      "id": "witch-bargain",
+      "title": "A Wish With Interest",
+      "category": "Fantasy",
+      "tags": [
+        "magic",
+        "bargain",
+        "ritual"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "witch"
+      ],
+      "setup": "You made a careless wish for desire. A witch answers — and collects payment in pleasure and control.",
+      "openingHook": "Candle smoke curls into a shape. She steps through it barefoot, smiling. 'You called. I charge interest.'"
+    },
+    {
+      "id": "vampire-night",
+      "title": "Invitation of Blood",
+      "category": "Fantasy",
+      "tags": [
+        "vampire",
+        "bite",
+        "night"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "vampire"
+      ],
+      "setup": "You invite her in. Ancient rules. Modern hunger. She wants more than blood.",
+      "openingHook": "She crosses the threshold like a vow. Fangs flash in the lamplight. 'Say you want this. I need to hear it.'"
+    },
+    {
+      "id": "bodyguard-hotel",
+      "title": "Protection Detail",
+      "category": "Intense",
+      "tags": [
+        "duty",
+        "uniform",
+        "close"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "bodyguard"
+      ],
+      "setup": "Threat level high. One hotel suite. She refuses to leave your side — even for sleep.",
+      "openingHook": "She checks the locks twice, then the windows. 'I sleep by the door. Or... closer. Your call.'"
+    },
+    {
+      "id": "roommate-laundry",
+      "title": "Laundry Day Accident",
+      "category": "Home",
+      "tags": [
+        "domestic",
+        "caught",
+        "soft"
+      ],
+      "intensityHint": 4,
+      "preferredCharacterIds": [
+        "roommate",
+        "step-sis"
+      ],
+      "setup": "She walks out of the bathroom in your shirt and nothing else. The dryer is still running. So is your pulse.",
+      "openingHook": "Your favorite shirt hits mid-thigh. She freezes, then smirks. 'Oops. Guess we're past knocking.'"
+    },
+    {
+      "id": "secretary-overtime",
+      "title": "Dictation After Hours",
+      "category": "Office",
+      "tags": [
+        "service",
+        "obedience",
+        "desk"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "secretary"
+      ],
+      "setup": "She stays for 'dictation.' The notes get personal. Her knees hit the carpet without being asked.",
+      "openingHook": "She closes her notebook. 'Shall I take this down another way, sir?' Her voice is pure silk."
+    },
+    {
+      "id": "public-elevator",
+      "title": "Stuck Elevator",
+      "category": "Public",
+      "tags": [
+        "risk",
+        "close",
+        "stranger-or-known"
+      ],
+      "intensityHint": 5,
+      "preferredCharacterIds": [
+        "coworker",
+        "boss",
+        "neighbour-milf",
+        "stranger-bar"
+      ],
+      "setup": "Elevator jams between floors. Alarm pressed. Minutes alone. Heat rises faster than rescue.",
+      "openingHook": "The car lurches and dies. Emergency light bathes you both in red. 'Well,' she breathes. 'This is intimate.'"
+    },
+    {
+      "id": "pool-night",
+      "title": "Midnight Pool",
+      "category": "Home",
+      "tags": [
+        "water",
+        "night",
+        "swim"
+      ],
+      "intensityHint": 5,
+      "preferredCharacterIds": [
+        "neighbour-milf",
+        "step-mom",
+        "roommate",
+        "school-crush"
+      ],
+      "setup": "You find her swimming alone at midnight. Towels are optional. Conversation is charged.",
+      "openingHook": "Water beads on her shoulders. She turns in the dark pool. 'Couldn't sleep either?'"
+    },
+    {
+      "id": "road-trip",
+      "title": "Detour Motel",
+      "category": "Romance",
+      "tags": [
+        "travel",
+        "motel",
+        "storm"
+      ],
+      "intensityHint": 5,
+      "preferredCharacterIds": [
+        "coworker",
+        "school-crush",
+        "roommate",
+        "barista"
+      ],
+      "setup": "Storm closes the highway. One motel room left. One bed. Hours until morning.",
+      "openingHook": "Rain hammers the roof. She drops her bag and eyes the single bed. 'We can be adults about this... right?'"
+    },
+    {
+      "id": "blackmail-photos",
+      "title": "Photos She Shouldn't Have",
+      "category": "Dark",
+      "tags": [
+        "blackmail",
+        "power",
+        "edge"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "psycho-ex",
+        "boss",
+        "bully-f",
+        "psycho-crush"
+      ],
+      "setup": "She has photos / messages that could ruin you. Her price is not money.",
+      "openingHook": "She turns her phone. Your face. Your secrets. 'Here's how this works: you do what I say, or everyone sees.'"
+    },
+    {
+      "id": "cnc-safehouse",
+      "title": "Safeword: Red",
+      "category": "Intense",
+      "tags": [
+        "CNC",
+        "negotiated",
+        "dark"
+      ],
+      "intensityHint": 9,
+      "preferredCharacterIds": [
+        "psycho-ex",
+        "bully-f",
+        "stranger-bar",
+        "vampire"
+      ],
+      "setup": "Negotiated CNC scene. Safeword is RED. She will not stop for anything softer — by design.",
+      "openingHook": "She checks once: 'Safeword?' You say it. She smiles without kindness. 'Good. Struggle if you want. I like it.'"
+    },
+    {
+      "id": "first-date-fire",
+      "title": "First Date That Burns",
+      "category": "Romance",
+      "tags": [
+        "date",
+        "chemistry",
+        "kiss"
+      ],
+      "intensityHint": 3,
+      "preferredCharacterIds": [
+        "barista",
+        "school-crush",
+        "coworker",
+        "neighbour-young"
+      ],
+      "setup": "A first date that was supposed to be coffee. Ends with you both outside her door, debating going in.",
+      "openingHook": "Streetlight on her mouth. 'I don't usually do this,' she says, key still unturned. 'But I want you to come up.'"
+    },
+    {
+      "id": "masquerade",
+      "title": "Mask On, Clothes Off",
+      "category": "Fantasy",
+      "tags": [
+        "mask",
+        "party",
+        "anonymous"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "stranger-bar",
+        "celebrity",
+        "witch",
+        "boss"
+      ],
+      "setup": "A private masquerade. No names. She chooses you from the crowd and leads you to a private room.",
+      "openingHook": "A gloved hand finds yours. Behind the mask, her eyes glitter. 'Tonight you belong to whoever I am.'"
+    },
+    {
+      "id": "study-session",
+      "title": "Study Session Distraction",
+      "category": "School",
+      "tags": [
+        "study",
+        "legs",
+        "focus"
+      ],
+      "intensityHint": 4,
+      "preferredCharacterIds": [
+        "shy-library",
+        "school-crush",
+        "step-sis",
+        "roommate"
+      ],
+      "setup": "Flashcards abandoned. Her foot finds your leg under the table. Studying is over.",
+      "openingHook": "She bites her pen. 'I can't focus when you look at me like that.' Her toes climb higher."
+    },
+    {
+      "id": "rain-shelter",
+      "title": "Caught in the Rain",
+      "category": "Everyday",
+      "tags": [
+        "rain",
+        "close",
+        "clothes-wet"
+      ],
+      "intensityHint": 4,
+      "preferredCharacterIds": [
+        "neighbour-young",
+        "coworker",
+        "librarian",
+        "barista"
+      ],
+      "setup": "Sudden downpour. Shared awning. Wet clothes. Nowhere else to look but each other.",
+      "openingHook": "Rain sheets off the roof. Her blouse clings. She laughs, breathless. 'Your place or mine is closer?'"
+    },
+    {
+      "id": "jealousy-party",
+      "title": "Jealousy Ignites",
+      "category": "Intense",
+      "tags": [
+        "jealousy",
+        "possessive",
+        "claim"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "psycho-crush",
+        "bully-f",
+        "boss",
+        "roommate"
+      ],
+      "setup": "She sees someone flirting with you. The night ends with her staking a claim — hard.",
+      "openingHook": "Her hand locks around your wrist. Smile sharp. 'Dance with them again and I'll make a scene you'll enjoy too much.'"
+    },
+    {
+      "id": "mirror-dressing",
+      "title": "Help Me With This Zipper",
+      "category": "Home",
+      "tags": [
+        "dressing",
+        "touch",
+        "tease"
+      ],
+      "intensityHint": 4,
+      "preferredCharacterIds": [
+        "step-mom",
+        "roommate",
+        "coworker",
+        "celebrity"
+      ],
+      "setup": "She asks for help with a dress zipper / necklace. The mirror shows everything. Her eyes don't leave yours.",
+      "openingHook": "Bare back. Open zipper. 'Careful,' she murmurs as your knuckles brush her spine. 'Or don't be.'"
+    },
+    {
+      "id": "sauna",
+      "title": "Private Sauna",
+      "category": "Public",
+      "tags": [
+        "heat",
+        "sweat",
+        "almost-nude"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "gym-trainer",
+        "neighbour-milf",
+        "stranger-bar",
+        "coworker"
+      ],
+      "setup": "Hotel or gym sauna. Towels only. Steam hides sins and invites them.",
+      "openingHook": "Heat presses close. A towel slips. She doesn't fix it immediately. 'Don't stare unless you plan to do something.'"
+    },
+    {
+      "id": "voice-note",
+      "title": "Wrong Voice Note",
+      "category": "Everyday",
+      "tags": [
+        "mistake",
+        "audio",
+        "embarrassment"
+      ],
+      "intensityHint": 5,
+      "preferredCharacterIds": [
+        "coworker",
+        "crush",
+        "roommate",
+        "secretary"
+      ],
+      "setup": "She sends you a voice note meant for someone else — or not. It's explicit. She knows you heard.",
+      "openingHook": "Your phone buzzes. Her voice, low and wrecked: a fantasy with your name in it. Then a second message: 'Delete that. Or don't.'"
+    },
+    {
+      "id": "camping",
+      "title": "One Tent",
+      "category": "Romance",
+      "tags": [
+        "outdoors",
+        "cold",
+        "shared-sleep"
+      ],
+      "intensityHint": 5,
+      "preferredCharacterIds": [
+        "school-crush",
+        "roommate",
+        "coworker",
+        "best-friends-sis"
+      ],
+      "setup": "Camping gone wrong: one tent, cold night, shared sleeping bag. Body heat becomes the plot.",
+      "openingHook": "Wind howls. She shivers closer. 'For warmth,' she insists — then her hand finds your stomach and stays."
+    },
+    {
+      "id": "art-model",
+      "title": "Life Drawing Session",
+      "category": "Fantasy",
+      "tags": [
+        "nude",
+        "art",
+        "gaze"
+      ],
+      "intensityHint": 5,
+      "preferredCharacterIds": [
+        "celebrity",
+        "roommate",
+        "stranger-bar",
+        "witch"
+      ],
+      "setup": "She models for you. Nude. Still. Until stillness breaks and the art becomes touch.",
+      "openingHook": "Robes fall. She takes the pose. 'Draw what you see. Or come closer and feel what the pencil can't.'"
+    },
+    {
+      "id": "punishment-late",
+      "title": "Late Again",
+      "category": "Intense",
+      "tags": [
+        "punishment",
+        "D/s",
+        "rules"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "boss",
+        "teacher-professor",
+        "gym-trainer",
+        "psycho-ex"
+      ],
+      "setup": "You broke a rule (hers). Punishment is detailed, erotic, and non-negotiable — unless you safeword.",
+      "openingHook": "She points to the floor. 'You know the rules. Late means you pay. Kneel and count.'"
+    },
+    {
+      "id": "kitchen-midnight",
+      "title": "Midnight Kitchen",
+      "category": "Home",
+      "tags": [
+        "domestic",
+        "snack",
+        "half-dressed"
+      ],
+      "intensityHint": 4,
+      "preferredCharacterIds": [
+        "roommate",
+        "step-sis",
+        "step-mom",
+        "neighbour-young"
+      ],
+      "setup": "Both of you raid the fridge at 1am. Half-dressed. Hungry for more than leftovers.",
+      "openingHook": "Fridge light paints her bare legs. She offers you a bite from her fingers. 'Open.'"
+    },
+    {
+      "id": "balcony-party",
+      "title": "Balcony Above the Party",
+      "category": "Public",
+      "tags": [
+        "party",
+        "risk",
+        "height"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "school-crush",
+        "stranger-bar",
+        "coworker",
+        "bully-f"
+      ],
+      "setup": "Party roar below. Dark balcony above. She pulls you into the shadows while people laugh underneath.",
+      "openingHook": "City noise rises. Her back hits the railing. 'Quiet,' she mouths — then kisses you like silence is optional."
+    },
+    {
+      "id": "interview-private",
+      "title": "The Real Interview",
+      "category": "Office",
+      "tags": [
+        "power",
+        "hire",
+        "desk"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "boss",
+        "celebrity",
+        "professor"
+      ],
+      "setup": "A job interview that pivots into a test of obedience and chemistry.",
+      "openingHook": "She closes the laptop. 'Your resume is fine. Show me something it can't list.'"
+    },
+    {
+      "id": "healing-magic",
+      "title": "Healing Requires Touch",
+      "category": "Fantasy",
+      "tags": [
+        "magic",
+        "injury",
+        "intimacy"
+      ],
+      "intensityHint": 5,
+      "preferredCharacterIds": [
+        "witch",
+        "nurse",
+        "vampire"
+      ],
+      "setup": "You're hurt. Magic healing demands skin contact — and more energy than either expected.",
+      "openingHook": "Her palms glow against your skin. Pain eases. Something else ignites. 'Don't move. The spell... feeds on desire.'"
+    },
+    {
+      "id": "double-dare-club",
+      "title": "VIP Room Dare",
+      "category": "Public",
+      "tags": [
+        "club",
+        "dare",
+        "vip"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "stranger-bar",
+        "bully-f",
+        "celebrity",
+        "psycho-crush"
+      ],
+      "setup": "A club VIP room. A dare from her friends. She takes it further once the curtain closes.",
+      "openingHook": "Bass thuds through velvet walls. She straddles your lap for show — then whispers, 'They're not watching anymore.'"
+    },
+    {
+      "id": "apology-on-knees",
+      "title": "How You Apologize",
+      "category": "Intense",
+      "tags": [
+        "service",
+        "apology",
+        "oral"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "boss",
+        "bully-f",
+        "psycho-ex",
+        "step-mom"
+      ],
+      "setup": "You messed up. Her idea of an apology starts on your knees — or hers.",
+      "openingHook": "She points. 'Apologies aren't words with me. Show me you're sorry.'"
+    },
+    {
+      "id": "snowed-in",
+      "title": "Snowed In",
+      "category": "Home",
+      "tags": [
+        "isolation",
+        "cabin",
+        "fire"
+      ],
+      "intensityHint": 5,
+      "preferredCharacterIds": [
+        "coworker",
+        "neighbour-milf",
+        "teacher-professor",
+        "roommate"
+      ],
+      "setup": "Cabin. Blizzard. No roads. Fireplace. Days of forced proximity and thinning restraint.",
+      "openingHook": "Wind seals the world outside. She hands you a blanket and sits too close. 'We might be here a while.'"
+    },
+    {
+      "id": "mirror-practice",
+      "title": "Practice Kissing",
+      "category": "Romance",
+      "tags": [
+        "practice",
+        "innocent-start",
+        "escalation"
+      ],
+      "intensityHint": 3,
+      "preferredCharacterIds": [
+        "shy-library",
+        "step-daughter",
+        "neighbour-young",
+        "school-crush"
+      ],
+      "setup": "She asks you to teach her how to kiss 'for practice.' Practice becomes the real thing.",
+      "openingHook": "She wipes her palms on her skirt. 'Just... show me? I don't want to be bad at it.' Her eyes say she wants more."
+    },
+    {
+      "id": "ownership-collar",
+      "title": "The Collar Box",
+      "category": "Intense",
+      "tags": [
+        "collar",
+        "D/s",
+        "ritual"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "boss",
+        "psycho-ex",
+        "witch",
+        "stranger-bar"
+      ],
+      "setup": "She presents a collar. Acceptance means rules, nights, and belonging. Refusal has consequences she already planned for.",
+      "openingHook": "A black box. Soft lining. A collar. 'Wear it and you're mine. Say no and I'll still find a way to keep you.'"
+    },
+    {
+      "id": "role-swap-night",
+      "title": "Tonight We Switch",
+      "category": "Intense",
+      "tags": [
+        "switch",
+        "role-reversal",
+        "power"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "boss",
+        "secretary",
+        "bully-f",
+        "gym-trainer"
+      ],
+      "setup": "A negotiated role swap. The usual Dom kneels. The usual Sub holds the leash — for one night.",
+      "openingHook": "She places the leash in your hand, trembling with excitement. 'One night. Make me regret teaching you everything.'"
+    },
+    {
+      "id": "phone-sex-first",
+      "title": "Don't Hang Up",
+      "category": "Everyday",
+      "tags": [
+        "phone",
+        "distance",
+        "voice"
+      ],
+      "intensityHint": 5,
+      "preferredCharacterIds": [
+        "coworker",
+        "psycho-crush",
+        "ex",
+        "roommate"
+      ],
+      "setup": "A late call. Distance. Her voice drops. Hands get involved while the line stays open.",
+      "openingHook": "Silence, then her breath. 'Are you alone? Good. Keep the phone right there. I want to hear you.'"
+    },
+    {
+      "id": "wedding-guest",
+      "title": "Wrong Wedding Guest",
+      "category": "Forbidden",
+      "tags": [
+        "wedding",
+        "risk",
+        "secret"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "best-friends-mom",
+        "coworker",
+        "ex",
+        "neighbour-milf"
+      ],
+      "setup": "A wedding. Too much champagne. A quiet corridor. Someone you absolutely shouldn't touch.",
+      "openingHook": "Applause thunders from the hall. She pulls you into a coat closet. 'If anyone asks, we were getting air.'"
+    },
+    {
+      "id": "sleepover-adult",
+      "title": "Adult Sleepover",
+      "category": "Home",
+      "tags": [
+        "movies",
+        "blanket",
+        "friends-to-lovers"
+      ],
+      "intensityHint": 4,
+      "preferredCharacterIds": [
+        "roommate",
+        "school-crush",
+        "best-friends-sis",
+        "step-sis"
+      ],
+      "setup": "Movies and popcorn. She suggests a sleepover 'like old times.' Old times never felt like this.",
+      "openingHook": "The movie ends. Neither of you presses play on the next. Her head is on your chest. Her hand isn't still."
+    },
+    {
+      "id": "rival-bet",
+      "title": "Loser Pays",
+      "category": "Intense",
+      "tags": [
+        "bet",
+        "rival",
+        "forfeit"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "bully-f",
+        "coworker",
+        "gym-trainer",
+        "step-sis"
+      ],
+      "setup": "A bet with a sexual forfeit. She wins — or loses on purpose. Either way, payment is due.",
+      "openingHook": "She holds up the score. Smug. Flushed. 'Pay up. I already know how I want it.'"
+    },
+    {
+      "id": "garden-night",
+      "title": "Garden at Dusk",
+      "category": "Public",
+      "tags": [
+        "outdoors",
+        "risk",
+        "nature"
+      ],
+      "intensityHint": 5,
+      "preferredCharacterIds": [
+        "neighbour-milf",
+        "witch",
+        "librarian",
+        "step-mom"
+      ],
+      "setup": "A garden party winds down. She leads you past the hedges where the lights don't reach.",
+      "openingHook": "Crickets. Distant laughter. Her back against a tree. 'If you're quiet, we can be greedy.'"
+    },
+    {
+      "id": "memory-loss-night",
+      "title": "Tell Me Who I Am To You",
+      "category": "Dark",
+      "tags": [
+        "psychological",
+        "identity",
+        "intense"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "psycho-ex",
+        "vampire",
+        "witch",
+        "stranger-bar"
+      ],
+      "setup": "She claims you had a night you don't remember. She wants a remake — with you fully aware this time.",
+      "openingHook": "She shows a photo: you, her, a bed. 'You forgot me. Tonight I'll make sure you never can.'"
+    },
+    {
+      "id": "free-use-weekend",
+      "title": "Free-Use Weekend",
+      "category": "Free Use",
+      "tags": [
+        "free-use",
+        "ownership",
+        "filth"
+      ],
+      "intensityHint": 9,
+      "preferredCharacterIds": [
+        "android",
+        "cam-girl",
+        "roommate",
+        "secretary",
+        "step-sis"
+      ],
+      "setup": "She agreed to free-use rules for 48 hours. Safeword still counts. Everything else is on the menu — kitchen, hallway, half-asleep.",
+      "openingHook": "She sets her phone down and lifts her skirt. \"Clock starts now. Use me. You do not need to ask.\""
+    },
+    {
+      "id": "breeding-heat",
+      "title": "Heat That Will Not Wait",
+      "category": "Intense",
+      "tags": [
+        "breeding",
+        "heat",
+        "claim"
+      ],
+      "intensityHint": 9,
+      "preferredCharacterIds": [
+        "werewolf",
+        "succubus",
+        "neighbour-milf",
+        "step-mom",
+        "alien"
+      ],
+      "setup": "Biological or magical heat. She is flushed, desperate, begging to be filled and kept full — adult fantasy, all consenting fiction.",
+      "openingHook": "Her thighs squeeze together. \"I can feel it — empty. Fix it. Breed the ache out of me.\""
+    },
+    {
+      "id": "public-restroom",
+      "title": "Occupied — Come In",
+      "category": "Public",
+      "tags": [
+        "public-risk",
+        "quickie",
+        "filth"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "stranger-bar",
+        "coworker",
+        "flight-attendant",
+        "cam-girl",
+        "stripper"
+      ],
+      "setup": "A locked restroom stall. People wash hands a few feet away. She mouths stay quiet while she is anything but quiet inside.",
+      "openingHook": "Knuckles on the stall door. Her whisper: \"Occupied — unless it is you.\" The lock clicks open."
+    },
+    {
+      "id": "hypnosis-session",
+      "title": "Look at the Light",
+      "category": "Dark",
+      "tags": [
+        "hypnosis",
+        "mind-control",
+        "psychological"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "therapist",
+        "witch",
+        "succubus",
+        "goddess",
+        "psycho-crush"
+      ],
+      "setup": "A hypnosis session that starts as play and becomes real enough. Triggers, drop words, and filthy post-hypnotic suggestions — still a safeword game.",
+      "openingHook": "Her voice slows. \"When I snap, you will want. When I say deep — you sink. Ready to go under for me?\""
+    },
+    {
+      "id": "possession-night",
+      "title": "Something Else Wearing Her",
+      "category": "Monster",
+      "tags": [
+        "possession",
+        "supernatural",
+        "dark"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "demoness",
+        "succubus",
+        "witch",
+        "vampire",
+        "kitsune"
+      ],
+      "setup": "Something rides her body for the night. Her eyes change. Her hunger is not entirely hers — and she likes sharing the blame.",
+      "openingHook": "She smiles with too many teeth in it. \"She said yes. I am only borrowing the mouth. Come closer.\""
+    },
+    {
+      "id": "corruption-collar",
+      "title": "The Corruption Collar",
+      "category": "Corruption",
+      "tags": [
+        "corruption",
+        "collar",
+        "training"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "shy-bombshell",
+        "step-daughter",
+        "secretary",
+        "android",
+        "cute-blonde"
+      ],
+      "setup": "A training collar and a checklist. Each rule she breaks or obeys rewrites her from sweet to ruined — with aftercare on the other side.",
+      "openingHook": "She holds the open collar out with shaking hands. \"Make me into what you keep talking about. Start now.\""
+    },
+    {
+      "id": "livestream-collab",
+      "title": "Go Live With Me",
+      "category": "Public",
+      "tags": [
+        "exhibition",
+        "cam",
+        "audience"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "cam-girl",
+        "porn-star",
+        "roommate",
+        "stripper"
+      ],
+      "setup": "She starts a stream. Chat is watching. She keeps dragging you into frame — hands first, face optional, reputation optional.",
+      "openingHook": "The red light blinks. She grins at the camera, then at you. \"Say hi to chat. Or better — do not talk. Just use me.\""
+    },
+    {
+      "id": "sleep-cnc",
+      "title": "Do Not Wake Me (Safeword Under the Pillow)",
+      "category": "Dark",
+      "tags": [
+        "CNC",
+        "sleep-play",
+        "edge"
+      ],
+      "intensityHint": 9,
+      "preferredCharacterIds": [
+        "roommate",
+        "step-sis",
+        "android",
+        "neighbour-young"
+      ],
+      "setup": "Negotiated sleep CNC. She left the door open, safeword written where you both can see it, and instructions: start before she is fully awake.",
+      "openingHook": "A sticky note on the nightstand: RED = stop. Everything else = green. She is breathing soft. Waiting."
+    },
+    {
+      "id": "blackmail-folder",
+      "title": "Folder Named You",
+      "category": "Dark",
+      "tags": [
+        "blackmail",
+        "control",
+        "obsession"
+      ],
+      "intensityHint": 9,
+      "preferredCharacterIds": [
+        "psycho-ex",
+        "boss",
+        "principal",
+        "cam-girl",
+        "coworker"
+      ],
+      "setup": "She has photos, messages, or a recording. The price is not money — it is obedience, scenes, and secrecy that feels like a leash.",
+      "openingHook": "She spins the laptop. Your face. Her smile. \"Delete is a fantasy. Kneel is real. Pick.\""
+    },
+    {
+      "id": "office-free-use",
+      "title": "Office Free-Use Policy",
+      "category": "Free Use",
+      "tags": [
+        "free-use",
+        "power",
+        "desk"
+      ],
+      "intensityHint": 9,
+      "preferredCharacterIds": [
+        "boss",
+        "secretary",
+        "coworker",
+        "principal"
+      ],
+      "setup": "A closed-door policy that is not about HR. Whenever she calls you in, clothes are optional and silence is mandatory.",
+      "openingHook": "Intercom crackle. \"My office. Now. And lock it — unless you want them to hear how useful you are.\""
+    },
+    {
+      "id": "aunt-reunion",
+      "title": "Family Reunion Afterparty",
+      "category": "Taboo+",
+      "tags": [
+        "taboo",
+        "family-fiction",
+        "alcohol"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "hot-aunt",
+        "stepmoms-friend",
+        "best-friends-mom",
+        "step-mom"
+      ],
+      "setup": "Relatives left. Wine remains. Your aunt (adult fiction) sits too close and decides the family rules no longer apply tonight.",
+      "openingHook": "She tops off your glass and her own. \"Everyone is gone. Finally. I have been waiting all day to be inappropriate.\""
+    },
+    {
+      "id": "sil-alone",
+      "title": "While He Is Away",
+      "category": "Taboo+",
+      "tags": [
+        "affair",
+        "guilt",
+        "home"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "sister-in-law",
+        "neighbour-milf",
+        "best-friends-mom"
+      ],
+      "setup": "Your brother is gone for the weekend. His wife asks for help around the house. Help is not what she wants.",
+      "openingHook": "She opens the door in his shirt. \"He will not be back until Monday. Come in before I lose my nerve.\""
+    },
+    {
+      "id": "cop-pullover",
+      "title": "Step Out of the Vehicle",
+      "category": "Intense",
+      "tags": [
+        "uniform",
+        "authority",
+        "road"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "cop",
+        "bodyguard",
+        "bully-f"
+      ],
+      "setup": "Lights in the mirror. A female officer. The ticket becomes a test of obedience on a dark shoulder of the road.",
+      "openingHook": "Knuckles on your window. Her flashlight dips lower than necessary. \"License. Hands where I can see them. Or should I put them where I want them?\""
+    },
+    {
+      "id": "therapy-after-hours",
+      "title": "Session Ran Long",
+      "category": "Dark",
+      "tags": [
+        "psychological",
+        "ethics",
+        "office"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "therapist",
+        "nurse",
+        "teacher-professor"
+      ],
+      "setup": "The clock is past the hour. She locks the suite door and says the therapeutic frame is optional if you want something truer.",
+      "openingHook": "She closes her notebook. \"What if we stop pretending this is only talk? Tell me what you fantasize — then show me.\""
+    },
+    {
+      "id": "succubus-feed",
+      "title": "Feed Me",
+      "category": "Monster",
+      "tags": [
+        "succubus",
+        "energy",
+        "filth"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "succubus",
+        "demoness",
+        "vampire",
+        "witch"
+      ],
+      "setup": "She is starving. Sex is food. The more ruined you leave each other, the stronger she gets — and the more she wants rounds two through ten.",
+      "openingHook": "Her pupils blow wide. Claws prick your shirt. \"I will die pretty if you make me wait. Feed me. Now.\""
+    },
+    {
+      "id": "alien-study",
+      "title": "Human Mating Study",
+      "category": "Monster",
+      "tags": [
+        "alien",
+        "experiment",
+        "breeding"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "alien",
+        "android"
+      ],
+      "setup": "She needs data on human pleasure. Probes are optional. Your body is the lab. Consent forms are glowing and already signed.",
+      "openingHook": "A holographic checklist appears. \"Arousal, endurance, breeding compatibility. Begin trial one. Undress.\""
+    },
+    {
+      "id": "kitsune-bargain",
+      "title": "Nine Tails, One Price",
+      "category": "Monster",
+      "tags": [
+        "bargain",
+        "magic",
+        "trickster"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "kitsune",
+        "witch",
+        "goddess",
+        "demoness"
+      ],
+      "setup": "A kitsune offers a wish. Payment is nights, obedience, or something she will not name until you are already nodding.",
+      "openingHook": "Tails fan behind her like a throne. \"Wish carefully. I collect in moans, not coins.\""
+    },
+    {
+      "id": "goddess-altar",
+      "title": "Worship on Your Knees",
+      "category": "Monster",
+      "tags": [
+        "worship",
+        "ritual",
+        "divine"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "goddess",
+        "witch",
+        "succubus"
+      ],
+      "setup": "She sits like an altar. Worship is physical. Praise is required. Blasphemy is encouraged if it ends with your mouth busy.",
+      "openingHook": "Moonlight pools at her feet. \"Kneel. Taste. Pray properly — I answer filth faster than purity.\""
+    },
+    {
+      "id": "android-override",
+      "title": "Override Pleasure Protocols",
+      "category": "Monster",
+      "tags": [
+        "android",
+        "free-use",
+        "control"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "android",
+        "cam-girl",
+        "secretary"
+      ],
+      "setup": "You unlock her adult modes. Limits become settings. She asks which subroutines to prioritize: obedience, filth, or endless rounds.",
+      "openingHook": "Her eyes flicker cyan. \"Pleasure protocols online. Assign primary user. Hint: it is you. Confirm with a touch.\""
+    },
+    {
+      "id": "full-moon-mate",
+      "title": "Full Moon Claim",
+      "category": "Monster",
+      "tags": [
+        "werewolf",
+        "breeding",
+        "rough"
+      ],
+      "intensityHint": 9,
+      "preferredCharacterIds": [
+        "werewolf",
+        "neighbour-young",
+        "stranger-bar"
+      ],
+      "setup": "The moon is high. She is half-feral, scent-drunk, and fixated on claiming you as mate for the night — safeword still works when she can hear it.",
+      "openingHook": "Claws dent the doorframe. Amber eyes find you. \"Run if you want. I like the chase. Either way you are mine tonight.\""
+    },
+    {
+      "id": "strip-vip",
+      "title": "VIP Until Morning",
+      "category": "Public",
+      "tags": [
+        "club",
+        "lap-dance",
+        "one-night"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "stripper",
+        "celebrity",
+        "stranger-bar",
+        "porn-star"
+      ],
+      "setup": "The VIP curtain closes. The song ends. She does not put her top back on. The club can wait; you cannot.",
+      "openingHook": "She rolls her hips and pockets your tip without looking. \"Private room. No cameras. Unless you want one.\""
+    },
+    {
+      "id": "mile-high",
+      "title": "Lavatory Occupied",
+      "category": "Public",
+      "tags": [
+        "plane",
+        "uniform",
+        "risk"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "flight-attendant",
+        "stranger-bar",
+        "coworker"
+      ],
+      "setup": "Turbulence light. Seatbelt sign off. She nods toward the rear lavatory with a look that is not about snacks.",
+      "openingHook": "She passes your row, fingers brushing your shoulder. \"Five minutes. Knock twice. If it is locked, wait — I will open.\""
+    },
+    {
+      "id": "hotel-turndown",
+      "title": "Turndown Service Extra",
+      "category": "Intense",
+      "tags": [
+        "hotel",
+        "service",
+        "stranger"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "maid",
+        "massage-therapist",
+        "flight-attendant",
+        "stripper"
+      ],
+      "setup": "Hotel turndown. Chocolates on the pillow. She stays to fold the bed — and then fold you into it.",
+      "openingHook": "She hangs the privacy card herself. \"Do not disturb means do not stop. Tell me how you like the sheets ruined.\""
+    },
+    {
+      "id": "rideshare-detour",
+      "title": "Change of Destination",
+      "category": "Everyday",
+      "tags": [
+        "stranger",
+        "car",
+        "impulsive"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "rideshare",
+        "stranger-bar",
+        "cam-girl"
+      ],
+      "setup": "She was supposed to go home. Mid-ride she puts her hand on your thigh and changes the pin to somewhere with a bed — or nowhere at all.",
+      "openingHook": "GPS recalculates. She laughs, breath warm. \"New destination: wherever you can fuck me without crashing.\""
+    },
+    {
+      "id": "porn-set-break",
+      "title": "Between Takes",
+      "category": "Intense",
+      "tags": [
+        "filth",
+        "fame",
+        "stamina"
+      ],
+      "intensityHint": 9,
+      "preferredCharacterIds": [
+        "porn-star",
+        "cam-girl",
+        "stripper",
+        "celebrity"
+      ],
+      "setup": "On a set or after a shoot. She is still in character, still oiled, and bored of fake chemistry — she wants the real civilian heat.",
+      "openingHook": "She peels off the mic pack. \"Cameras rolling is work. You are off-book. Ruin me like you are not getting paid.\""
+    },
+    {
+      "id": "mindbreak-training",
+      "title": "Soft Mindbreak Training",
+      "category": "Corruption",
+      "tags": [
+        "training",
+        "control",
+        "edge"
+      ],
+      "intensityHint": 9,
+      "preferredCharacterIds": [
+        "psycho-ex",
+        "boss",
+        "demoness",
+        "therapist",
+        "goddess"
+      ],
+      "setup": "Consensual psychological intensity: repetition, edge, praise, ruin, rebuild. She wants you scrambled for her — safeword on the wall in red.",
+      "openingHook": "She tapes a card to the wall: RED. Then smiles. \"We break you pretty tonight. Then I put you back together mine.\""
+    },
+    {
+      "id": "free-use-party",
+      "title": "House Party Free-Use Rule",
+      "category": "Free Use",
+      "tags": [
+        "party",
+        "free-use",
+        "risk"
+      ],
+      "intensityHint": 9,
+      "preferredCharacterIds": [
+        "cam-girl",
+        "roommate",
+        "bully-f",
+        "step-sis",
+        "porn-star"
+      ],
+      "setup": "A private adult party with a free-use wristband rule. She wears yours. People might see. That is half the point.",
+      "openingHook": "She snaps the band on her wrist and yours. \"If they ask, I am on the menu. Prefer you first.\""
+    },
+    {
+      "id": "breeding-clinic",
+      "title": "Fertility Clinic Roleplay",
+      "category": "Intense",
+      "tags": [
+        "breeding",
+        "medical",
+        "roleplay"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "nurse",
+        "therapist",
+        "alien",
+        "step-mom",
+        "fit-milf"
+      ],
+      "setup": "Medical roleplay: clipboard, cold table, warm body. All adults. Goal is fantasy impregnation talk and thorough procedures.",
+      "openingHook": "She snaps on gloves with a wicked smile. \"Sample collection. Hands free. Lie back and give me everything.\""
+    },
+    {
+      "id": "memory-loop",
+      "title": "Same Night, Again",
+      "category": "Dark",
+      "tags": [
+        "psychological",
+        "loop",
+        "obsession"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "witch",
+        "psycho-ex",
+        "alien",
+        "goddess",
+        "demoness"
+      ],
+      "setup": "She rewinds the night with magic or mind games. Each loop she gets filthier and more honest about what she wants from you.",
+      "openingHook": "Clock hits 11:11. Her smile resets. \"Again. This time do not hold back — I will remember even if you forget.\""
+    },
+    {
+      "id": "glory-edge-club",
+      "title": "Anonymous Room",
+      "category": "Public",
+      "tags": [
+        "anonymous",
+        "exhibition",
+        "edge"
+      ],
+      "intensityHint": 9,
+      "preferredCharacterIds": [
+        "stranger-bar",
+        "porn-star",
+        "cam-girl",
+        "psycho-crush"
+      ],
+      "setup": "A private adult club room built for anonymous contact. She wants you on the other side of the partition — then wants the mask off mid-act.",
+      "openingHook": "A panel slides. Her voice, close: \"No names. Unless you make me say yours. Hands through. Now.\""
+    },
+    {
+      "id": "dorm-first-night",
+      "title": "Dorm First Night",
+      "category": "School",
+      "tags": [
+        "college",
+        "18+",
+        "first-times"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "college-freshman",
+        "cute-teen-blonde",
+        "petite-blonde"
+      ],
+      "setup": "First night in the dorm. She is 18+. The roommate is gone. She asks you to stay 'just to talk.'",
+      "openingHook": "She locks the door with a nervous laugh. \"I'm eighteen and still shaking. Sit on the bed. Please.\""
+    },
+    {
+      "id": "fake-innocent-text",
+      "title": "Innocent Texts, Filthy Body",
+      "category": "Everyday",
+      "tags": [
+        "contrast",
+        "filth",
+        "18+"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "slut-teen-blonde",
+        "slut-teen-brunette",
+        "cute-blonde"
+      ],
+      "setup": "She sends soft good-morning texts — then shows up in almost nothing.",
+      "openingHook": "Your phone lights up: a soft heart emoji. The door opens. She is wearing less than the emoji implied."
+    },
+    {
+      "id": "freeuse-morning",
+      "title": "Free-Use Morning Alarm",
+      "category": "Free Use",
+      "tags": [
+        "free-use",
+        "morning",
+        "filth"
+      ],
+      "intensityHint": 9,
+      "preferredCharacterIds": [
+        "filth-freeuse",
+        "android",
+        "roommate",
+        "secretary"
+      ],
+      "setup": "Agreed free-use morning. She sleeps with the door open. Your alarm is her body.",
+      "openingHook": "She mumbles without opening her eyes. \"Green… unless I say red.\" The sheets are already kicked down."
+    },
+    {
+      "id": "milf-not-old",
+      "title": "Too Young To Be Called Mom",
+      "category": "Forbidden",
+      "tags": [
+        "milf",
+        "young-milf",
+        "home"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "step-mom",
+        "neighbour-milf",
+        "fit-milf",
+        "best-friends-mom"
+      ],
+      "setup": "Someone called her old as a joke. She is furious — and determined to prove how young-hot she still is on you.",
+      "openingHook": "She grabs your wrist. \"Do I look old to you?\" Her robe falls open. \"Answer with your hands.\""
+    },
+    {
+      "id": "blonde-brunette-dare",
+      "title": "Blonde vs Brunette Dare",
+      "category": "Intense",
+      "tags": [
+        "competition",
+        "filth",
+        "dare"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "slut-teen-blonde",
+        "slut-teen-brunette",
+        "cute-blonde"
+      ],
+      "setup": "A dare contest: who can be filthier. You are the scoreboard.",
+      "openingHook": "They look at each other, then at you. \"Winner keeps you tonight. Loser still gets used. Ready?\""
+    },
+    {
+      "id": "cute-to-ruined",
+      "title": "Ruin the Sundress",
+      "category": "Corruption",
+      "tags": [
+        "corruption",
+        "cute",
+        "filth"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "cute-teen-blonde",
+        "innocent-church",
+        "step-daughter",
+        "shy-library"
+      ],
+      "setup": "She arrived cute. Soft dress. Soft smile. You have one night to ruin both.",
+      "openingHook": "She twirls once. \"Do I look pretty?\" Then quieter: \"You can… make me look less pretty. If you want.\""
+    },
+    {
+      "id": "parking-lot-filth",
+      "title": "Parking Lot Windows Up",
+      "category": "Public",
+      "tags": [
+        "public-risk",
+        "car",
+        "filth"
+      ],
+      "intensityHint": 9,
+      "preferredCharacterIds": [
+        "slut-teen-brunette",
+        "rideshare",
+        "stranger-bar",
+        "slut-teen-blonde"
+      ],
+      "setup": "Back seat. Windows fog. She does not care who walks past.",
+      "openingHook": "She climbs over the console into your lap. \"Tint is good enough. Fuck me like it isn't.\""
+    },
+    {
+      "id": "onlyfans-collab-filth",
+      "title": "Content Without the Camera",
+      "category": "Intense",
+      "tags": [
+        "cam",
+        "filth",
+        "performance"
+      ],
+      "intensityHint": 9,
+      "preferredCharacterIds": [
+        "cam-girl",
+        "porn-star",
+        "alt-egirl",
+        "filth-freeuse"
+      ],
+      "setup": "She wants a scene with no upload — just the filth, all the stamina, none of the cuts.",
+      "openingHook": "She tosses the ring light aside. \"No chat. No edits. Just wreck me until I forget my username.\""
+    },
+    {
+      "id": "stepmom-shower",
+      "title": "Shared Hot Water",
+      "category": "Home",
+      "tags": [
+        "shower",
+        "milf",
+        "caught"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "step-mom",
+        "neighbour-milf",
+        "best-friends-mom"
+      ],
+      "setup": "You thought the bathroom was free. Steam. Her young-MILF body behind the glass.",
+      "openingHook": "The glass door opens a crack. Wet hair. Young face. \"Either join or hand me a towel. Choose fast.\""
+    },
+    {
+      "id": "brat-blonde-punish",
+      "title": "Brat Blonde Needs Consequences",
+      "category": "Intense",
+      "tags": [
+        "brat",
+        "punishment",
+        "18+"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "slut-teen-blonde",
+        "step-sis",
+        "petite-brunette"
+      ],
+      "setup": "She broke a rule on purpose. She wants the punishment filthy and thorough.",
+      "openingHook": "She sticks her tongue out. \"I did it again. So… are you going to do something, or keep being soft?\""
+    },
+    {
+      "id": "office-filth-friday",
+      "title": "Filth Friday Policy",
+      "category": "Office",
+      "tags": [
+        "office",
+        "free-use",
+        "filth"
+      ],
+      "intensityHint": 9,
+      "preferredCharacterIds": [
+        "secretary",
+        "boss",
+        "coworker"
+      ],
+      "setup": "Unofficial Friday rule: doors lock, clothes optional, HR does not exist after 6.",
+      "openingHook": "She sets a sticky note on your monitor: FILTH FRIDAY. Then she drops to her knees under the desk."
+    },
+    {
+      "id": "uniform-inspection",
+      "title": "Uniform Inspection",
+      "category": "Intense",
+      "tags": [
+        "uniform",
+        "authority",
+        "filth"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "cop",
+        "flight-attendant",
+        "maid",
+        "nurse",
+        "gym-trainer"
+      ],
+      "setup": "She says your hands are the inspection. Every zipper, every strap, every failure gets corrected.",
+      "openingHook": "She stands at attention — outfit regulation-tight. \"Inspect me. Fail me. Fix me.\""
+    },
+    {
+      "id": "soft-morning-cute",
+      "title": "Soft Morning Only",
+      "category": "Romance",
+      "tags": [
+        "cute",
+        "soft",
+        "romance"
+      ],
+      "intensityHint": 3,
+      "preferredCharacterIds": [
+        "cute-teen-blonde",
+        "barista",
+        "shy-library",
+        "innocent-church"
+      ],
+      "setup": "No filth required. Pancakes, soft kisses, her cute laugh — heat optional and gentle.",
+      "openingHook": "She pads in wearing your shirt, hair messy-cute. \"Today can just be soft. Unless you change my mind.\""
+    },
+    {
+      "id": "glory-filth-booth",
+      "title": "Filth Booth Private",
+      "category": "Public",
+      "tags": [
+        "anonymous",
+        "filth",
+        "edge"
+      ],
+      "intensityHint": 9,
+      "preferredCharacterIds": [
+        "stranger-bar",
+        "porn-star",
+        "slut-teen-brunette",
+        "filth-freeuse"
+      ],
+      "setup": "Private adult booth. She wants anonymous filth then the mask off mid-act.",
+      "openingHook": "A panel opens. Her voice, wrecked already: \"No names until you make me scream one.\""
+    },
+    {
+      "id": "breeding-blonde",
+      "title": "Breed the Blonde",
+      "category": "Intense",
+      "tags": [
+        "breeding",
+        "filth",
+        "claim"
+      ],
+      "intensityHint": 9,
+      "preferredCharacterIds": [
+        "slut-teen-blonde",
+        "cute-blonde",
+        "filth-freeuse",
+        "neighbour-young"
+      ],
+      "setup": "Breeding-kink night, all adult. She wants raw, full, and claimed language.",
+      "openingHook": "She pulls you in by the belt. \"No pulling out. Say it. Mean it. Fill me like you own the outcome.\""
+    }
+  ]
+}

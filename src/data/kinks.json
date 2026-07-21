@@ -1,0 +1,702 @@
+{
+  "version": "1.1.0",
+  "description": "Kinks/fetishes for profile multi-select. Add freely. id is unique slug.",
+  "kinks": [
+    {
+      "id": "teasing",
+      "label": "Teasing / Edging",
+      "category": "play"
+    },
+    {
+      "id": "slow-seduction",
+      "label": "Slow Seduction",
+      "category": "pace"
+    },
+    {
+      "id": "praise",
+      "label": "Praise Kink",
+      "category": "power"
+    },
+    {
+      "id": "degradation",
+      "label": "Degradation (light)",
+      "category": "power"
+    },
+    {
+      "id": "rough",
+      "label": "Rough Play",
+      "category": "intensity"
+    },
+    {
+      "id": "gentle",
+      "label": "Gentle / Soft",
+      "category": "pace"
+    },
+    {
+      "id": "oral",
+      "label": "Oral Fixation",
+      "category": "act"
+    },
+    {
+      "id": "bondage",
+      "label": "Bondage / Restraints",
+      "category": "power"
+    },
+    {
+      "id": "power-exchange",
+      "label": "Power Exchange (D/s)",
+      "category": "power"
+    },
+    {
+      "id": "service",
+      "label": "Service Submission",
+      "category": "power"
+    },
+    {
+      "id": "exhibition",
+      "label": "Exhibitionism",
+      "category": "public"
+    },
+    {
+      "id": "voyeur",
+      "label": "Voyeurism",
+      "category": "public"
+    },
+    {
+      "id": "public-risk",
+      "label": "Public Risk / Semi-public",
+      "category": "public"
+    },
+    {
+      "id": "public-quiet",
+      "label": "Quiet Public (libraries, etc.)",
+      "category": "public"
+    },
+    {
+      "id": "CNC",
+      "label": "CNC (with safeword)",
+      "category": "edge"
+    },
+    {
+      "id": "dubcon",
+      "label": "Dubcon Fantasy",
+      "category": "edge"
+    },
+    {
+      "id": "blackmail-light",
+      "label": "Blackmail Fantasy (consensual fiction)",
+      "category": "edge"
+    },
+    {
+      "id": "obsession",
+      "label": "Obsession / Yandere",
+      "category": "dark"
+    },
+    {
+      "id": "yandere",
+      "label": "Yandere Dynamics",
+      "category": "dark"
+    },
+    {
+      "id": "stalking-fantasy",
+      "label": "Stalking Fantasy",
+      "category": "dark"
+    },
+    {
+      "id": "possessiveness",
+      "label": "Possessiveness",
+      "category": "dark"
+    },
+    {
+      "id": "hate-to-love",
+      "label": "Hate to Love / Enemies",
+      "category": "dynamic"
+    },
+    {
+      "id": "hate-sex",
+      "label": "Hate Sex Energy",
+      "category": "intensity"
+    },
+    {
+      "id": "romance",
+      "label": "Romantic / Emotional",
+      "category": "pace"
+    },
+    {
+      "id": "first-times",
+      "label": "First Times / Nervous",
+      "category": "pace"
+    },
+    {
+      "id": "confession",
+      "label": "Confession Scenes",
+      "category": "pace"
+    },
+    {
+      "id": "office",
+      "label": "Office / Workplace",
+      "category": "setting"
+    },
+    {
+      "id": "after-hours",
+      "label": "After Hours",
+      "category": "setting"
+    },
+    {
+      "id": "desk-sex",
+      "label": "Desk / Against Surface",
+      "category": "act"
+    },
+    {
+      "id": "semi-public",
+      "label": "Semi-Public Spaces",
+      "category": "public"
+    },
+    {
+      "id": "home",
+      "label": "Domestic / Home",
+      "category": "setting"
+    },
+    {
+      "id": "caught",
+      "label": "Almost Caught",
+      "category": "risk"
+    },
+    {
+      "id": "secret",
+      "label": "Secret Relationships",
+      "category": "dynamic"
+    },
+    {
+      "id": "affair-fantasy",
+      "label": "Affair Fantasy",
+      "category": "forbidden"
+    },
+    {
+      "id": "forbidden",
+      "label": "Forbidden / Taboo Fiction",
+      "category": "forbidden"
+    },
+    {
+      "id": "incest-step",
+      "label": "Step-family (adult fiction)",
+      "category": "forbidden"
+    },
+    {
+      "id": "age-gap",
+      "label": "Age Gap (all 18+)",
+      "category": "dynamic"
+    },
+    {
+      "id": "authority",
+      "label": "Authority Figures",
+      "category": "power"
+    },
+    {
+      "id": "punishment",
+      "label": "Punishment / Discipline",
+      "category": "power"
+    },
+    {
+      "id": "aftercare",
+      "label": "Aftercare Focus",
+      "category": "care"
+    },
+    {
+      "id": "caretaking",
+      "label": "Caretaking",
+      "category": "care"
+    },
+    {
+      "id": "medical-play",
+      "label": "Medical Play",
+      "category": "roleplay"
+    },
+    {
+      "id": "uniform",
+      "label": "Uniforms",
+      "category": "roleplay"
+    },
+    {
+      "id": "roleplay",
+      "label": "Roleplay Heavy",
+      "category": "roleplay"
+    },
+    {
+      "id": "body-worship",
+      "label": "Body Worship",
+      "category": "act"
+    },
+    {
+      "id": "size-difference",
+      "label": "Size Difference",
+      "category": "dynamic"
+    },
+    {
+      "id": "wall-pinning",
+      "label": "Pinned to Wall",
+      "category": "act"
+    },
+    {
+      "id": "quickies",
+      "label": "Quickies",
+      "category": "pace"
+    },
+    {
+      "id": "lazy-sex",
+      "label": "Lazy / Morning Sex",
+      "category": "pace"
+    },
+    {
+      "id": "friends-to-lovers",
+      "label": "Friends to Lovers",
+      "category": "dynamic"
+    },
+    {
+      "id": "one-night",
+      "label": "One Night Stand",
+      "category": "pace"
+    },
+    {
+      "id": "hotel",
+      "label": "Hotel Rooms",
+      "category": "setting"
+    },
+    {
+      "id": "stranger",
+      "label": "Stranger Risk",
+      "category": "risk"
+    },
+    {
+      "id": "magic-bondage",
+      "label": "Magical Restraint",
+      "category": "fantasy"
+    },
+    {
+      "id": "possession",
+      "label": "Possession Fantasy",
+      "category": "fantasy"
+    },
+    {
+      "id": "ritual",
+      "label": "Ritual / Ceremony",
+      "category": "fantasy"
+    },
+    {
+      "id": "worship",
+      "label": "Worship / Devotion",
+      "category": "power"
+    },
+    {
+      "id": "biting",
+      "label": "Biting / Marking",
+      "category": "act"
+    },
+    {
+      "id": "blood-play-light",
+      "label": "Light Blood Play (fiction)",
+      "category": "edge"
+    },
+    {
+      "id": "immortal-claim",
+      "label": "Immortal Claim",
+      "category": "fantasy"
+    },
+    {
+      "id": "night",
+      "label": "Night / Darkness",
+      "category": "setting"
+    },
+    {
+      "id": "protection",
+      "label": "Protector Dynamic",
+      "category": "dynamic"
+    },
+    {
+      "id": "sweat",
+      "label": "Sweat / Gym",
+      "category": "body"
+    },
+    {
+      "id": "stockings",
+      "label": "Stockings / Lingerie",
+      "category": "clothing"
+    },
+    {
+      "id": "intellectual-tease",
+      "label": "Intellectual Tease",
+      "category": "play"
+    },
+    {
+      "id": "erotic-literature",
+      "label": "Erotic Reading Together",
+      "category": "play"
+    },
+    {
+      "id": "kissing",
+      "label": "Heavy Kissing Focus",
+      "category": "act"
+    },
+    {
+      "id": "soft-dom",
+      "label": "Soft Domination",
+      "category": "power"
+    },
+    {
+      "id": "gentle-dom",
+      "label": "Gentle Dom",
+      "category": "power"
+    },
+    {
+      "id": "control",
+      "label": "Control / Orders",
+      "category": "power"
+    },
+    {
+      "id": "ownership",
+      "label": "Ownership Language",
+      "category": "power"
+    },
+    {
+      "id": "guilt",
+      "label": "Guilt / Taboo Thrill",
+      "category": "forbidden"
+    },
+    {
+      "id": "competition",
+      "label": "Competitive / Brat Taming",
+      "category": "play"
+    },
+    {
+      "id": "help-me-fix-it",
+      "label": "Help Me Fix It Trope",
+      "category": "setting"
+    },
+    {
+      "id": "shyness",
+      "label": "Shy / Flustered",
+      "category": "pace"
+    },
+    {
+      "id": "first-kiss",
+      "label": "First Kiss Focus",
+      "category": "romance"
+    },
+    {
+      "id": "being-used",
+      "label": "Being Used (consensual)",
+      "category": "power"
+    },
+    {
+      "id": "role-reversal",
+      "label": "Role Reversal",
+      "category": "dynamic"
+    },
+    {
+      "id": "secret-affair",
+      "label": "Secret Affair",
+      "category": "forbidden"
+    },
+    {
+      "id": "domestic",
+      "label": "Domestic Intimacy",
+      "category": "setting"
+    },
+    {
+      "id": "pure-filth",
+      "label": "Pure Filth / Explicit",
+      "category": "intensity"
+    },
+    {
+      "id": "breeding-fantasy",
+      "label": "Breeding Fantasy (adult)",
+      "category": "edge"
+    },
+    {
+      "id": "creampie",
+      "label": "Creampie Focus",
+      "category": "act"
+    },
+    {
+      "id": "multiple-rounds",
+      "label": "Multiple Rounds",
+      "category": "pace"
+    },
+    {
+      "id": "sensory",
+      "label": "Sensory Play",
+      "category": "play"
+    },
+    {
+      "id": "temperature",
+      "label": "Temperature Play",
+      "category": "play"
+    },
+    {
+      "id": "blindfold",
+      "label": "Blindfolds",
+      "category": "power"
+    },
+    {
+      "id": "collar",
+      "label": "Collars / Collaring",
+      "category": "power"
+    },
+    {
+      "id": "pet-play",
+      "label": "Pet Play (light)",
+      "category": "roleplay"
+    },
+    {
+      "id": "corruption",
+      "label": "Corruption Arc",
+      "category": "pace"
+    },
+    {
+      "id": "innocent-to-filthy",
+      "label": "Innocent → Filthy Arc",
+      "category": "pace"
+    },
+    {
+      "id": "free-use",
+      "label": "Free Use (consensual)",
+      "category": "power"
+    },
+    {
+      "id": "hypnosis",
+      "label": "Hypnosis Play",
+      "category": "psychological"
+    },
+    {
+      "id": "mind-control",
+      "label": "Mind Control Fantasy",
+      "category": "psychological"
+    },
+    {
+      "id": "sleep-play",
+      "label": "Sleep Play (CNC negotiated)",
+      "category": "edge"
+    },
+    {
+      "id": "energy-drain",
+      "label": "Energy Drain / Succubus Feed",
+      "category": "fantasy"
+    },
+    {
+      "id": "happy-ending",
+      "label": "Happy Ending Massage",
+      "category": "act"
+    },
+    {
+      "id": "lap-dance",
+      "label": "Lap Dance / Club",
+      "category": "public"
+    },
+    {
+      "id": "oil",
+      "label": "Oil / Massage",
+      "category": "body"
+    },
+    {
+      "id": "experimentation",
+      "label": "Experimental / Lab Play",
+      "category": "fantasy"
+    },
+    {
+      "id": "trickery",
+      "label": "Trickster Games",
+      "category": "play"
+    },
+    {
+      "id": "psychological",
+      "label": "Psychological Play",
+      "category": "psychological"
+    },
+    {
+      "id": "brat-taming",
+      "label": "brat taming",
+      "category": "dynamic"
+    },
+    {
+      "id": "spanking-adjacent",
+      "label": "spanking adjacent",
+      "category": "dynamic"
+    }
+  ],
+  "hardNoPresets": [
+    {
+      "id": "minors",
+      "label": "Anything involving minors (always enforced)"
+    },
+    {
+      "id": "noncon-real",
+      "label": "Non-consensual framing without CNC/safeword context"
+    },
+    {
+      "id": "scat",
+      "label": "Scat"
+    },
+    {
+      "id": "gore",
+      "label": "Extreme gore"
+    },
+    {
+      "id": "snuff",
+      "label": "Snuff / death"
+    },
+    {
+      "id": "bestiality",
+      "label": "Bestiality"
+    },
+    {
+      "id": "watersports",
+      "label": "Watersports"
+    },
+    {
+      "id": "vomit",
+      "label": "Vomit"
+    },
+    {
+      "id": "needles",
+      "label": "Needles / heavy medical harm"
+    },
+    {
+      "id": "raceplay",
+      "label": "Race play"
+    },
+    {
+      "id": "incest-blood",
+      "label": "Blood-related incest"
+    },
+    {
+      "id": "pregnancy-risk",
+      "label": "Unwanted pregnancy risk focus"
+    }
+  ],
+  "writingStyles": [
+    {
+      "id": "slow-burn",
+      "label": "Slow Burn",
+      "description": "Long tension, charged dialogue, delayed payoff."
+    },
+    {
+      "id": "direct",
+      "label": "Direct / Immediate",
+      "description": "Gets to heat quickly with less preamble."
+    },
+    {
+      "id": "romantic",
+      "label": "Romantic",
+      "description": "Emotional intimacy, longing, soft language."
+    },
+    {
+      "id": "dark",
+      "label": "Dark",
+      "description": "Obsession, danger, moral grey, intensity."
+    },
+    {
+      "id": "literary",
+      "label": "Literary",
+      "description": "Rich prose, sensory detail, metaphor."
+    },
+    {
+      "id": "filthy",
+      "label": "Pure Filth",
+      "description": "Explicit, graphic, pornographic pacing."
+    },
+    {
+      "id": "playful",
+      "label": "Playful / Bratty",
+      "description": "Banter, teasing, competitive heat."
+    },
+    {
+      "id": "psychological",
+      "label": "Psychological",
+      "description": "Mind games, internal monologue, control."
+    }
+  ],
+  "storyModes": [
+    {
+      "id": "slow-burn",
+      "label": "Slow-burn Seduction"
+    },
+    {
+      "id": "immediate",
+      "label": "Immediate Intense"
+    },
+    {
+      "id": "cnc",
+      "label": "CNC (safeword-enabled)"
+    },
+    {
+      "id": "dubcon",
+      "label": "Dubcon Fantasy"
+    },
+    {
+      "id": "full-consent",
+      "label": "Full Enthusiastic Consent"
+    },
+    {
+      "id": "blackmail",
+      "label": "Blackmail Fantasy"
+    },
+    {
+      "id": "romance",
+      "label": "Romance First"
+    },
+    {
+      "id": "pure-filth",
+      "label": "Pure Filth"
+    },
+    {
+      "id": "enemies",
+      "label": "Enemies to Lovers"
+    },
+    {
+      "id": "corruption",
+      "label": "Corruption Arc"
+    },
+    {
+      "id": "free-use",
+      "label": "Free Use"
+    },
+    {
+      "id": "hypnosis",
+      "label": "Hypnosis / Mind Games"
+    },
+    {
+      "id": "breeding",
+      "label": "Breeding Heat"
+    },
+    {
+      "id": "monster",
+      "label": "Monster / Supernatural"
+    }
+  ],
+  "domSubRoles": [
+    {
+      "id": "dom",
+      "label": "Dominant"
+    },
+    {
+      "id": "sub",
+      "label": "Submissive"
+    },
+    {
+      "id": "switch",
+      "label": "Switch"
+    },
+    {
+      "id": "brat",
+      "label": "Brat"
+    },
+    {
+      "id": "yandere",
+      "label": "Yandere / Obsessive"
+    },
+    {
+      "id": "random",
+      "label": "Randomize"
+    }
+  ]
+}

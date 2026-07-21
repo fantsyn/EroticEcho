@@ -1,0 +1,285 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0d0a12;
+  --fg: #f8f7fa;
+  --accent: #ec4899;
+  --accent-2: #a855f7;
+  --theme-glow: rgba(236, 72, 153, 0.18);
+  --theme-glow-2: rgba(168, 85, 247, 0.12);
+}
+
+html {
+  color-scheme: dark;
+  /* Prevent iOS rubber-band jank behind fixed chrome */
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  min-height: 100dvh;
+  min-height: -webkit-fill-available;
+  /* Notch / home indicator */
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  /* Smoother taps on mobile — kill 300ms delay & ghost double-fires */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  overscroll-behavior-y: none;
+}
+
+/* Buttons/links: reliable mobile hit targets */
+button,
+a,
+[role="button"] {
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+input,
+textarea {
+  -webkit-user-select: text;
+  user-select: text;
+  font-size: 16px; /* prevent iOS zoom on focus */
+}
+
+/* Play page: no bottom-tab padding (nav hidden there) */
+@media (max-width: 767px) {
+  body:has([data-play-page]) .play-main {
+    padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+  }
+  /* Theater: even tighter chrome */
+  body:has([data-theater="1"]) .play-main {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+/* Reduce motion preference (settings + OS) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body.reduce-motion *,
+body.reduce-motion *::before,
+body.reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+/* ——— Immersive theme shells ——— */
+.theme-default {
+  --theme-glow: rgba(236, 72, 153, 0.18);
+  --theme-glow-2: rgba(168, 85, 247, 0.12);
+}
+.theme-velvet-night {
+  --bg: #12060e;
+  --theme-glow: rgba(244, 63, 94, 0.22);
+  --theme-glow-2: rgba(192, 38, 211, 0.14);
+}
+.theme-neon-noir {
+  --bg: #0a0614;
+  --theme-glow: rgba(139, 92, 246, 0.24);
+  --theme-glow-2: rgba(34, 211, 238, 0.1);
+}
+.theme-candle-library {
+  --bg: #140c06;
+  --theme-glow: rgba(245, 158, 11, 0.2);
+  --theme-glow-2: rgba(234, 88, 12, 0.12);
+}
+.theme-blood-rose {
+  --bg: #100508;
+  --theme-glow: rgba(220, 38, 38, 0.28);
+  --theme-glow-2: rgba(190, 24, 93, 0.16);
+}
+.theme-sunset-glow {
+  --bg: #120a08;
+  --theme-glow: rgba(249, 115, 22, 0.22);
+  --theme-glow-2: rgba(236, 72, 153, 0.12);
+}
+.theme-arcane-smoke {
+  --bg: #06120f;
+  --theme-glow: rgba(16, 185, 129, 0.2);
+  --theme-glow-2: rgba(20, 184, 166, 0.12);
+}
+.theme-ember-cafe {
+  --bg: #0f0c09;
+  --theme-glow: rgba(180, 83, 9, 0.18);
+  --theme-glow-2: rgba(120, 113, 108, 0.12);
+}
+
+/* Seductive ambient background */
+.bg-echo-scene {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, var(--theme-glow), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 50%, var(--theme-glow-2), transparent),
+    radial-gradient(ellipse 50% 30% at 0% 80%, rgba(0, 0, 0, 0.4), transparent);
+  transition: background-color 0.8s ease;
+}
+
+/* Soft noise grain */
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-echo-600 to-velvet-600 px-5 py-2.5 min-h-11 text-sm font-medium text-white shadow-lg shadow-echo-900/40 transition hover:from-echo-500 hover:to-velvet-500 hover:shadow-echo-700/40 disabled:opacity-50 disabled:pointer-events-none touch-manipulation;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 min-h-11 text-sm text-ink-100 transition hover:bg-white/10 hover:border-echo-500/40 disabled:opacity-50 touch-manipulation;
+  }
+
+  .btn-choice {
+    @apply inline-flex items-start gap-2.5 rounded-xl border border-white/10 bg-black/25 px-3.5 py-3 min-h-12 text-sm text-ink-100 transition hover:border-echo-400/35 hover:bg-echo-500/10 active:scale-[0.99] touch-manipulation;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-red-500/30 bg-red-500/10 px-4 py-2 text-sm text-red-200 transition hover:bg-red-500/20;
+  }
+
+  .card {
+    @apply rounded-2xl border border-white/10 bg-ink-900/50 backdrop-blur-md shadow-xl;
+  }
+
+  .card-immersive {
+    @apply rounded-2xl border backdrop-blur-xl shadow-2xl;
+    border-color: color-mix(in srgb, var(--theme-glow) 40%, transparent);
+    background: color-mix(in srgb, var(--bg) 75%, transparent);
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.04),
+      0 25px 50px -12px rgba(0, 0, 0, 0.55),
+      0 0 80px -20px var(--theme-glow);
+  }
+
+  .input {
+    @apply w-full rounded-xl border border-white/10 bg-black/40 px-3.5 py-2.5 min-h-11 text-base sm:text-sm text-ink-50 placeholder:text-ink-500 outline-none transition focus:border-echo-500/60 focus:ring-2 focus:ring-echo-500/25;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/5 px-2.5 py-1.5 min-h-9 text-xs text-ink-200 transition hover:border-echo-400/40 hover:bg-echo-500/10 touch-manipulation;
+  }
+
+  .label {
+    @apply mb-1 block text-xs font-medium uppercase tracking-wider text-ink-400;
+  }
+
+  .chip-active {
+    @apply border-echo-500/50 bg-echo-500/20 text-echo-100;
+  }
+
+  .panel-title {
+    @apply font-display text-xl text-echo-100 tracking-wide;
+  }
+
+  .section-kicker {
+    @apply text-[10px] uppercase tracking-[0.25em] text-echo-300/80;
+  }
+}
+
+/* Typewriter caret */
+.caret-blink::after {
+  content: "▋";
+  margin-left: 2px;
+  animation: pulseSoft 1s ease-in-out infinite;
+  color: #f472b6;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(236, 72, 153, 0.35);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(236, 72, 153, 0.55);
+}
+
+/* Prose for story reader — immersive */
+.story-prose {
+  @apply text-[1.08rem] sm:text-[1.15rem] leading-[1.85] text-ink-100;
+  white-space: pre-wrap;
+  font-family: var(--font-display), Georgia, serif;
+  letter-spacing: 0.01em;
+}
+.story-prose p {
+  margin-bottom: 1em;
+}
+
+/* Floating orbs */
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translate(2%, 4%) scale(1.08);
+    opacity: 0.85;
+  }
+}
+.animate-float-slow {
+  animation: floatSlow 14s ease-in-out infinite;
+}
+
+/* Soft pulse glow for active play frame */
+@keyframes borderPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 40px -10px var(--theme-glow);
+  }
+  50% {
+    box-shadow: 0 0 70px -5px var(--theme-glow);
+  }
+}
+.play-frame {
+  animation: borderPulse 6s ease-in-out infinite;
+}
+@media (pointer: coarse) {
+  .play-frame {
+    animation: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .play-frame,
+  .animate-curtain,
+  .animate-float-slow {
+    animation: none !important;
+  }
+}
+
+/* Curtain fade for immersion */
+@keyframes curtainIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.animate-curtain {
+  animation: curtainIn 0.55s ease-out both;
+}
