@@ -37,8 +37,18 @@ God plan: **no daily caps**, admin flags, bypass metering.
 
 - Register / login / logout via `/login`
 - Session cookie `ee_session` (HTTP-only)
-- Users file: `data/users.json` (gitignored)
+- Users file: `data/users.json` locally; on **Vercel** uses `/tmp` + memory (no project-dir writes)
+- God login never requires a writable filesystem (`GOD_PASSWORD` env)
 - AI routes require login unless `ALLOW_GUEST_AI=true`
+
+### Vercel env (required for god login)
+
+| Variable | Notes |
+|----------|--------|
+| `SESSION_SECRET` | Long random string (≥16 chars) |
+| `GOD_USER` | Default `god` |
+| `GOD_PASSWORD` | Must match what you type on `/login` |
+| `XAI_API_KEY` | Live stories/images |
 
 ## Public checklist
 

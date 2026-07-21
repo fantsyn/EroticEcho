@@ -2,8 +2,11 @@ import { promises as fs } from "fs";
 import path from "path";
 import { randomBytes } from "crypto";
 import { findByEmail, setPassword } from "./users";
+import { getDataDir } from "./data-path";
 
-const FILE = path.join(process.cwd(), "data", "password-resets.json");
+function resetFile(): string {
+  return path.join(getDataDir(), "password-resets.json");
+}
 
 type ResetRow = {
   email: string;
@@ -13,7 +16,7 @@ type ResetRow = {
 
 async function load(): Promise<ResetRow[]> {
   try {
-    const raw = await fs.readFile(FILE, "utf8");
+    const raw = await fs.readFile(resetFile(), "utf8");
     return JSON.parse(raw) as ResetRow[];
   } catch {
     return [];
@@ -21,8 +24,13 @@ async function load(): Promise<ResetRow[]> {
 }
 
 async function save(rows: ResetRow[]) {
-  await fs.mkdir(path.dirname(FILE), { recursive: true });
-  await fs.writeFile(FILE, JSON.stringify(rows, null, 2), "utf8");
+  try {
+    const file = resetFile();
+    await fs.mkdir(path.dirname(file), { recursive: true });
+    await fs.writeFile(file, JSON.stringify(rows, null, 2), "utf8");
+  } catch {
+    // Serverless read-only /tmp full — tokens stay request-local only
+  }
 }
 
 /** Create a reset token (valid 1 hour). Returns token for email or admin display. */

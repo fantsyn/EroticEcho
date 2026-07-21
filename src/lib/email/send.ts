@@ -1,5 +1,6 @@
 import { promises as fs } from "fs";
 import path from "path";
+import { getDataDir } from "@/lib/auth/data-path";
 
 /**
  * Send themed email via Resend if RESEND_API_KEY is set.
@@ -63,26 +64,30 @@ async function writeOutbox(
   opts: { to: string; subject: string; html: string; text: string },
   note?: string
 ) {
-  const dir = path.join(process.cwd(), "data", "outbox");
-  await fs.mkdir(dir, { recursive: true });
-  const file = path.join(
-    dir,
-    `${Date.now()}-${opts.to.replace(/[^a-z0-9@._-]/gi, "_")}.json`
-  );
-  await fs.writeFile(
-    file,
-    JSON.stringify(
-      {
-        ...opts,
-        note,
-        at: new Date().toISOString(),
-      },
-      null,
-      2
-    ),
-    "utf8"
-  );
-  if (process.env.NODE_ENV !== "production") {
-    console.info("[email outbox]", opts.to, opts.subject, file);
+  try {
+    const dir = path.join(getDataDir(), "outbox");
+    await fs.mkdir(dir, { recursive: true });
+    const file = path.join(
+      dir,
+      `${Date.now()}-${opts.to.replace(/[^a-z0-9@._-]/gi, "_")}.json`
+    );
+    await fs.writeFile(
+      file,
+      JSON.stringify(
+        {
+          ...opts,
+          note,
+          at: new Date().toISOString(),
+        },
+        null,
+        2
+      ),
+      "utf8"
+    );
+    if (process.env.NODE_ENV !== "production") {
+      console.info("[email outbox]", opts.to, opts.subject, file);
+    }
+  } catch {
+    // Serverless may not allow disk writes — skip silently
   }
 }

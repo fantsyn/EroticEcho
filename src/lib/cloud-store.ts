@@ -5,8 +5,11 @@
 import { promises as fs } from "fs";
 import path from "path";
 import type { ActiveStory } from "./types";
+import { getDataDir } from "@/lib/auth/data-path";
 
-const DIR = path.join(process.cwd(), "data", "cloud-stories");
+function cloudDir(): string {
+  return path.join(getDataDir(), "cloud-stories");
+}
 
 /** Unambiguous alphabet (no 0/O, 1/I/L) */
 const ALPHABET = "23456789ABCDEFGHJKMNPQRSTUVWXYZ";
@@ -28,11 +31,11 @@ export function normalizeCode(raw: string): string {
 }
 
 function fileFor(code: string): string {
-  return path.join(DIR, `${normalizeCode(code)}.json`);
+  return path.join(cloudDir(), `${normalizeCode(code)}.json`);
 }
 
 async function ensureDir(): Promise<void> {
-  await fs.mkdir(DIR, { recursive: true });
+  await fs.mkdir(cloudDir(), { recursive: true });
 }
 
 export type CloudPayload = {
@@ -159,7 +162,7 @@ export async function listRecentCloud(limit = 20): Promise<
   await ensureDir();
   let files: string[] = [];
   try {
-    files = await fs.readdir(DIR);
+    files = await fs.readdir(cloudDir());
   } catch {
     return [];
   }
@@ -172,7 +175,7 @@ export async function listRecentCloud(limit = 20): Promise<
   for (const f of files) {
     if (!f.endsWith(".json")) continue;
     try {
-      const raw = await fs.readFile(path.join(DIR, f), "utf8");
+      const raw = await fs.readFile(path.join(cloudDir(), f), "utf8");
       const data = JSON.parse(raw) as CloudPayload;
       rows.push({
         code: data.code,
