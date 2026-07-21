@@ -64,9 +64,11 @@ export function StoryReader() {
   const saveActive = useAppStore((s) => s.saveActive);
   const updateMods = useAppStore((s) => s.updateMods);
   const refreshAuth = useAuthStore((s) => s.refresh);
-  const canGenImages =
-    useAuthStore((s) => s.user?.features.canGenerateImages) === true ||
-    useAuthStore((s) => s.user?.isGod) === true;
+  // Single selector — never short-circuit multiple hooks with ||
+  const canGenImages = useAuthStore(
+    (s) =>
+      s.user?.features.canGenerateImages === true || s.user?.isGod === true
+  );
 
   const [loading, setLoading] = useState(false);
   const [imageLoading, setImageLoading] = useState(false);
@@ -114,7 +116,7 @@ export function StoryReader() {
 
   // Reset typing gate when scene changes
   useEffect(() => {
-    if (!current) {
+    if (!current?.id) {
       setTypingDone(true);
       return;
     }
@@ -420,7 +422,7 @@ export function StoryReader() {
         if (mountedRef.current) setLoading(false);
       }
     },
-    [story, updateActiveStory, attachImageToScene, speakScene]
+    [story, updateActiveStory, attachImageToScene, refreshAuth]
   );
 
   const generateImage = async () => {

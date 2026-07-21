@@ -93,7 +93,6 @@ export function PresetCard({
     (async () => {
       const ok: { id: string; label: string; src: string }[] = [];
       for (const c of candidates) {
-        // eslint-disable-next-line no-await-in-loop
         const good = await probeImage(c.src);
         if (cancelled) return;
         if (good) ok.push(c);

@@ -41,7 +41,6 @@ export function track(
   pushLocal(name, props);
 
   if (process.env.NODE_ENV !== "production") {
-    // eslint-disable-next-line no-console
     console.debug("[analytics]", name, props || {});
   }
 

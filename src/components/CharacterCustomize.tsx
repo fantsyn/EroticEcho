@@ -30,9 +30,11 @@ export function CharacterCustomize({ character, onChange }: Props) {
   const [avatarBusy, setAvatarBusy] = useState(false);
   const [showAllKinks, setShowAllKinks] = useState(false);
   const [genError, setGenError] = useState<string | null>(null);
-  const canGenImages =
-    useAuthStore((s) => s.user?.features.canGenerateImages) === true ||
-    useAuthStore((s) => s.user?.isGod) === true;
+  // Single selector — never short-circuit multiple hooks with ||
+  const canGenImages = useAuthStore(
+    (s) =>
+      s.user?.features.canGenerateImages === true || s.user?.isGod === true
+  );
 
   const patch = (partial: Partial<Character>) => {
     onChange({ ...character, ...partial });

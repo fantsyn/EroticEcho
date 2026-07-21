@@ -20,8 +20,7 @@ export function InstallPrompt() {
     // Only tip on small screens / standalone not already installed
     const standalone =
       window.matchMedia("(display-mode: standalone)").matches ||
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (navigator as any).standalone === true;
+      (navigator as Navigator & { standalone?: boolean }).standalone === true;
     if (standalone) return;
 
     const isMobile = /iPhone|iPad|Android/i.test(navigator.userAgent);
