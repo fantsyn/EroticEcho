@@ -307,6 +307,88 @@ export const MOOD_CHIPS: MoodChip[] = [
       },
     }),
   },
+  {
+    id: "she-melts",
+    label: "She melts",
+    description: "Confident → soft; she falls for you",
+    heat: 1,
+    apply: (s) => ({
+      settings: {
+        ...s.settings,
+        mode: "romance" as StoryModeId,
+        intensity: clamp(s.settings.intensity, 1, 8),
+      },
+      mods: {
+        ...s.mods,
+        personalityNotes: appendNote(
+          s.mods.personalityNotes,
+          "Arc: her confident/untouchable act cracks; she softens, gets almost shy, attaches emotionally while heat stays."
+        ),
+        freeformNotes: appendNote(
+          s.mods.freeformNotes,
+          "Next scene: she melts for the reader — less performance, more real need, soft eye contact, cling, 'don't make fun of me for feeling this'."
+        ),
+        addedKinks: uniqKinks(s, ["romance", "praise", "kissing", "aftercare"]),
+      },
+      memorySummary: appendNote(
+        s.memorySummary,
+        "Emotional turn: she is falling for you; bravado dropping."
+      ),
+    }),
+  },
+  {
+    id: "you-submit",
+    label: "You submit",
+    description: "Reader is the sub; she leads",
+    heat: 2,
+    apply: (s) => ({
+      settings: {
+        ...s.settings,
+        intensity: clamp(s.settings.intensity + 1, 1, 10),
+      },
+      mods: {
+        ...s.mods,
+        personalityNotes: appendNote(
+          s.mods.personalityNotes,
+          "She leads; reader yields. Clear instructions, praise for obedience, firm but consensual control."
+        ),
+        freeformNotes: appendNote(
+          s.mods.freeformNotes,
+          "Reader-as-sub framing: she gives orders, sets pace, uses soft-dom or full-dom energy; safeword always honored."
+        ),
+        relationshipNotes: appendNote(
+          s.mods.relationshipNotes,
+          "Power: she is in charge this stretch; you kneel/listen/serve as she prefers."
+        ),
+        addedKinks: uniqKinks(s, ["soft-dom", "service", "praise", "ownership"]),
+      },
+    }),
+  },
+  {
+    id: "shy-to-dom",
+    label: "Shy→dom",
+    description: "She finds her spine and takes control",
+    heat: 2,
+    apply: (s) => ({
+      settings: {
+        ...s.settings,
+        intensity: clamp(s.settings.intensity + 1, 1, 10),
+        mode: "corruption" as StoryModeId,
+      },
+      mods: {
+        ...s.mods,
+        personalityNotes: appendNote(
+          s.mods.personalityNotes,
+          "Shy-to-dom arc: still blushes, but gives real orders; voice shakes then steadies; addicted to being obeyed."
+        ),
+        freeformNotes: appendNote(
+          s.mods.freeformNotes,
+          "She practices leading: sit, stay still, look at me — clumsy confidence growing into real control."
+        ),
+        addedKinks: uniqKinks(s, ["soft-dom", "corruption", "praise", "control"]),
+      },
+    }),
+  },
 ];
 
 export function getMoodChip(id: string): MoodChip | undefined {

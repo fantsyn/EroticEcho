@@ -5,11 +5,14 @@ import Link from "next/link";
 import { v4 as uuidv4 } from "uuid";
 import {
   Bookmark,
+  ChevronDown,
   ChevronLeft,
+  ChevronUp,
   ImagePlus,
   Loader2,
   Maximize2,
   Minimize2,
+  MoreHorizontal,
   Pause,
   Play,
   RefreshCw,
@@ -18,6 +21,8 @@ import {
   Send,
   Settings2,
   ShieldOff,
+  Sparkles,
+  Shirt,
   Undo2,
 } from "lucide-react";
 import { Typewriter } from "./Typewriter";
@@ -88,6 +93,15 @@ export function StoryReader() {
   const [showHardNos, setShowHardNos] = useState(false);
   const [recentActions, setRecentActions] = useState<string[]>([]);
   const [limitModal, setLimitModal] = useState(false);
+  /** Collapsed by default to keep the story page clean */
+  const [panel, setPanel] = useState<
+    null | "mood" | "clothes" | "more"
+  >(null);
+
+  const togglePanel = (id: "mood" | "clothes" | "more") => {
+    setPanel((p) => (p === id ? null : id));
+    if (id !== "more") setShowHardNos(false);
+  };
 
   /** Prevents double-submit / double-generate on multi-touch */
   const generatingRef = useRef(false);
@@ -645,84 +659,43 @@ export function StoryReader() {
             theater && "sm:p-10 border-white/15"
           )}
         >
-          {/* Header */}
-          <div className="flex flex-col gap-3 mb-4">
-            <div className="flex items-start gap-3 min-w-0">
+          {/* Slim header — story first, controls second */}
+          <div className="flex flex-col gap-2.5 mb-3">
+            <div className="flex items-center gap-3 min-w-0">
               <CharacterAvatar
                 character={story.character}
-                size="md"
+                size="sm"
                 shape="soft"
                 className="shrink-0"
               />
               <div className="min-w-0 flex-1">
-                <p className="section-kicker mb-1">{theme.label}</p>
-                <h1 className="panel-title text-lg sm:text-3xl truncate">
+                <h1 className="panel-title text-base sm:text-xl truncate leading-tight">
                   {story.title}
                 </h1>
-                <p className="text-xs text-ink-400 mt-1 flex flex-wrap gap-x-2 gap-y-1">
-                  <span className="text-ink-200">{herName}</span>
+                <p className="text-[11px] text-ink-500 mt-0.5 truncate">
+                  <span className="text-ink-300">{herName}</span>
                   {scenes.length > 0 && (
-                    <>
-                      <span className="text-ink-600">·</span>
-                      <span>
-                        Scene {viewIndex + 1}/{scenes.length}
-                      </span>
-                    </>
+                    <span>
+                      {" "}
+                      · {viewIndex + 1}/{scenes.length}
+                    </span>
+                  )}
+                  {moodFlash && (
+                    <span className="text-echo-300/90"> · {moodFlash}</span>
                   )}
                 </p>
-                <div className="mt-2">
-                  <ShareCodePanel story={story} compact />
-                </div>
               </div>
             </div>
 
-            {/* Mid-story mood chips */}
-            <div className="rounded-xl border border-white/8 bg-black/25 p-2.5 space-y-1.5">
-              <div className="flex items-center justify-between gap-2">
-                <p className="text-[10px] uppercase tracking-widest text-ink-500">
-                  Mood inject (next scene)
-                </p>
-                {moodFlash && (
-                  <span className="text-[10px] text-echo-300 animate-fade-in">
-                    Applied: {moodFlash}
-                  </span>
-                )}
-              </div>
-              <div className="flex flex-wrap gap-1.5">
-                {MOOD_CHIPS.map((m) => (
-                  <button
-                    key={m.id}
-                    type="button"
-                    title={m.description}
-                    disabled={busy}
-                    onClick={() => applyMood(m.id)}
-                    className={clsx(
-                      "rounded-full border px-2.5 py-1 text-[11px] transition touch-manipulation min-h-8",
-                      lastMood === m.id
-                        ? "bg-echo-500/25 border-echo-400/50 text-echo-50"
-                        : m.heat === 3
-                          ? "border-rose-500/30 bg-rose-950/30 text-rose-100/90 hover:border-rose-400/50"
-                          : m.heat === 2
-                            ? "border-amber-500/25 bg-amber-950/25 text-amber-100/90 hover:border-amber-400/40"
-                            : "border-white/10 bg-white/5 text-ink-300 hover:border-white/25"
-                    )}
-                  >
-                    {m.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Large mobile-safe controls */}
-            <div className="flex flex-wrap items-center gap-2 sticky top-[3.25rem] z-30 bg-black/50 backdrop-blur-md py-2 -mx-1 px-1 rounded-xl md:static md:bg-transparent md:p-0">
+            {/* Primary bar only — secondary tools collapse */}
+            <div className="flex flex-wrap items-center gap-1.5 sticky top-[3.25rem] z-30 bg-black/55 backdrop-blur-md py-1.5 -mx-1 px-1 rounded-xl md:static md:bg-transparent md:p-0">
               {current && (
                 <button
                   type="button"
                   className={clsx(
-                    "btn-primary min-h-12 min-w-[8rem] px-5 touch-manipulation select-none",
+                    "btn-primary min-h-10 px-4 text-sm touch-manipulation select-none",
                     voiceLoading && "opacity-90"
                   )}
-                  // onClick works on every mobile browser; pointerup alone is flaky
                   onClick={(e) => {
                     e.preventDefault();
                     e.stopPropagation();
@@ -731,166 +704,242 @@ export function StoryReader() {
                 >
                   {voiceLoading ? (
                     <>
-                      <Loader2 className="h-4 w-4 animate-spin" /> Loading
+                      <Loader2 className="h-3.5 w-3.5 animate-spin" /> …
                     </>
                   ) : isSpeaking && !isPaused ? (
                     <>
-                      <Pause className="h-4 w-4" /> Pause
+                      <Pause className="h-3.5 w-3.5" /> Pause
                     </>
                   ) : isSpeaking && isPaused ? (
                     <>
-                      <Play className="h-4 w-4" /> Resume
+                      <Play className="h-3.5 w-3.5" /> Resume
                     </>
                   ) : (
                     <>
-                      <Play className="h-4 w-4" /> Narrate
+                      <Play className="h-3.5 w-3.5" /> Narrate
                     </>
                   )}
                 </button>
               )}
               <button
                 type="button"
-                className="btn-ghost min-h-12 touch-manipulation"
+                className="btn-ghost min-h-10 min-w-10 px-2.5 touch-manipulation"
+                title="Save"
                 onClick={(e) => {
                   e.preventDefault();
                   saveActive();
-                  setHint("Saved · cloud synced if code exists");
+                  setHint("Saved");
                 }}
               >
                 <Save className="h-4 w-4" />
-                <span className="hidden sm:inline">Save</span>
               </button>
-              {current && (
+              <button
+                type="button"
+                className={clsx(
+                  "btn-ghost min-h-10 px-2.5 text-xs touch-manipulation gap-1",
+                  panel === "mood" && "border-echo-500/40 text-echo-200"
+                )}
+                title="Mood inject"
+                disabled={busy}
+                onClick={() => togglePanel("mood")}
+              >
+                <Sparkles className="h-3.5 w-3.5" />
+                <span className="hidden xs:inline sm:inline">Mood</span>
+                {panel === "mood" ? (
+                  <ChevronUp className="h-3 w-3 opacity-60" />
+                ) : (
+                  <ChevronDown className="h-3 w-3 opacity-60" />
+                )}
+              </button>
+              {scenes.length > 0 && (
                 <button
                   type="button"
                   className={clsx(
-                    "btn-ghost min-h-12 touch-manipulation",
-                    current.bookmarked && "text-echo-300 border-echo-500/30"
+                    "btn-ghost min-h-10 px-2.5 text-xs touch-manipulation gap-1",
+                    panel === "clothes" && "border-echo-500/40 text-echo-200"
                   )}
-                  onClick={toggleBookmark}
+                  title="Clothing"
+                  onClick={() => togglePanel("clothes")}
                 >
-                  <Bookmark className="h-4 w-4" />
+                  <Shirt className="h-3.5 w-3.5" />
+                  <span className="hidden sm:inline">Look</span>
                 </button>
               )}
               <button
                 type="button"
                 className={clsx(
-                  "btn-ghost min-h-12 touch-manipulation",
-                  showMods && "border-echo-500/40 text-echo-200"
+                  "btn-ghost min-h-10 min-w-10 px-2.5 touch-manipulation ml-auto",
+                  panel === "more" && "border-echo-500/40 text-echo-200"
                 )}
-                onClick={() => setShowMods((v) => !v)}
+                title="More tools"
+                onClick={() => togglePanel("more")}
               >
-                <Settings2 className="h-4 w-4" />
-                <span className="hidden sm:inline">Edit</span>
-              </button>
-              {scenes.length > 0 && isLatest && (
-                <button
-                  type="button"
-                  className="btn-ghost min-h-12 touch-manipulation"
-                  disabled={busy}
-                  title="Undo last scene"
-                  onClick={undoLastScene}
-                >
-                  <Undo2 className="h-4 w-4" />
-                  <span className="hidden sm:inline">Undo</span>
-                </button>
-              )}
-              {scenes.length > 0 && isLatest && current && (
-                <button
-                  type="button"
-                  className="btn-ghost min-h-12 touch-manipulation"
-                  disabled={busy}
-                  title="Regenerate this scene"
-                  onClick={() => void regenerateLastScene()}
-                >
-                  <RefreshCw
-                    className={clsx("h-4 w-4", busy && "animate-spin")}
-                  />
-                  <span className="hidden sm:inline">Regen</span>
-                </button>
-              )}
-              <button
-                type="button"
-                className={clsx(
-                  "btn-ghost min-h-12 touch-manipulation",
-                  theater && "border-echo-500/40 text-echo-200"
-                )}
-                title="Theater mode"
-                onClick={() => setTheater((v) => !v)}
-              >
-                {theater ? (
-                  <Minimize2 className="h-4 w-4" />
-                ) : (
-                  <Maximize2 className="h-4 w-4" />
-                )}
-              </button>
-              <button
-                type="button"
-                className={clsx(
-                  "btn-ghost min-h-12 touch-manipulation",
-                  showHardNos && "border-rose-500/40 text-rose-200"
-                )}
-                title="Hard nos"
-                onClick={() => setShowHardNos((v) => !v)}
-              >
-                <ShieldOff className="h-4 w-4" />
+                <MoreHorizontal className="h-4 w-4" />
               </button>
             </div>
-          </div>
 
-          {/* Clothing state */}
-          {scenes.length > 0 && (
-            <div className="mb-3 rounded-xl border border-white/8 bg-black/20 p-2">
-              <p className="text-[10px] uppercase tracking-widest text-ink-500 mb-1.5 px-1">
-                Clothing
-              </p>
-              <div className="flex flex-wrap gap-1.5">
-                {CLOTHING_STATES.map((c) => {
-                  const active =
-                    (story.mods.clothingState || "dressed") === c.id;
-                  return (
+            {/* Mood drawer */}
+            {panel === "mood" && (
+              <div className="rounded-xl border border-white/8 bg-black/30 p-2.5 space-y-1.5 animate-fade-in">
+                <p className="text-[10px] uppercase tracking-widest text-ink-500 px-0.5">
+                  Mood for next scene
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  {MOOD_CHIPS.map((m) => (
                     <button
-                      key={c.id}
+                      key={m.id}
                       type="button"
-                      onClick={() => setClothing(c.id)}
+                      title={m.description}
+                      disabled={busy}
+                      onClick={() => applyMood(m.id)}
                       className={clsx(
-                        "rounded-full border px-2.5 py-1 text-[11px] min-h-8 touch-manipulation transition",
-                        active
-                          ? "bg-echo-500/25 border-echo-400/45 text-echo-50"
-                          : "border-white/10 bg-white/5 text-ink-400 active:bg-white/10"
+                        "rounded-full border px-2.5 py-1 text-[11px] transition touch-manipulation min-h-8",
+                        lastMood === m.id
+                          ? "bg-echo-500/25 border-echo-400/50 text-echo-50"
+                          : m.heat === 3
+                            ? "border-rose-500/30 bg-rose-950/30 text-rose-100/90"
+                            : m.heat === 2
+                              ? "border-amber-500/25 bg-amber-950/25 text-amber-100/90"
+                              : "border-white/10 bg-white/5 text-ink-300"
                       )}
                     >
-                      {c.label}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-
-          {/* Hard-no panic */}
-          {showHardNos && (
-            <div className="mb-3 rounded-xl border border-rose-500/25 bg-rose-950/30 p-3 space-y-2">
-              <p className="text-xs text-rose-100/90 font-medium">
-                Block content for this story (and profile)
-              </p>
-              <div className="flex flex-wrap gap-1.5">
-                {hardNoPresets
-                  .filter((h) => h.id !== "minors")
-                  .slice(0, 12)
-                  .map((h) => (
-                    <button
-                      key={h.id}
-                      type="button"
-                      className="rounded-full border border-rose-400/30 bg-black/30 px-2.5 py-1 text-[11px] text-rose-100 min-h-8"
-                      onClick={() => injectHardNo(h.label)}
-                    >
-                      {h.label}
+                      {m.label}
                     </button>
                   ))}
+                </div>
               </div>
-            </div>
-          )}
+            )}
+
+            {/* Clothing drawer */}
+            {panel === "clothes" && scenes.length > 0 && (
+              <div className="rounded-xl border border-white/8 bg-black/30 p-2.5 animate-fade-in">
+                <p className="text-[10px] uppercase tracking-widest text-ink-500 mb-1.5 px-0.5">
+                  Clothing
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  {CLOTHING_STATES.map((c) => {
+                    const active =
+                      (story.mods.clothingState || "dressed") === c.id;
+                    return (
+                      <button
+                        key={c.id}
+                        type="button"
+                        onClick={() => setClothing(c.id)}
+                        className={clsx(
+                          "rounded-full border px-2.5 py-1 text-[11px] min-h-8 touch-manipulation transition",
+                          active
+                            ? "bg-echo-500/25 border-echo-400/45 text-echo-50"
+                            : "border-white/10 bg-white/5 text-ink-400"
+                        )}
+                      >
+                        {c.label}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* More tools drawer */}
+            {panel === "more" && (
+              <div className="rounded-xl border border-white/8 bg-black/30 p-2.5 space-y-2 animate-fade-in">
+                <div className="flex flex-wrap gap-1.5">
+                  {current && (
+                    <button
+                      type="button"
+                      className={clsx(
+                        "btn-ghost min-h-9 text-xs",
+                        current.bookmarked && "text-echo-300 border-echo-500/30"
+                      )}
+                      onClick={toggleBookmark}
+                    >
+                      <Bookmark className="h-3.5 w-3.5" /> Bookmark
+                    </button>
+                  )}
+                  <button
+                    type="button"
+                    className={clsx(
+                      "btn-ghost min-h-9 text-xs",
+                      showMods && "border-echo-500/40 text-echo-200"
+                    )}
+                    onClick={() => setShowMods((v) => !v)}
+                  >
+                    <Settings2 className="h-3.5 w-3.5" /> Edit scene
+                  </button>
+                  {scenes.length > 0 && isLatest && (
+                    <button
+                      type="button"
+                      className="btn-ghost min-h-9 text-xs"
+                      disabled={busy}
+                      onClick={undoLastScene}
+                    >
+                      <Undo2 className="h-3.5 w-3.5" /> Undo
+                    </button>
+                  )}
+                  {scenes.length > 0 && isLatest && current && (
+                    <button
+                      type="button"
+                      className="btn-ghost min-h-9 text-xs"
+                      disabled={busy}
+                      onClick={() => void regenerateLastScene()}
+                    >
+                      <RefreshCw
+                        className={clsx("h-3.5 w-3.5", busy && "animate-spin")}
+                      />{" "}
+                      Regen
+                    </button>
+                  )}
+                  <button
+                    type="button"
+                    className={clsx(
+                      "btn-ghost min-h-9 text-xs",
+                      theater && "border-echo-500/40 text-echo-200"
+                    )}
+                    onClick={() => setTheater((v) => !v)}
+                  >
+                    {theater ? (
+                      <Minimize2 className="h-3.5 w-3.5" />
+                    ) : (
+                      <Maximize2 className="h-3.5 w-3.5" />
+                    )}{" "}
+                    Theater
+                  </button>
+                  <button
+                    type="button"
+                    className={clsx(
+                      "btn-ghost min-h-9 text-xs",
+                      showHardNos && "border-rose-500/40 text-rose-200"
+                    )}
+                    onClick={() => setShowHardNos((v) => !v)}
+                  >
+                    <ShieldOff className="h-3.5 w-3.5" /> Hard nos
+                  </button>
+                </div>
+                {showHardNos && (
+                  <div className="rounded-lg border border-rose-500/25 bg-rose-950/30 p-2.5 space-y-2">
+                    <p className="text-[11px] text-rose-100/90">
+                      Block for this story (and profile)
+                    </p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {hardNoPresets
+                        .filter((h) => h.id !== "minors")
+                        .slice(0, 12)
+                        .map((h) => (
+                          <button
+                            key={h.id}
+                            type="button"
+                            className="rounded-full border border-rose-400/30 bg-black/30 px-2.5 py-1 text-[11px] text-rose-100 min-h-8"
+                            onClick={() => injectHardNo(h.label)}
+                          >
+                            {h.label}
+                          </button>
+                        ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
 
           {error && (
             <div className="mb-4 flex items-start justify-between gap-3 rounded-xl border border-red-500/25 bg-red-500/10 px-4 py-3 text-xs text-red-50">
@@ -1026,29 +1075,11 @@ export function StoryReader() {
         {current && isLatest && typingDone && !busy && (
           <div
             className={clsx(
-              "card-immersive p-4 sm:p-5 space-y-3",
+              "card-immersive p-3 sm:p-4 space-y-2.5",
               theme.card,
               "pb-[calc(1rem+env(safe-area-inset-bottom))]"
             )}
           >
-            <div className="flex items-baseline justify-between gap-2">
-              <p className="label mb-0">Your move</p>
-              <p className="text-[10px] text-ink-500">Tap once</p>
-            </div>
-            {recentActions.length > 0 && (
-              <div className="flex flex-wrap gap-1.5">
-                {recentActions.map((a) => (
-                  <button
-                    key={a}
-                    type="button"
-                    className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] text-ink-400 max-w-[12rem] truncate min-h-8"
-                    onClick={() => onChoice(a)}
-                  >
-                    {a}
-                  </button>
-                ))}
-              </div>
-            )}
             <div className="grid gap-2">
               {current.choices.map((c, i) => {
                 const tag = tagChoice(c.label);
@@ -1056,7 +1087,7 @@ export function StoryReader() {
                   <button
                     key={`${current.id}-${c.id}-${i}`}
                     type="button"
-                    className="btn-choice w-full text-left min-h-[3.5rem] touch-manipulation select-none active:bg-echo-500/15"
+                    className="btn-choice w-full text-left min-h-[3.25rem] touch-manipulation select-none active:bg-echo-500/15"
                     disabled={busy}
                     onClick={(e) => {
                       e.preventDefault();
@@ -1068,13 +1099,13 @@ export function StoryReader() {
                     <span className="text-echo-400/70 text-[10px] font-medium w-5 shrink-0 pt-0.5">
                       {i + 1}
                     </span>
-                    <span className="leading-snug flex-1 min-w-0">
+                    <span className="leading-snug flex-1 min-w-0 text-sm">
                       {c.label}
                     </span>
                     {tag && (
                       <span
                         className={clsx(
-                          "shrink-0 rounded-full border px-1.5 py-0.5 text-[9px] uppercase tracking-wide",
+                          "shrink-0 rounded-full border px-1.5 py-0.5 text-[9px] uppercase tracking-wide opacity-80",
                           tag.className
                         )}
                       >
@@ -1085,6 +1116,20 @@ export function StoryReader() {
                 );
               })}
             </div>
+            {recentActions.length > 0 && (
+              <div className="flex flex-wrap gap-1.5 pt-0.5">
+                {recentActions.map((a) => (
+                  <button
+                    key={a}
+                    type="button"
+                    className="rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[10px] text-ink-500 max-w-[10rem] truncate min-h-7"
+                    onClick={() => onChoice(a)}
+                  >
+                    {a}
+                  </button>
+                ))}
+              </div>
+            )}
             <div className="flex gap-2 pt-1">
               <input
                 className="input flex-1 min-h-12 text-base"

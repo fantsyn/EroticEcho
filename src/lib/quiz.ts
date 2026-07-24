@@ -167,18 +167,18 @@ export function scorePresetForYou(
 
 /** Curated starter twelve — approachable first nights */
 export const STARTER_PRESET_IDS = [
-  "barista-close",
+  "shy-masseuse-oil",
+  "shy-barista-hearts",
+  "shy-girl-leads",
+  "bombshell-wants-you",
+  "bombshell-melts-for-you",
+  "you-kneel-soft",
   "library-confession",
   "cute-blonde-morning",
-  "empty-classroom",
   "neighbour-fix",
-  "shy-stacks",
-  "stepdad-comfort",
-  "midnight-stepmom",
   "office-after-dark",
-  "gym-one-more",
-  "hotel-key",
-  "witch-bargain",
+  "reader-sub-training",
+  "midnight-stepmom",
 ] as const;
 
 export function loadStarterDismissed(): boolean {

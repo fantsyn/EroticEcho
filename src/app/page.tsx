@@ -37,7 +37,9 @@ import clsx from "clsx";
 const MOOD_FILTERS = [
   { id: "all", label: "All" },
   { id: "fav", label: "★ Favorites" },
-  { id: "soft", label: "Soft / cute", match: /cute|soft|romance|shy|library|slow/i },
+  { id: "soft", label: "Soft / cute", match: /cute|soft|romance|shy|library|slow|barista|massage|melt/i },
+  { id: "you-sub", label: "You are sub", match: /you sub|reader-sub|kneel|domme|training|soft dom|shy→dom|shy-to-dom/i },
+  { id: "bombshell", label: "Bombshell / melt", match: /bombshell|melt|wants you|falls|confident/i },
   { id: "filth", label: "Filth / NSFW", match: /filth|nsfw|free use|breeding|cam|slut/i },
   { id: "forbidden", label: "Forbidden", match: /forbidden|taboo|milf|step|affair|home/i },
   { id: "dark", label: "Dark / CNC", match: /dark|cnc|yandere|edge|blackmail|mind|control/i },
