@@ -284,7 +284,7 @@ function sanitizeSexy(s: string): string {
 }
 
 /** Cache-bust when portraits are regenerated (bump when re-running generate-avatars) */
-export const AVATAR_ASSET_VERSION = "3";
+export const AVATAR_ASSET_VERSION = "4";
 
 export function staticAvatarPath(
   characterId: string,
@@ -301,15 +301,67 @@ export function staticAvatarPath(
 
 /** Resolve which static portrait URL to show for a character (no API). */
 export function resolvePortraitUrl(character: Character): string | null {
-  if (character.avatarUrl) return character.avatarUrl;
   const looks = character.portraitLooks || [];
-  if (looks.length) {
-    const sel =
-      looks.find((l) => l.id === character.selectedPortraitId) || looks[0];
+
+  // Prefer explicit multi-look selection (mid-story / customize)
+  if (looks.length && character.selectedPortraitId) {
+    const sel = looks.find((l) => l.id === character.selectedPortraitId);
     if (sel?.file) return staticAvatarPath(character.id, sel.file);
   }
+
+  // Generated / uploaded override (data URLs or remote) — only when not using a look
+  if (
+    character.avatarUrl &&
+    (character.avatarUrl.startsWith("data:") ||
+      character.avatarUrl.startsWith("http://") ||
+      character.avatarUrl.startsWith("https://") ||
+      !looks.length)
+  ) {
+    return character.avatarUrl;
+  }
+
+  if (looks.length) {
+    const sel =
+      looks.find((l) => l.id === "role") ||
+      looks.find((l) => l.id === "sexy") ||
+      looks.find((l) => l.id === "hot") ||
+      looks[0];
+    if (sel?.file) return staticAvatarPath(character.id, sel.file);
+  }
+
+  // Sticky static avatarUrl under /avatars/
+  if (character.avatarUrl?.startsWith("/avatars/")) {
+    return character.avatarUrl.includes("?")
+      ? character.avatarUrl
+      : `${character.avatarUrl}?v=${AVATAR_ASSET_VERSION}`;
+  }
+
   if (character.id) return staticAvatarPath(character.id);
   return null;
+}
+
+/** Ordered fallback URLs when an image 404s */
+export function portraitFallbackUrls(character: Character): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  const push = (u: string | null | undefined) => {
+    if (!u || seen.has(u)) return;
+    seen.add(u);
+    out.push(u);
+  };
+  push(resolvePortraitUrl(character));
+  for (const look of character.portraitLooks || []) {
+    if (look.file) push(staticAvatarPath(character.id, look.file));
+  }
+  if (character.avatarUrl?.startsWith("/avatars/")) {
+    push(
+      character.avatarUrl.includes("?")
+        ? character.avatarUrl
+        : `${character.avatarUrl}?v=${AVATAR_ASSET_VERSION}`
+    );
+  }
+  if (character.id) push(staticAvatarPath(character.id));
+  return out;
 }
 
 /** Default multi-look set written for every preset character */

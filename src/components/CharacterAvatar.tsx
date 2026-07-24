@@ -5,8 +5,8 @@ import clsx from "clsx";
 import type { Character } from "@/lib/types";
 import {
   characterInitials,
+  portraitFallbackUrls,
   resolvePortraitUrl,
-  staticAvatarPath,
 } from "@/lib/avatars";
 
 type Size = "sm" | "md" | "lg" | "xl" | "hero";
@@ -67,11 +67,15 @@ export function CharacterAvatar({
   const [url, setUrl] = useState<string | null>(() => seedUrl(character));
   const [loading, setLoading] = useState(false);
   const [failed, setFailed] = useState(false);
+  const fallbackIdx = useRef(0);
+  const fallbacksRef = useRef<string[]>([]);
   const onUrlRef = useRef(onUrl);
   onUrlRef.current = onUrl;
 
   useEffect(() => {
     let cancelled = false;
+    fallbackIdx.current = 0;
+    fallbacksRef.current = portraitFallbackUrls(character);
 
     // User explicitly requested regen from Customize
     if (allowGenerate && refreshToken > 0) {
@@ -82,7 +86,7 @@ export function CharacterAvatar({
     }
 
     // Static / selected look only — NEVER auto-hit the image API
-    const seed = seedUrl(character);
+    const seed = seedUrl(character) || fallbacksRef.current[0] || null;
     setUrl(seed);
     setFailed(false);
     setLoading(false);
@@ -147,9 +151,14 @@ export function CharacterAvatar({
             decoding="async"
             draggable={false}
             onError={() => {
-              // Fallback to base id.png then monogram — no API retry
-              if (url && !url.includes(`${character.id}.png`)) {
-                setUrl(staticAvatarPath(character.id));
+              // Walk portrait look fallbacks, then monogram — no API retry
+              const list = fallbacksRef.current.length
+                ? fallbacksRef.current
+                : portraitFallbackUrls(character);
+              fallbackIdx.current += 1;
+              const next = list[fallbackIdx.current];
+              if (next && next !== url) {
+                setUrl(next);
                 setFailed(false);
                 return;
               }

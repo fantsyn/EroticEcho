@@ -7930,7 +7930,7 @@
       ],
       "bio": "Professional until her hands start shaking. She asks if the pressure is okay in a voice that wants you to say more. One compliment and she melts onto the table edge with you.",
       "avatarVibe": "shy",
-      "avatarUrl": "/avatars/massage-therapist-shy.png",
+      "avatarUrl": "/avatars/shy-masseuse.png",
       "outfitStyles": [
         {
           "id": "default",
@@ -7967,52 +7967,53 @@
         {
           "id": "role",
           "label": "On-role",
-          "file": "massage-therapist-role.png",
+          "file": "shy-masseuse-role.png",
           "vibe": "sexy"
         },
         {
           "id": "sexy",
           "label": "Sexy",
-          "file": "massage-therapist-sexy.png",
+          "file": "shy-masseuse-sexy.png",
           "vibe": "sexy"
         },
         {
           "id": "almost",
           "label": "Almost nude",
-          "file": "massage-therapist-almost.png",
+          "file": "shy-masseuse-almost.png",
           "vibe": "almost"
         },
         {
           "id": "cute",
           "label": "Cute soft",
-          "file": "massage-therapist-cute.png",
+          "file": "shy-masseuse-cute.png",
           "vibe": "cute"
         },
         {
           "id": "shy",
           "label": "Shy",
-          "file": "massage-therapist-shy.png",
+          "file": "shy-masseuse-shy.png",
           "vibe": "shy"
         },
         {
           "id": "hot",
           "label": "Hot glam",
-          "file": "massage-therapist-hot.png",
+          "file": "shy-masseuse-hot.png",
           "vibe": "hot"
         },
         {
           "id": "erotic",
           "label": "Erotic pose",
-          "file": "massage-therapist-erotic.png",
+          "file": "shy-masseuse-erotic.png",
           "vibe": "erotic"
         },
         {
           "id": "slutty",
           "label": "Danger slut",
-          "file": "massage-therapist-slutty.png",
+          "file": "shy-masseuse-slutty.png",
           "vibe": "slutty"
         }
-      ]
+      ],
+      "selectedPortraitId": "role"
     },
     {
       "id": "shy-barista",
@@ -8057,7 +8058,7 @@
       ],
       "bio": "She knows your order by heart and still stammers when you say her name. After the sign flips, the shop is quiet enough for her secret notes to become real.",
       "avatarVibe": "cute",
-      "avatarUrl": "/avatars/barista-shy.png",
+      "avatarUrl": "/avatars/shy-barista.png",
       "outfitStyles": [
         {
           "id": "default",
@@ -8094,52 +8095,53 @@
         {
           "id": "role",
           "label": "On-role",
-          "file": "barista-role.png",
+          "file": "shy-barista-role.png",
           "vibe": "sexy"
         },
         {
           "id": "sexy",
           "label": "Sexy",
-          "file": "barista-sexy.png",
+          "file": "shy-barista-sexy.png",
           "vibe": "sexy"
         },
         {
           "id": "almost",
           "label": "Almost nude",
-          "file": "barista-almost.png",
+          "file": "shy-barista-almost.png",
           "vibe": "almost"
         },
         {
           "id": "cute",
           "label": "Cute soft",
-          "file": "barista-cute.png",
+          "file": "shy-barista-cute.png",
           "vibe": "cute"
         },
         {
           "id": "shy",
           "label": "Shy",
-          "file": "barista-shy.png",
+          "file": "shy-barista-shy.png",
           "vibe": "shy"
         },
         {
           "id": "hot",
           "label": "Hot glam",
-          "file": "barista-hot.png",
+          "file": "shy-barista-hot.png",
           "vibe": "hot"
         },
         {
           "id": "erotic",
           "label": "Erotic pose",
-          "file": "barista-erotic.png",
+          "file": "shy-barista-erotic.png",
           "vibe": "erotic"
         },
         {
           "id": "slutty",
           "label": "Danger slut",
-          "file": "barista-slutty.png",
+          "file": "shy-barista-slutty.png",
           "vibe": "slutty"
         }
-      ]
+      ],
+      "selectedPortraitId": "role"
     },
     {
       "id": "confident-bombshell",
@@ -8183,7 +8185,7 @@
       ],
       "bio": "She wants you first — bold eye contact, hand on your chest, zero hesitation. Then something cracks: she melts, softens, falls for you hard and gets almost shy about how much she needs it.",
       "avatarVibe": "hot",
-      "avatarUrl": "/avatars/shy-bombshell-hot.png",
+      "avatarUrl": "/avatars/confident-bombshell.png",
       "outfitStyles": [
         {
           "id": "default",
@@ -8220,52 +8222,53 @@
         {
           "id": "role",
           "label": "On-role",
-          "file": "shy-bombshell-role.png",
+          "file": "confident-bombshell-role.png",
           "vibe": "sexy"
         },
         {
           "id": "sexy",
           "label": "Sexy",
-          "file": "shy-bombshell-sexy.png",
+          "file": "confident-bombshell-sexy.png",
           "vibe": "sexy"
         },
         {
           "id": "almost",
           "label": "Almost nude",
-          "file": "shy-bombshell-almost.png",
+          "file": "confident-bombshell-almost.png",
           "vibe": "almost"
         },
         {
           "id": "cute",
           "label": "Cute soft",
-          "file": "shy-bombshell-cute.png",
+          "file": "confident-bombshell-cute.png",
           "vibe": "cute"
         },
         {
           "id": "shy",
           "label": "Shy",
-          "file": "shy-bombshell-shy.png",
+          "file": "confident-bombshell-shy.png",
           "vibe": "shy"
         },
         {
           "id": "hot",
           "label": "Hot glam",
-          "file": "shy-bombshell-hot.png",
+          "file": "confident-bombshell-hot.png",
           "vibe": "hot"
         },
         {
           "id": "erotic",
           "label": "Erotic pose",
-          "file": "shy-bombshell-erotic.png",
+          "file": "confident-bombshell-erotic.png",
           "vibe": "erotic"
         },
         {
           "id": "slutty",
           "label": "Danger slut",
-          "file": "shy-bombshell-slutty.png",
+          "file": "confident-bombshell-slutty.png",
           "vibe": "slutty"
         }
-      ]
+      ],
+      "selectedPortraitId": "role"
     },
     {
       "id": "soft-domme",
@@ -8309,7 +8312,7 @@
       ],
       "bio": "She does not bark. She guides. One look and you know she will take care of you — if you let her lead.",
       "avatarVibe": "sexy",
-      "avatarUrl": "/avatars/therapist-hot.png",
+      "avatarUrl": "/avatars/soft-domme.png",
       "outfitStyles": [
         {
           "id": "default",
@@ -8346,52 +8349,53 @@
         {
           "id": "role",
           "label": "On-role",
-          "file": "therapist-role.png",
+          "file": "soft-domme-role.png",
           "vibe": "sexy"
         },
         {
           "id": "sexy",
           "label": "Sexy",
-          "file": "therapist-sexy.png",
+          "file": "soft-domme-sexy.png",
           "vibe": "sexy"
         },
         {
           "id": "almost",
           "label": "Almost nude",
-          "file": "therapist-almost.png",
+          "file": "soft-domme-almost.png",
           "vibe": "almost"
         },
         {
           "id": "cute",
           "label": "Cute soft",
-          "file": "therapist-cute.png",
+          "file": "soft-domme-cute.png",
           "vibe": "cute"
         },
         {
           "id": "shy",
           "label": "Shy",
-          "file": "therapist-shy.png",
+          "file": "soft-domme-shy.png",
           "vibe": "shy"
         },
         {
           "id": "hot",
           "label": "Hot glam",
-          "file": "therapist-hot.png",
+          "file": "soft-domme-hot.png",
           "vibe": "hot"
         },
         {
           "id": "erotic",
           "label": "Erotic pose",
-          "file": "therapist-erotic.png",
+          "file": "soft-domme-erotic.png",
           "vibe": "erotic"
         },
         {
           "id": "slutty",
           "label": "Danger slut",
-          "file": "therapist-slutty.png",
+          "file": "soft-domme-slutty.png",
           "vibe": "slutty"
         }
-      ]
+      ],
+      "selectedPortraitId": "role"
     },
     {
       "id": "arab-princess",
@@ -8436,7 +8440,7 @@
       ],
       "bio": "Forbidden palace heat: she is not supposed to want common hands on royal silk. She wants them anyway — pride first, then surrender, then commands again.",
       "avatarVibe": "hot",
-      "avatarUrl": "/avatars/goddess-hot.png",
+      "avatarUrl": "/avatars/arab-princess.png",
       "outfitStyles": [
         {
           "id": "default",
@@ -8473,52 +8477,53 @@
         {
           "id": "role",
           "label": "On-role",
-          "file": "goddess-role.png",
+          "file": "arab-princess-role.png",
           "vibe": "sexy"
         },
         {
           "id": "sexy",
           "label": "Sexy",
-          "file": "goddess-sexy.png",
+          "file": "arab-princess-sexy.png",
           "vibe": "sexy"
         },
         {
           "id": "almost",
           "label": "Almost nude",
-          "file": "goddess-almost.png",
+          "file": "arab-princess-almost.png",
           "vibe": "almost"
         },
         {
           "id": "cute",
           "label": "Cute soft",
-          "file": "goddess-cute.png",
+          "file": "arab-princess-cute.png",
           "vibe": "cute"
         },
         {
           "id": "shy",
           "label": "Shy",
-          "file": "goddess-shy.png",
+          "file": "arab-princess-shy.png",
           "vibe": "shy"
         },
         {
           "id": "hot",
           "label": "Hot glam",
-          "file": "goddess-hot.png",
+          "file": "arab-princess-hot.png",
           "vibe": "hot"
         },
         {
           "id": "erotic",
           "label": "Erotic pose",
-          "file": "goddess-erotic.png",
+          "file": "arab-princess-erotic.png",
           "vibe": "erotic"
         },
         {
           "id": "slutty",
           "label": "Danger slut",
-          "file": "goddess-slutty.png",
+          "file": "arab-princess-slutty.png",
           "vibe": "slutty"
         }
-      ]
+      ],
+      "selectedPortraitId": "role"
     },
     {
       "id": "blackmail-queen",
@@ -8562,7 +8567,7 @@
       ],
       "bio": "CNC/blackmail fantasy only: she frames the scene as leverage, you both know the safeword ends it. Humiliation optional, consent architecture mandatory.",
       "avatarVibe": "sexy",
-      "avatarUrl": "/avatars/boss-hot.png",
+      "avatarUrl": "/avatars/blackmail-queen.png",
       "outfitStyles": [
         {
           "id": "default",
@@ -8599,52 +8604,53 @@
         {
           "id": "role",
           "label": "On-role",
-          "file": "boss-role.png",
+          "file": "blackmail-queen-role.png",
           "vibe": "sexy"
         },
         {
           "id": "sexy",
           "label": "Sexy",
-          "file": "boss-sexy.png",
+          "file": "blackmail-queen-sexy.png",
           "vibe": "sexy"
         },
         {
           "id": "almost",
           "label": "Almost nude",
-          "file": "boss-almost.png",
+          "file": "blackmail-queen-almost.png",
           "vibe": "almost"
         },
         {
           "id": "cute",
           "label": "Cute soft",
-          "file": "boss-cute.png",
+          "file": "blackmail-queen-cute.png",
           "vibe": "cute"
         },
         {
           "id": "shy",
           "label": "Shy",
-          "file": "boss-shy.png",
+          "file": "blackmail-queen-shy.png",
           "vibe": "shy"
         },
         {
           "id": "hot",
           "label": "Hot glam",
-          "file": "boss-hot.png",
+          "file": "blackmail-queen-hot.png",
           "vibe": "hot"
         },
         {
           "id": "erotic",
           "label": "Erotic pose",
-          "file": "boss-erotic.png",
+          "file": "blackmail-queen-erotic.png",
           "vibe": "erotic"
         },
         {
           "id": "slutty",
           "label": "Danger slut",
-          "file": "boss-slutty.png",
+          "file": "blackmail-queen-slutty.png",
           "vibe": "slutty"
         }
-      ]
+      ],
+      "selectedPortraitId": "role"
     },
     {
       "id": "public-risk-girl",
@@ -8686,7 +8692,7 @@
       ],
       "bio": "She gets wet on adrenaline. Crowds, thin walls, balconies, dressing rooms — quiet heat with the risk of eyes.",
       "avatarVibe": "sexy",
-      "avatarUrl": "/avatars/celebrity-sexy.png",
+      "avatarUrl": "/avatars/public-risk-girl.png",
       "outfitStyles": [
         {
           "id": "default",
@@ -8723,52 +8729,53 @@
         {
           "id": "role",
           "label": "On-role",
-          "file": "celebrity-role.png",
+          "file": "public-risk-girl-role.png",
           "vibe": "sexy"
         },
         {
           "id": "sexy",
           "label": "Sexy",
-          "file": "celebrity-sexy.png",
+          "file": "public-risk-girl-sexy.png",
           "vibe": "sexy"
         },
         {
           "id": "almost",
           "label": "Almost nude",
-          "file": "celebrity-almost.png",
+          "file": "public-risk-girl-almost.png",
           "vibe": "almost"
         },
         {
           "id": "cute",
           "label": "Cute soft",
-          "file": "celebrity-cute.png",
+          "file": "public-risk-girl-cute.png",
           "vibe": "cute"
         },
         {
           "id": "shy",
           "label": "Shy",
-          "file": "celebrity-shy.png",
+          "file": "public-risk-girl-shy.png",
           "vibe": "shy"
         },
         {
           "id": "hot",
           "label": "Hot glam",
-          "file": "celebrity-hot.png",
+          "file": "public-risk-girl-hot.png",
           "vibe": "hot"
         },
         {
           "id": "erotic",
           "label": "Erotic pose",
-          "file": "celebrity-erotic.png",
+          "file": "public-risk-girl-erotic.png",
           "vibe": "erotic"
         },
         {
           "id": "slutty",
           "label": "Danger slut",
-          "file": "celebrity-slutty.png",
+          "file": "public-risk-girl-slutty.png",
           "vibe": "slutty"
         }
-      ]
+      ],
+      "selectedPortraitId": "role"
     },
     {
       "id": "humiliation-brat",
@@ -8811,7 +8818,7 @@
       ],
       "bio": "Consensual humiliation play: name-calling as heat, shame as spice, aftercare as law. She can dish it, take it, or switch mid-scene.",
       "avatarVibe": "sexy",
-      "avatarUrl": "/avatars/bully-f-sexy.png",
+      "avatarUrl": "/avatars/humiliation-brat.png",
       "outfitStyles": [
         {
           "id": "default",
@@ -8848,52 +8855,53 @@
         {
           "id": "role",
           "label": "On-role",
-          "file": "bully-f-role.png",
+          "file": "humiliation-brat-role.png",
           "vibe": "sexy"
         },
         {
           "id": "sexy",
           "label": "Sexy",
-          "file": "bully-f-sexy.png",
+          "file": "humiliation-brat-sexy.png",
           "vibe": "sexy"
         },
         {
           "id": "almost",
           "label": "Almost nude",
-          "file": "bully-f-almost.png",
+          "file": "humiliation-brat-almost.png",
           "vibe": "almost"
         },
         {
           "id": "cute",
           "label": "Cute soft",
-          "file": "bully-f-cute.png",
+          "file": "humiliation-brat-cute.png",
           "vibe": "cute"
         },
         {
           "id": "shy",
           "label": "Shy",
-          "file": "bully-f-shy.png",
+          "file": "humiliation-brat-shy.png",
           "vibe": "shy"
         },
         {
           "id": "hot",
           "label": "Hot glam",
-          "file": "bully-f-hot.png",
+          "file": "humiliation-brat-hot.png",
           "vibe": "hot"
         },
         {
           "id": "erotic",
           "label": "Erotic pose",
-          "file": "bully-f-erotic.png",
+          "file": "humiliation-brat-erotic.png",
           "vibe": "erotic"
         },
         {
           "id": "slutty",
           "label": "Danger slut",
-          "file": "bully-f-slutty.png",
+          "file": "humiliation-brat-slutty.png",
           "vibe": "slutty"
         }
-      ]
+      ],
+      "selectedPortraitId": "role"
     },
     {
       "id": "switch-lover",
@@ -8936,7 +8944,7 @@
       ],
       "bio": "Designed for fluid D/s: one scene she rides control, the next she yields with a grin. Communication is part of the heat.",
       "avatarVibe": "sexy",
-      "avatarUrl": "/avatars/secretary-hot.png",
+      "avatarUrl": "/avatars/switch-lover.png",
       "outfitStyles": [
         {
           "id": "default",
@@ -8973,52 +8981,53 @@
         {
           "id": "role",
           "label": "On-role",
-          "file": "secretary-role.png",
+          "file": "switch-lover-role.png",
           "vibe": "sexy"
         },
         {
           "id": "sexy",
           "label": "Sexy",
-          "file": "secretary-sexy.png",
+          "file": "switch-lover-sexy.png",
           "vibe": "sexy"
         },
         {
           "id": "almost",
           "label": "Almost nude",
-          "file": "secretary-almost.png",
+          "file": "switch-lover-almost.png",
           "vibe": "almost"
         },
         {
           "id": "cute",
           "label": "Cute soft",
-          "file": "secretary-cute.png",
+          "file": "switch-lover-cute.png",
           "vibe": "cute"
         },
         {
           "id": "shy",
           "label": "Shy",
-          "file": "secretary-shy.png",
+          "file": "switch-lover-shy.png",
           "vibe": "shy"
         },
         {
           "id": "hot",
           "label": "Hot glam",
-          "file": "secretary-hot.png",
+          "file": "switch-lover-hot.png",
           "vibe": "hot"
         },
         {
           "id": "erotic",
           "label": "Erotic pose",
-          "file": "secretary-erotic.png",
+          "file": "switch-lover-erotic.png",
           "vibe": "erotic"
         },
         {
           "id": "slutty",
           "label": "Danger slut",
-          "file": "secretary-slutty.png",
+          "file": "switch-lover-slutty.png",
           "vibe": "slutty"
         }
-      ]
+      ],
+      "selectedPortraitId": "role"
     },
     {
       "id": "taboo-roommate",
@@ -9061,7 +9070,7 @@
       ],
       "bio": "Roommate taboo: thin walls, shared showers, morning-after coffee that is too intimate. Adult fiction only.",
       "avatarVibe": "cute",
-      "avatarUrl": "/avatars/roommate-shy.png",
+      "avatarUrl": "/avatars/taboo-roommate.png",
       "outfitStyles": [
         {
           "id": "default",
@@ -9098,52 +9107,53 @@
         {
           "id": "role",
           "label": "On-role",
-          "file": "roommate-role.png",
+          "file": "taboo-roommate-role.png",
           "vibe": "sexy"
         },
         {
           "id": "sexy",
           "label": "Sexy",
-          "file": "roommate-sexy.png",
+          "file": "taboo-roommate-sexy.png",
           "vibe": "sexy"
         },
         {
           "id": "almost",
           "label": "Almost nude",
-          "file": "roommate-almost.png",
+          "file": "taboo-roommate-almost.png",
           "vibe": "almost"
         },
         {
           "id": "cute",
           "label": "Cute soft",
-          "file": "roommate-cute.png",
+          "file": "taboo-roommate-cute.png",
           "vibe": "cute"
         },
         {
           "id": "shy",
           "label": "Shy",
-          "file": "roommate-shy.png",
+          "file": "taboo-roommate-shy.png",
           "vibe": "shy"
         },
         {
           "id": "hot",
           "label": "Hot glam",
-          "file": "roommate-hot.png",
+          "file": "taboo-roommate-hot.png",
           "vibe": "hot"
         },
         {
           "id": "erotic",
           "label": "Erotic pose",
-          "file": "roommate-erotic.png",
+          "file": "taboo-roommate-erotic.png",
           "vibe": "erotic"
         },
         {
           "id": "slutty",
           "label": "Danger slut",
-          "file": "roommate-slutty.png",
+          "file": "taboo-roommate-slutty.png",
           "vibe": "slutty"
         }
-      ]
+      ],
+      "selectedPortraitId": "role"
     }
   ]
 }

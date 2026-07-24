@@ -10,6 +10,7 @@ import type {
   StorySettings,
 } from "./types";
 import { themeFromCategory } from "./themes";
+import { resolvePortraitUrl } from "./avatars";
 
 export function defaultMods(): MidStoryMods {
   return {
@@ -58,10 +59,15 @@ export function createStory(
     updatedAt: now,
     character: {
       ...character,
-      // Prefer pre-generated photoreal portrait when present
-      avatarUrl:
-        character.avatarUrl ||
-        (character.id ? `/avatars/${character.id}.png?v=2` : undefined),
+      // Keep multi-look portraits; seed a resolved URL for older clients
+      selectedPortraitId:
+        character.selectedPortraitId ||
+        character.portraitLooks?.[0]?.id ||
+        "role",
+      avatarUrl: character.avatarUrl?.startsWith("data:")
+        ? character.avatarUrl
+        : resolvePortraitUrl(character) ||
+          (character.id ? `/avatars/${character.id}.png` : undefined),
     },
     scenario: { ...scenario },
     settings: defaultStorySettings(settings),

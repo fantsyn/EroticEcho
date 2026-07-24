@@ -13,6 +13,7 @@ import {
   Maximize2,
   Minimize2,
   BookOpen,
+  Image as ImageIcon,
   List,
   MoreHorizontal,
   Pause,
@@ -57,7 +58,7 @@ import { publishStoryToCloud } from "@/lib/cloud-client";
 import { MOOD_CHIPS } from "@/lib/mood-chips";
 import { CLOTHING_STATES } from "@/lib/clothing-states";
 import { tagChoice } from "@/lib/choice-tags";
-import { hardNoPresets } from "@/lib/data";
+import { getCharacterById, hardNoPresets } from "@/lib/data";
 import { UsageBanner } from "./UsageBanner";
 import { LimitReachedModal } from "./LimitReachedModal";
 import { track } from "@/lib/analytics";
@@ -99,12 +100,12 @@ export function StoryReader() {
   const [limitModal, setLimitModal] = useState(false);
   /** Collapsed by default to keep the story page clean */
   const [panel, setPanel] = useState<
-    null | "mood" | "clothes" | "more"
+    null | "mood" | "clothes" | "looks" | "more"
   >(null);
   /** Continuous full-story reading (all scenes at once) */
   const [fullStoryMode, setFullStoryMode] = useState(false);
 
-  const togglePanel = (id: "mood" | "clothes" | "more") => {
+  const togglePanel = (id: "mood" | "clothes" | "looks" | "more") => {
     setPanel((p) => (p === id ? null : id));
     if (id !== "more") setShowHardNos(false);
   };
@@ -138,6 +139,36 @@ export function StoryReader() {
       stopNarration();
     };
   }, []);
+
+  // Hydrate portrait library for older stories / missing multi-looks
+  useEffect(() => {
+    if (!story?.character?.id) return;
+    const lib = getCharacterById(story.character.id);
+    if (!lib) return;
+    const needsLooks =
+      !story.character.portraitLooks?.length && !!lib.portraitLooks?.length;
+    const needsUrl =
+      !story.character.avatarUrl &&
+      !story.character.selectedPortraitId &&
+      (!!lib.avatarUrl || !!lib.portraitLooks?.length);
+    if (!needsLooks && !needsUrl) return;
+    updateActiveStory((s) => ({
+      ...s,
+      character: {
+        ...s.character,
+        portraitLooks: s.character.portraitLooks?.length
+          ? s.character.portraitLooks
+          : lib.portraitLooks,
+        selectedPortraitId:
+          s.character.selectedPortraitId ||
+          lib.selectedPortraitId ||
+          "role",
+        avatarUrl: s.character.avatarUrl?.startsWith("data:")
+          ? s.character.avatarUrl
+          : undefined,
+      },
+    }));
+  }, [story?.character?.id, story?.character?.portraitLooks?.length, updateActiveStory]);
 
   // Reset typing gate when scene changes
   useEffect(() => {
@@ -535,6 +566,25 @@ export function StoryReader() {
     setHint(`Clothing: ${CLOTHING_STATES.find((c) => c.id === id)?.label || id}`);
   };
 
+  /** Swap pre-made portrait look mid-story (no API spend) */
+  const setPortraitLook = (lookId: string) => {
+    if (!story) return;
+    const looks = story.character.portraitLooks || [];
+    const look = looks.find((l) => l.id === lookId);
+    updateActiveStory((s) => ({
+      ...s,
+      character: {
+        ...s.character,
+        selectedPortraitId: lookId,
+        // Clear generated override so static multi-look files win
+        avatarUrl: undefined,
+        avatarVibe: look?.vibe || s.character.avatarVibe,
+      },
+      updatedAt: new Date().toISOString(),
+    }));
+    setHint(`Portrait: ${look?.label || lookId}`);
+  };
+
   const injectHardNo = (label: string) => {
     const line = `HARD NO this session: ${label}. Never include.`;
     updateActiveStory((s) => ({
@@ -818,6 +868,20 @@ export function StoryReader() {
                   <ChevronDown className="h-3 w-3 opacity-60" />
                 )}
               </button>
+              {(story.character.portraitLooks?.length ?? 0) > 0 && (
+                <button
+                  type="button"
+                  className={clsx(
+                    "btn-ghost min-h-10 px-2.5 text-xs touch-manipulation gap-1",
+                    panel === "looks" && "border-echo-500/40 text-echo-200"
+                  )}
+                  title="Portrait looks"
+                  onClick={() => togglePanel("looks")}
+                >
+                  <ImageIcon className="h-3.5 w-3.5" />
+                  <span className="hidden sm:inline">Portrait</span>
+                </button>
+              )}
               {scenes.length > 0 && (
                 <button
                   type="button"
@@ -825,11 +889,11 @@ export function StoryReader() {
                     "btn-ghost min-h-10 px-2.5 text-xs touch-manipulation gap-1",
                     panel === "clothes" && "border-echo-500/40 text-echo-200"
                   )}
-                  title="Clothing"
+                  title="Clothing state"
                   onClick={() => togglePanel("clothes")}
                 >
                   <Shirt className="h-3.5 w-3.5" />
-                  <span className="hidden sm:inline">Look</span>
+                  <span className="hidden sm:inline">Clothes</span>
                 </button>
               )}
               <button
@@ -877,11 +941,73 @@ export function StoryReader() {
               </div>
             )}
 
+            {/* Portrait looks drawer — pre-made images, mid-story */}
+            {panel === "looks" &&
+              (story.character.portraitLooks?.length ?? 0) > 0 && (
+                <div className="rounded-xl border border-white/8 bg-black/30 p-2.5 animate-fade-in space-y-2">
+                  <div className="flex items-center justify-between gap-2 px-0.5">
+                    <p className="text-[10px] uppercase tracking-widest text-ink-500">
+                      Portrait look
+                    </p>
+                    <p className="text-[10px] text-ink-600">
+                      Pre-made · free · works mid-story
+                    </p>
+                  </div>
+                  <div className="grid grid-cols-4 sm:grid-cols-4 gap-2">
+                    {story.character.portraitLooks!.map((look) => {
+                      const active =
+                        story.character.selectedPortraitId === look.id ||
+                        (!story.character.selectedPortraitId &&
+                          look.id === "role");
+                      const src = `/avatars/${look.file}?v=4`;
+                      return (
+                        <button
+                          key={look.id}
+                          type="button"
+                          title={look.label}
+                          onClick={() => setPortraitLook(look.id)}
+                          className={clsx(
+                            "group relative overflow-hidden rounded-xl border text-left transition touch-manipulation",
+                            active
+                              ? "border-echo-400/60 ring-1 ring-echo-400/40"
+                              : "border-white/10 hover:border-white/25"
+                          )}
+                        >
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={src}
+                            alt={look.label}
+                            className="aspect-[4/5] w-full object-cover object-top bg-ink-900"
+                            loading="lazy"
+                            draggable={false}
+                            onError={(e) => {
+                              const el = e.currentTarget;
+                              if (!el.dataset.fb) {
+                                el.dataset.fb = "1";
+                                el.src = `/avatars/${story.character.id}.png?v=4`;
+                              }
+                            }}
+                          />
+                          <span
+                            className={clsx(
+                              "absolute inset-x-0 bottom-0 px-1 py-1 text-[9px] text-center truncate",
+                              "bg-gradient-to-t from-black/85 to-transparent text-ink-100"
+                            )}
+                          >
+                            {look.label}
+                          </span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
             {/* Clothing drawer */}
             {panel === "clothes" && scenes.length > 0 && (
               <div className="rounded-xl border border-white/8 bg-black/30 p-2.5 animate-fade-in">
                 <p className="text-[10px] uppercase tracking-widest text-ink-500 mb-1.5 px-0.5">
-                  Clothing
+                  Clothing state (story text)
                 </p>
                 <div className="flex flex-wrap gap-1.5">
                   {CLOTHING_STATES.map((c) => {
