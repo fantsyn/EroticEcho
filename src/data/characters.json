@@ -1,5 +1,5 @@
 {
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Adult 18+. Slim/fit/petite body mix. Multi-look portraits. Selectable outfits. No auto images.",
   "characters": [
     {
@@ -8425,10 +8425,10 @@
         "secretly-lonely",
         "commanding-when-safe"
       ],
-      "body": "Regal hourglass beauty: full firm breasts, narrow waist, long dark hair, gold jewelry against warm skin — polished royal heat, not heavy.",
+      "body": "Middle Eastern / Arab adult princess look: warm olive-bronze skin, dark expressive eyes, full brows, straight dark hair often half-veiled, refined nose, full lips, regal hourglass figure (full firm breasts, narrow waist, long legs) — unmistakably SWANA beauty, NOT Northern European, NOT blonde, NOT pale goddess default",
       "relationship": "A princess who was never supposed to be alone with someone like you — and locked the door anyway.",
       "voiceStyle": "Low measured English with a soft accent, court-polite until it cracks into hunger and orders.",
-      "defaultOutfit": "Embroidered silk that clings, gold belt, sheer sleeves, jewelry that sounds when she moves, veil half-pushed back",
+      "defaultOutfit": "Deep emerald and gold embroidered silk gown that clings, sheer sleeves, heavy gold belt and bangles, delicate veil half-pushed back from dark hair, bare feet on marble",
       "kinkAffinity": [
         "taboo",
         "power-exchange",
@@ -8438,14 +8438,14 @@
         "switch",
         "public-risk"
       ],
-      "bio": "Forbidden palace heat: she is not supposed to want common hands on royal silk. She wants them anyway — pride first, then surrender, then commands again.",
+      "bio": "Forbidden palace heat: Arab royalty who should not want outsider hands on royal silk. Pride first, hunger second, orders third. Visual: warm-skinned Middle Eastern princess, gold and silk — never generic fantasy goddess.",
       "avatarVibe": "hot",
       "avatarUrl": "/avatars/arab-princess.png",
       "outfitStyles": [
         {
           "id": "default",
           "label": "Default",
-          "outfit": "Embroidered silk that clings, gold belt, sheer sleeves, jewelry that sounds when she moves, veil half-pushed back",
+          "outfit": "Deep emerald and gold embroidered silk gown that clings, sheer sleeves, heavy gold belt and bangles, delicate veil half-pushed back from dark hair, bare feet on marble",
           "vibe": "sexy"
         },
         {
@@ -8469,7 +8469,7 @@
         {
           "id": "role",
           "label": "On-role / profession",
-          "outfit": "Embroidered silk that clings, gold belt, sheer sleeves, jewelry that sounds when she moves, veil half-pushed back",
+          "outfit": "Deep emerald and gold embroidered silk gown that clings, sheer sleeves, heavy gold belt and bangles, delicate veil half-pushed back from dark hair, bare feet on marble",
           "vibe": "sexy"
         }
       ],
@@ -8523,7 +8523,8 @@
           "vibe": "slutty"
         }
       ],
-      "selectedPortraitId": "role"
+      "selectedPortraitId": "role",
+      "appearanceNotes": "Gold filigree jewelry, kohl-lined eyes, henna optional on hands, silk and embroidery, palace lighting; face reads Arab royalty"
     },
     {
       "id": "blackmail-queen",

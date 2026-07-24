@@ -1,7 +1,608 @@
 {
-  "version": "1.4.0",
-  "description": "Expanded library: arab princess taboo, blackmail CNC, public risk, humiliation, switch, threesomes, melt arcs, shy→dom, and more.",
+  "version": "1.5.0",
+  "description": "Creative library wave 2: time-loops, hot mics, vault drills, palace gardens, body-swap, wedding closets, and more — plus classic heat.",
   "presets": [
+    {
+      "id": "loop-41-date",
+      "title": "Loop Forty-One",
+      "tagline": "She remembers every reset. Tonight she stops pretending.",
+      "blurb": "Time-loop date heat with an android/experiment vibe — romance, déjà vu, and a woman tired of polite endings.",
+      "theme": "neon-noir",
+      "characterId": "android",
+      "scenarioId": "timeloop-first-date",
+      "role": "switch",
+      "mode": "romance",
+      "intensity": 5,
+      "length": "medium",
+      "tags": [
+        "Creative",
+        "Time-loop",
+        "Romance"
+      ],
+      "coverGradient": "from-cyan-950 via-violet-950 to-ink-950",
+      "accent": "cyan"
+    },
+    {
+      "id": "wrong-key-room",
+      "title": "Wrong Key, Right Room",
+      "tagline": "Keycard glitch. Silk robe. Stay anyway.",
+      "blurb": "Hotel mistaken-identity heat that becomes intentional. Stranger energy without the cold openers.",
+      "theme": "velvet-night",
+      "characterId": "stranger-bar",
+      "scenarioId": "wrong-hotel-key",
+      "role": "switch",
+      "mode": "immediate",
+      "intensity": 6,
+      "length": "medium",
+      "tags": [
+        "Creative",
+        "Hotel",
+        "Stranger"
+      ],
+      "coverGradient": "from-rose-950 via-slate-950 to-ink-950",
+      "accent": "rose"
+    },
+    {
+      "id": "hot-mic-under-desk",
+      "title": "Hot Mic",
+      "tagline": "ON AIR lies. She does not.",
+      "blurb": "Podcast booth public-risk filth — chat still scrolling, mute light untrustworthy, knees on cable covers.",
+      "theme": "neon-noir",
+      "characterId": "alt-egirl",
+      "scenarioId": "hot-mic-podcast",
+      "role": "dom",
+      "mode": "pure-filth",
+      "intensity": 7,
+      "length": "short",
+      "tags": [
+        "Creative",
+        "Public risk",
+        "Filth"
+      ],
+      "coverGradient": "from-fuchsia-950 via-purple-950 to-black",
+      "accent": "fuchsia"
+    },
+    {
+      "id": "escape-her-rules",
+      "title": "Escape Room Rules",
+      "tagline": "Door stuck. She rewrites the puzzle.",
+      "blurb": "Trapped switch game: follow her rules until staff remembers you exist.",
+      "theme": "candle-library",
+      "characterId": "switch-lover",
+      "scenarioId": "escape-room-lock",
+      "role": "dom",
+      "mode": "full-consent",
+      "intensity": 6,
+      "length": "medium",
+      "tags": [
+        "Creative",
+        "Switch",
+        "Game"
+      ],
+      "coverGradient": "from-amber-950 via-violet-950 to-ink-950",
+      "accent": "amber"
+    },
+    {
+      "id": "ink-after-hours",
+      "title": "Ink After Hours",
+      "tagline": "Machine off. Different kind of needle.",
+      "blurb": "Tattoo studio close-up heat — pain/pleasure edge, artist hands, after-hours privacy.",
+      "theme": "blood-rose",
+      "characterId": "petite-goth",
+      "scenarioId": "tattoo-last-slot",
+      "role": "switch",
+      "mode": "slow-burn",
+      "intensity": 6,
+      "length": "medium",
+      "tags": [
+        "Creative",
+        "Tattoo",
+        "Slow burn"
+      ],
+      "coverGradient": "from-stone-950 via-red-950 to-ink-950",
+      "accent": "red"
+    },
+    {
+      "id": "snow-cabin-rival",
+      "title": "Snowed In Rival",
+      "tagline": "One bed. One year of hate. Roads closed.",
+      "blurb": "Enemies-to-heat cabin night. Blankets as weapons. Pride melting slower than the snow.",
+      "theme": "velvet-night",
+      "characterId": "bully-f",
+      "scenarioId": "snowed-in-rival",
+      "role": "switch",
+      "mode": "enemies",
+      "intensity": 6,
+      "length": "medium",
+      "tags": [
+        "Creative",
+        "Enemies",
+        "Cabin"
+      ],
+      "coverGradient": "from-slate-900 via-rose-950 to-ink-950",
+      "accent": "slate"
+    },
+    {
+      "id": "night-ferry",
+      "title": "Night Ferry Crossing",
+      "tagline": "Black water. Three hours. Bad decisions.",
+      "blurb": "Travel stranger romance on an empty deck — salt wind, shared silence, last stop looming.",
+      "theme": "neon-noir",
+      "characterId": "flight-attendant",
+      "scenarioId": "ferry-night-crossing",
+      "role": "switch",
+      "mode": "romance",
+      "intensity": 5,
+      "length": "medium",
+      "tags": [
+        "Creative",
+        "Travel",
+        "Romance"
+      ],
+      "coverGradient": "from-indigo-950 via-slate-950 to-ink-950",
+      "accent": "indigo"
+    },
+    {
+      "id": "red-darkroom",
+      "title": "Develop This",
+      "tagline": "Red light. Camera down. Subject changes.",
+      "blurb": "Darkroom artistic filth — she stops posing for the lens and starts directing you.",
+      "theme": "blood-rose",
+      "characterId": "porn-star",
+      "scenarioId": "darkroom-develop",
+      "role": "dom",
+      "mode": "pure-filth",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "Creative",
+        "Art",
+        "Filth"
+      ],
+      "coverGradient": "from-red-950 via-black to-ink-950",
+      "accent": "red"
+    },
+    {
+      "id": "museum-six-minutes",
+      "title": "Six Minutes Between Sweeps",
+      "tagline": "Marble. Motion sensors. Donor night.",
+      "blurb": "Museum after-close public risk with culture-vulture heat and a countdown.",
+      "theme": "candle-library",
+      "characterId": "sugar-client",
+      "scenarioId": "museum-after-close",
+      "role": "dom",
+      "mode": "immediate",
+      "intensity": 6,
+      "length": "short",
+      "tags": [
+        "Creative",
+        "Public risk",
+        "Luxury"
+      ],
+      "coverGradient": "from-amber-950 via-stone-900 to-ink-950",
+      "accent": "amber"
+    },
+    {
+      "id": "translate-mute",
+      "title": "Mute and Verbs",
+      "tagline": "Glass booth. Diplomats below. Hand accurate.",
+      "blurb": "Translation booth office risk — neutral face required, under-desk diplomacy optional.",
+      "theme": "neon-noir",
+      "characterId": "secretary",
+      "scenarioId": "live-translate-booth",
+      "role": "dom",
+      "mode": "pure-filth",
+      "intensity": 7,
+      "length": "short",
+      "tags": [
+        "Creative",
+        "Office",
+        "Public risk"
+      ],
+      "coverGradient": "from-violet-950 via-slate-950 to-ink-950",
+      "accent": "violet"
+    },
+    {
+      "id": "silent-retreat-palm",
+      "title": "Letters on Your Palm",
+      "tagline": "Vow of silence. South garden. No words needed.",
+      "blurb": "Soft retreat corruption — touch language, garden secrecy, quiet heat.",
+      "theme": "sunset-glow",
+      "characterId": "fit-milf",
+      "scenarioId": "yoga-silence-broken",
+      "role": "switch",
+      "mode": "slow-burn",
+      "intensity": 4,
+      "length": "medium",
+      "tags": [
+        "Creative",
+        "Soft",
+        "Romance"
+      ],
+      "coverGradient": "from-orange-950 via-emerald-950 to-ink-950",
+      "accent": "orange"
+    },
+    {
+      "id": "yacht-price",
+      "title": "Cheaper Than Security",
+      "tagline": "Stowaway tax paid in scenes, not cash.",
+      "blurb": "Luxury yacht power play — she invents a price for silence that is all heat.",
+      "theme": "neon-noir",
+      "characterId": "sugar-client",
+      "scenarioId": "yacht-stowaway",
+      "role": "dom",
+      "mode": "immediate",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "Creative",
+        "Luxury",
+        "You sub"
+      ],
+      "coverGradient": "from-cyan-950 via-indigo-950 to-ink-950",
+      "accent": "cyan"
+    },
+    {
+      "id": "moh-closet",
+      "title": "Twenty Minutes to Vows",
+      "tagline": "Maid of honor. Coat closet. Wrong bride energy.",
+      "blurb": "Wedding intermission taboo — silk, guilt, music swelling, decision already made.",
+      "theme": "velvet-night",
+      "characterId": "best-friends-sis",
+      "scenarioId": "wedding-moh-confession",
+      "role": "switch",
+      "mode": "corruption",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "Creative",
+        "Taboo",
+        "Wedding"
+      ],
+      "coverGradient": "from-rose-950 via-pink-950 to-ink-950",
+      "accent": "rose"
+    },
+    {
+      "id": "clan-tag-irl",
+      "title": "Clan Tag IRL",
+      "tagline": "Two years of voice. One convention. Zero chill.",
+      "blurb": "Gamer voice-reveal meet-cute that skips straight to filthy honesty.",
+      "theme": "neon-noir",
+      "characterId": "alt-egirl",
+      "scenarioId": "gaming-voice-reveal",
+      "role": "switch",
+      "mode": "immediate",
+      "intensity": 6,
+      "length": "medium",
+      "tags": [
+        "Creative",
+        "Gamer",
+        "Meet-cute"
+      ],
+      "coverGradient": "from-purple-950 via-fuchsia-950 to-ink-950",
+      "accent": "purple"
+    },
+    {
+      "id": "sauna-story",
+      "title": "Invent a Better Story",
+      "tagline": "Wrong door. Steam. Towel diplomacy.",
+      "blurb": "Sauna semi-public heat — leave forever-awkward or stay and rewrite the alibi.",
+      "theme": "ember-cafe",
+      "characterId": "gym-trainer",
+      "scenarioId": "sauna-wrong-door",
+      "role": "switch",
+      "mode": "immediate",
+      "intensity": 6,
+      "length": "short",
+      "tags": [
+        "Creative",
+        "Public risk",
+        "Gym"
+      ],
+      "coverGradient": "from-orange-950 via-red-950 to-ink-950",
+      "accent": "orange"
+    },
+    {
+      "id": "opera-twelve",
+      "title": "Twelve-Minute Intermission",
+      "tagline": "Aria below. Hand under the program.",
+      "blurb": "Opera box luxury public risk — applause as cover, velvet as accomplice.",
+      "theme": "velvet-night",
+      "characterId": "celebrity",
+      "scenarioId": "opera-box-act-two",
+      "role": "dom",
+      "mode": "slow-burn",
+      "intensity": 6,
+      "length": "short",
+      "tags": [
+        "Creative",
+        "Public risk",
+        "Luxury"
+      ],
+      "coverGradient": "from-rose-950 via-violet-950 to-ink-950",
+      "accent": "rose"
+    },
+    {
+      "id": "on-call-five",
+      "title": "Five Minutes, No Charts",
+      "tagline": "Code over. Closet. Adrenaline still shaking.",
+      "blurb": "Hospital night-shift stress heat — scrubs, badges, zero romance novel lighting.",
+      "theme": "blood-rose",
+      "characterId": "nurse",
+      "scenarioId": "hospital-on-call",
+      "role": "switch",
+      "mode": "immediate",
+      "intensity": 7,
+      "length": "short",
+      "tags": [
+        "Creative",
+        "Uniform",
+        "Quick"
+      ],
+      "coverGradient": "from-red-950 via-slate-950 to-ink-950",
+      "accent": "red"
+    },
+    {
+      "id": "tent-over",
+      "title": "One Tent Over",
+      "tagline": "Thin nylon. Friends at the fire. Sleeping bag math.",
+      "blurb": "Camping quiet-sex risk — whispered threats that mean do not stop.",
+      "theme": "sunset-glow",
+      "characterId": "public-risk-girl",
+      "scenarioId": "camping-thin-wall",
+      "role": "switch",
+      "mode": "pure-filth",
+      "intensity": 6,
+      "length": "medium",
+      "tags": [
+        "Creative",
+        "Public risk",
+        "Camping"
+      ],
+      "coverGradient": "from-emerald-950 via-amber-950 to-ink-950",
+      "accent": "emerald"
+    },
+    {
+      "id": "hired-if",
+      "title": "Hired If You Follow",
+      "tagline": "Interview ended. Questions did not.",
+      "blurb": "Predatory-soft interview fantasy with clear power play (fiction). Instructions over answers.",
+      "theme": "neon-noir",
+      "characterId": "boss",
+      "scenarioId": "interview-after-hours",
+      "role": "dom",
+      "mode": "blackmail",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "Creative",
+        "Office",
+        "You sub"
+      ],
+      "coverGradient": "from-indigo-950 via-black to-ink-950",
+      "accent": "indigo"
+    },
+    {
+      "id": "storm-bunk",
+      "title": "Storm Bunk",
+      "tagline": "Ferry cancelled. Lights die. Floor offer rejected by thunder.",
+      "blurb": "Soft forced-proximity romance — shy heat, emergency lighting, shared bunk.",
+      "theme": "candle-library",
+      "characterId": "shy-barista",
+      "scenarioId": "ferry-storm-cabin",
+      "role": "sub",
+      "mode": "romance",
+      "intensity": 5,
+      "length": "medium",
+      "tags": [
+        "Creative",
+        "Soft",
+        "Shy"
+      ],
+      "coverGradient": "from-slate-900 via-amber-950 to-ink-950",
+      "accent": "amber"
+    },
+    {
+      "id": "install-consent",
+      "title": "Consent Is the Medium",
+      "tagline": "Empty gallery. Ladder. You become the piece.",
+      "blurb": "Art-install night filth with explicit consent framing — gallery as playground.",
+      "theme": "arcane-smoke",
+      "characterId": "confident-bombshell",
+      "scenarioId": "art-gallery-install",
+      "role": "dom",
+      "mode": "full-consent",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "Creative",
+        "Art",
+        "Filth"
+      ],
+      "coverGradient": "from-violet-950 via-rose-950 to-ink-950",
+      "accent": "violet"
+    },
+    {
+      "id": "vault-19",
+      "title": "Nineteen Minutes Sealed",
+      "tagline": "Vault drill. Cameras off. Countdown starts.",
+      "blurb": "Trapped power tension — bodyguard/authority energy and a clock that will not negotiate.",
+      "theme": "neon-noir",
+      "characterId": "bodyguard",
+      "scenarioId": "bank-vault-drill",
+      "role": "dom",
+      "mode": "immediate",
+      "intensity": 7,
+      "length": "short",
+      "tags": [
+        "Creative",
+        "Tension",
+        "You sub"
+      ],
+      "coverGradient": "from-slate-950 via-red-950 to-black",
+      "accent": "slate"
+    },
+    {
+      "id": "last-car",
+      "title": "Last Car",
+      "tagline": "Empty subway. Belt loop. Strangers if doors open.",
+      "blurb": "Transit public risk — fluorescent flicker, station gaps, performative distance.",
+      "theme": "neon-noir",
+      "characterId": "stranger-bar",
+      "scenarioId": "subway-last-car",
+      "role": "switch",
+      "mode": "immediate",
+      "intensity": 6,
+      "length": "short",
+      "tags": [
+        "Creative",
+        "Public risk",
+        "Transit"
+      ],
+      "coverGradient": "from-zinc-950 via-violet-950 to-ink-950",
+      "accent": "zinc"
+    },
+    {
+      "id": "voice-note-delete",
+      "title": "Earn Deletion",
+      "tagline": "Your voice note. Her kitchen. CNC leverage fantasy.",
+      "blurb": "Audio blackmail fantasy with color checks — earn the delete button the fun way.",
+      "theme": "blood-rose",
+      "characterId": "blackmail-queen",
+      "scenarioId": "voice-note-leverage",
+      "role": "dom",
+      "mode": "blackmail",
+      "intensity": 8,
+      "length": "medium",
+      "tags": [
+        "Creative",
+        "Blackmail",
+        "You sub"
+      ],
+      "coverGradient": "from-red-950 via-black to-ink-950",
+      "accent": "red"
+    },
+    {
+      "id": "pool-closed-ours",
+      "title": "Pool Closed Means Ours",
+      "tagline": "Chain-link. Dark water. Dress not for swimming.",
+      "blurb": "Night trespass-fantasy pool heat — security alibis and deep-end quiet.",
+      "theme": "sunset-glow",
+      "characterId": "neighbour-young",
+      "scenarioId": "pool-closed-sign",
+      "role": "switch",
+      "mode": "immediate",
+      "intensity": 6,
+      "length": "medium",
+      "tags": [
+        "Creative",
+        "Public risk",
+        "Night"
+      ],
+      "coverGradient": "from-cyan-950 via-blue-950 to-ink-950",
+      "accent": "cyan"
+    },
+    {
+      "id": "restricted-key",
+      "title": "Restricted Section",
+      "tagline": "Only key. Dust. Academic silence as kink.",
+      "blurb": "Locked stacks library corruption — rare books and quieter rules broken carefully.",
+      "theme": "candle-library",
+      "characterId": "librarian",
+      "scenarioId": "library-restricted",
+      "role": "switch",
+      "mode": "corruption",
+      "intensity": 6,
+      "length": "medium",
+      "tags": [
+        "Creative",
+        "Library",
+        "Quiet"
+      ],
+      "coverGradient": "from-amber-950 via-stone-900 to-ink-950",
+      "accent": "amber"
+    },
+    {
+      "id": "garden-of-eyes",
+      "title": "Garden of Eyes",
+      "tagline": "Palace windows watching. Touch like a secret.",
+      "blurb": "Arab princess public-risk garden walk — politics for the watchers, heat for you. Portrait should read SWANA royalty.",
+      "theme": "arcane-smoke",
+      "characterId": "arab-princess",
+      "scenarioId": "princess-garden-spy",
+      "role": "switch",
+      "mode": "slow-burn",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "Creative",
+        "Princess",
+        "Taboo",
+        "Public risk"
+      ],
+      "coverGradient": "from-amber-950 via-emerald-950 to-ink-950",
+      "accent": "amber"
+    },
+    {
+      "id": "woke-up-wrong",
+      "title": "Woke Up Wrong",
+      "tagline": "Body swap. Map for science. Curiosity wins.",
+      "blurb": "Magical mishap comedy-heat — she has your hands, you have her face, ethics committee unavailable.",
+      "theme": "arcane-smoke",
+      "characterId": "witch",
+      "scenarioId": "body-swap-morning",
+      "role": "switch",
+      "mode": "pure-filth",
+      "intensity": 6,
+      "length": "medium",
+      "tags": [
+        "Creative",
+        "Fantasy",
+        "Comedy-heat"
+      ],
+      "coverGradient": "from-violet-950 via-purple-950 to-ink-950",
+      "accent": "violet"
+    },
+    {
+      "id": "sin-worth-it",
+      "title": "Make the Sin Worth It",
+      "tagline": "Empty chapel. Adult confession of intent.",
+      "blurb": "Forbidden guilt-heat (adults only) — she is not asking forgiveness, she is asking commitment.",
+      "theme": "candle-library",
+      "characterId": "innocent-church",
+      "scenarioId": "confession-booth-adjacent",
+      "role": "sub",
+      "mode": "corruption",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "Creative",
+        "Taboo",
+        "Corruption"
+      ],
+      "coverGradient": "from-stone-900 via-rose-950 to-ink-950",
+      "accent": "rose"
+    },
+    {
+      "id": "drone-roof",
+      "title": "Everyone Looking Up",
+      "tagline": "Drone show skyline. Roof lap. Quiet work.",
+      "blurb": "Modern public risk — whole city stares at lights while she uses the distraction.",
+      "theme": "neon-noir",
+      "characterId": "public-risk-girl",
+      "scenarioId": "drone-show-roof",
+      "role": "switch",
+      "mode": "immediate",
+      "intensity": 6,
+      "length": "short",
+      "tags": [
+        "Creative",
+        "Public risk",
+        "Modern"
+      ],
+      "coverGradient": "from-indigo-950 via-fuchsia-950 to-ink-950",
+      "accent": "indigo"
+    },
     {
       "id": "arab-princess-forbidden",
       "title": "Forbidden Palace Hour",

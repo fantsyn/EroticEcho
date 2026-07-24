@@ -1,5 +1,5 @@
 {
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Expanded wild scenarios. preferredCharacterIds are hints only.",
   "categories": [
     "Everyday",
@@ -2467,6 +2467,576 @@
       ],
       "setup": "Work event downstairs. You and her vanish into a supply closet that smells like paper and bad decisions.",
       "openingHook": "Badge light blinks. She braces against shelves of paper reams, laughing once. 'Ten minutes. If someone needs toner…' She kisses you hard. 'Then we look professional. Until then — not.'"
+    },
+    {
+      "id": "timeloop-first-date",
+      "title": "Same Night, Again",
+      "category": "Fantasy",
+      "tags": [
+        "time-loop",
+        "romance",
+        "android",
+        "memory"
+      ],
+      "intensityHint": 5,
+      "preferredCharacterIds": [
+        "android",
+        "hot-nerd",
+        "shy-library"
+      ],
+      "setup": "The date resets at midnight. She remembers every loop. You only feel déjà vu — until she decides to break the rules of the experiment.",
+      "openingHook": "She finishes your sentence before you speak. 'Loop forty-one,' she says softly. 'Tonight I am done pretending I do not already know how you kiss.'"
+    },
+    {
+      "id": "wrong-hotel-key",
+      "title": "Wrong Key, Right Room",
+      "category": "Everyday",
+      "tags": [
+        "hotel",
+        "mistaken-identity",
+        "stranger",
+        "risk"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "stranger-bar",
+        "celebrity",
+        "coworker"
+      ],
+      "setup": "Your keycard opens a room that is not yours. She is already inside, half-ready for someone else — and does not kick you out.",
+      "openingHook": "The lock clicks green for the wrong person. She looks up from the bed, silk robe open at the throat. 'You are not him,' she says. A beat. 'Stay anyway. I am tired of waiting for the right one.'"
+    },
+    {
+      "id": "hot-mic-podcast",
+      "title": "Hot Mic After the Show",
+      "category": "Public",
+      "tags": [
+        "podcast",
+        "public-risk",
+        "fame",
+        "filth"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "cam-girl",
+        "alt-egirl",
+        "celebrity"
+      ],
+      "setup": "The live show ends. The mute light lies. She pulls you under the desk while the chat still rolls on the monitor.",
+      "openingHook": "ON AIR still glows red. She mouths 'quiet' and drops to her knees behind the foam wall. Headphones hang off one ear. Chat spam scrolls. She does not care."
+    },
+    {
+      "id": "escape-room-lock",
+      "title": "Puzzle Room, No Exit",
+      "category": "Intense",
+      "tags": [
+        "trapped",
+        "game",
+        "switch",
+        "teasing"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "switch-lover",
+        "hot-nerd",
+        "coworker"
+      ],
+      "setup": "The escape room glitches. Staff does not come. She turns the last clue into a dare: solve her, not the box.",
+      "openingHook": "The magnetic lock stays dead. She laughs once, nervous-hot. 'Forty minutes of privacy we did not pay for.' She pins the clue card to your chest. 'New rules. You follow mine until the door opens.'"
+    },
+    {
+      "id": "tattoo-last-slot",
+      "title": "Ink After Hours",
+      "category": "Everyday",
+      "tags": [
+        "tattoo",
+        "pain-pleasure",
+        "artist",
+        "slow-burn"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "alt-egirl",
+        "petite-goth",
+        "red-pixie"
+      ],
+      "setup": "Last client of the night. Machine still warm. She offers a 'free touch-up' that is not on the consent form.",
+      "openingHook": "Gloves snap off. She cleans ink from her wrist and looks at your mouth. 'Stay still for me one more time,' she murmurs. 'Different kind of needle. Louder safeword if you need it.'"
+    },
+    {
+      "id": "snowed-in-rival",
+      "title": "Snowed In With Her",
+      "category": "Home",
+      "tags": [
+        "enemies",
+        "cabin",
+        "slow-burn",
+        "switch"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "bully-f",
+        "coworker",
+        "best-friends-sis"
+      ],
+      "setup": "Work retreat cabin. Roads closed. One bed. She has hated you for a year and still takes the side closer to the fire — and to you.",
+      "openingHook": "Wind screams. She throws a blanket at your chest. 'If you snore I will end you.' Her voice cracks into something softer. 'Also… if you get cold, do not be proud about it.'"
+    },
+    {
+      "id": "ferry-night-crossing",
+      "title": "Night Ferry Crossing",
+      "category": "Public",
+      "tags": [
+        "travel",
+        "semi-public",
+        "stranger",
+        "romance"
+      ],
+      "intensityHint": 5,
+      "preferredCharacterIds": [
+        "stranger-bar",
+        "flight-attendant",
+        "rideshare"
+      ],
+      "setup": "Three hours of black water and empty decks. She shares a cigarette she does not smoke and a secret she should not.",
+      "openingHook": "Salt wind. She leans on the rail, coat open. 'I get off at the last stop. So do you.' Her shoulder touches yours on purpose. 'We have the whole dark crossing to make a bad decision.'"
+    },
+    {
+      "id": "darkroom-develop",
+      "title": "In the Darkroom",
+      "category": "Intense",
+      "tags": [
+        "photography",
+        "dark",
+        "artistic",
+        "filth"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "porn-star",
+        "cam-girl",
+        "celebrity"
+      ],
+      "setup": "Red safe light. Trays of chemicals. She was supposed to be the model. She takes the camera out of your hands.",
+      "openingHook": "Red light paints her collarbones. She sets the camera down. 'Enough pictures of me performing.' She guides your hands to the real subject. 'Develop this instead.'"
+    },
+    {
+      "id": "museum-after-close",
+      "title": "After the Alarms Arm",
+      "category": "Public",
+      "tags": [
+        "museum",
+        "public-risk",
+        "culture",
+        "taboo"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "librarian",
+        "teacher-professor",
+        "sugar-client"
+      ],
+      "setup": "Private donor night. Galleries empty. She pulls you behind a statue that has watched worse centuries.",
+      "openingHook": "Motion sensors sleep for seven minutes between sweeps. She checks her watch, smiling. 'We have six.' Marble cold at her back. Her mouth is not."
+    },
+    {
+      "id": "live-translate-booth",
+      "title": "Translation Booth",
+      "category": "Office",
+      "tags": [
+        "office",
+        "public-risk",
+        "power",
+        "filth"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "secretary",
+        "coworker",
+        "boss"
+      ],
+      "setup": "UN-style booth glass. Diplomats below. She translates nothing useful while her hand is very accurate.",
+      "openingHook": "She keys the mute and still mouths the speech. Under the desk her knee presses yours. 'Keep your face neutral,' she breathes. 'I will handle the verbs.'"
+    },
+    {
+      "id": "yoga-silence-broken",
+      "title": "Vow of Silence, Broken",
+      "category": "Romance",
+      "tags": [
+        "yoga",
+        "retreat",
+        "slow-burn",
+        "soft"
+      ],
+      "intensityHint": 4,
+      "preferredCharacterIds": [
+        "fit-milf",
+        "shy-library",
+        "massage-therapist"
+      ],
+      "setup": "Silent retreat day three. She writes on your palm instead of speaking — then writes something that is not spiritual.",
+      "openingHook": "Her fingertip traces letters on your skin: MEET / SOUTH / GARDEN. Later her mouth finds your ear without a word. The rule was silence. The exception is you."
+    },
+    {
+      "id": "yacht-stowaway",
+      "title": "Stowaway on Her Yacht",
+      "category": "Intense",
+      "tags": [
+        "luxury",
+        "power",
+        "blackmail-soft",
+        "domme"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "sugar-client",
+        "celebrity",
+        "confident-bombshell"
+      ],
+      "setup": "You were not on the guest list. She finds you below deck and invents a price for silence that is not money.",
+      "openingHook": "Bare feet on teak. She blocks the hatch, champagne in hand, zero surprise. 'Security is expensive. You are cheaper.' She points at the floor with two fingers. 'Start by being interesting.'"
+    },
+    {
+      "id": "wedding-moh-confession",
+      "title": "Maid of Honor Intermission",
+      "category": "Forbidden",
+      "tags": [
+        "wedding",
+        "taboo",
+        "guilt",
+        "public-risk"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "best-friends-sis",
+        "sister-in-law",
+        "coworker"
+      ],
+      "setup": "Ceremony in twenty minutes. She is in silk the color of a secret and pulls you into a coat closet with the vows still unsaid.",
+      "openingHook": "Bouquet crushed between you. She laughs wetly. 'I am supposed to hold her dress. I am holding you instead.' Music swells outside. She kisses like a crime scene."
+    },
+    {
+      "id": "gaming-voice-reveal",
+      "title": "Voice Chat, Real Life",
+      "category": "Everyday",
+      "tags": [
+        "gamer",
+        "meet-cute",
+        "reveal",
+        "filth"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "alt-egirl",
+        "hot-nerd",
+        "petite-goth"
+      ],
+      "setup": "Years of ranked nights. One convention. She is wearing your clan tag on her chest and zero patience left for 'just friends.'",
+      "openingHook": "Headset around her neck like a trophy. She recognizes your laugh before your face. 'So you are real,' she says, stepping into your space. 'Good. I have been filthy for a voice for two years. Show me the rest.'"
+    },
+    {
+      "id": "sauna-wrong-door",
+      "title": "Wrong Sauna Door",
+      "category": "Public",
+      "tags": [
+        "sauna",
+        "semi-public",
+        "risk",
+        "heat"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "fit-milf",
+        "gym-trainer",
+        "neighbour-milf"
+      ],
+      "setup": "Steam, towels, a door that should have been locked. She does not cover up when she realizes who you are.",
+      "openingHook": "Heat hits. She looks once, towel loose, sweat on her collarbone. 'If you leave, it is awkward forever. If you stay…' She shifts, making room on the wood. 'We invent a better story.'"
+    },
+    {
+      "id": "opera-box-act-two",
+      "title": "Box Seats, Act Two",
+      "category": "Public",
+      "tags": [
+        "opera",
+        "public-risk",
+        "luxury",
+        "teasing"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "sugar-client",
+        "boss",
+        "celebrity"
+      ],
+      "setup": "Private box, velvet curtain half-drawn. Aria below. Her hand under the program on your lap.",
+      "openingHook": "Applause covers a gasp. She does not look at you — only at the stage — while her fingers negotiate. 'Intermission is twelve minutes,' she whispers. 'Do not make me wait for the curtain.'"
+    },
+    {
+      "id": "hospital-on-call",
+      "title": "On-Call Closet",
+      "category": "Intense",
+      "tags": [
+        "hospital",
+        "uniform",
+        "stress-sex",
+        "quick"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "nurse",
+        "therapist",
+        "coworker"
+      ],
+      "setup": "Code ended. Hands still shaking. She drags you into a supply closet that smells like antiseptic and bad decisions.",
+      "openingHook": "Scrubs, badge, wild eyes. She locks the door with her hip. 'Five minutes. No deaths. No names on charts.' She kisses like adrenaline has a body."
+    },
+    {
+      "id": "camping-thin-wall",
+      "title": "One Tent Over",
+      "category": "Public",
+      "tags": [
+        "camping",
+        "quiet",
+        "almost-caught",
+        "friends"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "best-friends-sis",
+        "roommate",
+        "public-risk-girl"
+      ],
+      "setup": "Group trip. Thin nylon. Friends six feet away. She crawls into your sleeping bag because 'the ground is cold.'",
+      "openingHook": "Zipper teeth. Her whisper is almost nothing. 'If you make me loud I will kill you.' Then softer: 'If you stop I will also kill you.' Outside, someone laughs at a fire."
+    },
+    {
+      "id": "interview-after-hours",
+      "title": "Interview That Never Ended",
+      "category": "Office",
+      "tags": [
+        "power",
+        "office",
+        "corruption",
+        "domme"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "boss",
+        "principal",
+        "blackmail-queen"
+      ],
+      "setup": "The job interview ended an hour ago. She never stood up. The questions got personal, then physical, then non-negotiable.",
+      "openingHook": "She closes your portfolio without looking. 'You are hired if you can follow instructions better than you answer them.' She points under the desk with her chin. 'Demonstrate.'"
+    },
+    {
+      "id": "ferry-storm-cabin",
+      "title": "Storm Cabin Bunk",
+      "category": "Romance",
+      "tags": [
+        "storm",
+        "forced-proximity",
+        "soft",
+        "heat"
+      ],
+      "intensityHint": 5,
+      "preferredCharacterIds": [
+        "shy-barista",
+        "neighbour-young",
+        "cute-blonde"
+      ],
+      "setup": "Ferry cancelled. One spare cabin. Two bunks that become one when the lights die.",
+      "openingHook": "Emergency lighting paints her nervous smile. 'I can take the floor.' You both know she will not. Thunder. She sits on the edge of your bunk like the storm made the choice for her."
+    },
+    {
+      "id": "art-gallery-install",
+      "title": "Install Night",
+      "category": "Intense",
+      "tags": [
+        "art",
+        "exhibition",
+        "public-risk",
+        "filth"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "porn-star",
+        "stripper",
+        "confident-bombshell"
+      ],
+      "setup": "Empty gallery, crates, ladder. Her installation is about desire. She decides you are part of the piece.",
+      "openingHook": "She steps off the ladder into your space, paint on her wrist. 'The wall text says consent is the medium.' She takes your hand and places it where the camera will never point. 'So consent.'"
+    },
+    {
+      "id": "bank-vault-drill",
+      "title": "Vault Drill",
+      "category": "Intense",
+      "tags": [
+        "trapped",
+        "power",
+        "tension",
+        "switch"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "bodyguard",
+        "boss",
+        "cop"
+      ],
+      "setup": "Safety drill seals the vault for twenty minutes. Cameras blink offline by design. She starts a different kind of countdown.",
+      "openingHook": "Steel door thuds. She checks her watch, then your mouth. 'Nineteen minutes of no witnesses.' Her laugh is low. 'Want to waste them being professional?'"
+    },
+    {
+      "id": "subway-last-car",
+      "title": "Last Car, Last Train",
+      "category": "Public",
+      "tags": [
+        "transit",
+        "public-risk",
+        "stranger",
+        "filth"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "stranger-bar",
+        "public-risk-girl",
+        "rideshare"
+      ],
+      "setup": "Empty subway car after midnight. She sits across, then beside, then not beside enough.",
+      "openingHook": "Fluorescent flicker. She hooks a finger in your belt loop when the train jerks. 'If anyone gets on, we are strangers again.' Doors stay closed between stations long enough to be deliberate."
+    },
+    {
+      "id": "voice-note-leverage",
+      "title": "The Voice Note",
+      "category": "Dark",
+      "tags": [
+        "blackmail",
+        "audio",
+        "cnc-light",
+        "power"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "blackmail-queen",
+        "psycho-ex",
+        "cam-girl"
+      ],
+      "setup": "She plays three seconds of a voice note you should not have left. CNC fantasy terms only — safeword ends the game.",
+      "openingHook": "Your own voice, filthy, fills her kitchen. She stops it with a smile. 'Color check.' When you say green, she pockets the phone. 'Good. Now earn deletion the fun way.'"
+    },
+    {
+      "id": "pool-closed-sign",
+      "title": "POOL CLOSED Means Ours",
+      "category": "Public",
+      "tags": [
+        "pool",
+        "night",
+        "trespass-fantasy",
+        "heat"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "neighbour-young",
+        "fit-milf",
+        "college-freshman"
+      ],
+      "setup": "Chain-link, dark water, a sign that is a dare. She boosts you over and follows in a dress that was not meant for swimming.",
+      "openingHook": "Water up to her thighs, dress floating. She shushes the night. 'If security comes, we are lost tourists.' She pulls you deeper where the lights do not reach."
+    },
+    {
+      "id": "library-restricted",
+      "title": "Restricted Section Key",
+      "category": "School",
+      "tags": [
+        "library",
+        "keys",
+        "quiet",
+        "corruption"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "librarian",
+        "shy-library",
+        "teacher-professor"
+      ],
+      "setup": "She has the only key to the locked stacks. Dust, rare books, and a rule about silence she intends to break carefully.",
+      "openingHook": "The gate clicks. She pockets the key between her breasts like a joke. 'No cameras past this point. No shouting either.' Her eyes say the opposite of academic."
+    },
+    {
+      "id": "princess-garden-spy",
+      "title": "Garden of Eyes",
+      "category": "Taboo+",
+      "tags": [
+        "princess",
+        "spies",
+        "public-risk",
+        "palace"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "arab-princess",
+        "bodyguard",
+        "goddess"
+      ],
+      "setup": "Moonlit palace garden. Windows full of people who must not know. She uses you as cover for a walk that is not a walk.",
+      "openingHook": "Jasmine and gold. She laughs too brightly for the watchers, then whispers against your jaw in her soft accent: 'Look like my guest. Touch me like my secret. If they stare, we are only talking politics.'"
+    },
+    {
+      "id": "body-swap-morning",
+      "title": "Woke Up Wrong",
+      "category": "Fantasy",
+      "tags": [
+        "body-swap",
+        "comedy-heat",
+        "switch",
+        "identity"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "witch",
+        "android",
+        "succubus"
+      ],
+      "setup": "Magic mishap. She is in your body; you are in hers. The fix takes hours. Curiosity does not wait.",
+      "openingHook": "She flexes your hands, freaked and fascinated. 'Do not look at me like that — that is my face.' A beat. 'Okay. Look a little. We should… map things. For science.'"
+    },
+    {
+      "id": "confession-booth-adjacent",
+      "title": "Not Quite Confession",
+      "category": "Forbidden",
+      "tags": [
+        "taboo",
+        "guilt",
+        "church-adjacent",
+        "corruption"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "innocent-church",
+        "therapist",
+        "shy-library"
+      ],
+      "setup": "Empty chapel after hours (adults only). She came to confess a thought. She stays to commit it.",
+      "openingHook": "Candle smoke. She kneels out of habit, then laughs at herself. 'I am not asking forgiveness.' She looks up at you from the rail. 'I am asking you to make the sin worth it.'"
+    },
+    {
+      "id": "drone-show-roof",
+      "title": "Roof During the Drone Show",
+      "category": "Public",
+      "tags": [
+        "rooftop",
+        "public-risk",
+        "modern",
+        "filth"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "public-risk-girl",
+        "coworker",
+        "stranger-bar"
+      ],
+      "setup": "City drone light show above. Whole skyline watching the sky — not the roof where she pulls you down.",
+      "openingHook": "Pixels bloom overhead. She sits on your lap facing the skyline so it looks like cuddling. 'Everyone is looking up,' she whispers. 'Help me stay quiet while they do.'"
     }
   ]
 }

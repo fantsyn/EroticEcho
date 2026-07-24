@@ -284,7 +284,7 @@ function sanitizeSexy(s: string): string {
 }
 
 /** Cache-bust when portraits are regenerated (bump when re-running generate-avatars) */
-export const AVATAR_ASSET_VERSION = "4";
+export const AVATAR_ASSET_VERSION = "5";
 
 export function staticAvatarPath(
   characterId: string,
