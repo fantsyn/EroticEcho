@@ -18,6 +18,10 @@ export default function PrivacyPage() {
           Browser localStorage may hold stories, profile kinks, loadouts, and
           favorites on your device
         </li>
+        <li>
+          If the operator enables Redis (Upstash), account and share-code data
+          may be stored there for multi-device durability
+        </li>
       </ul>
       <h2 className="text-echo-100">Cookies</h2>
       <p className="text-ink-300">

@@ -68,11 +68,12 @@ export async function POST(req: NextRequest) {
     }
   }
 
-  // Demo / manual sales mode — redeem or instant upgrade for testing
-  if (
+  // Demo / manual sales mode — never auto-enable in production unless explicit
+  const demoBilling =
     process.env.DEMO_BILLING === "true" ||
-    process.env.NODE_ENV !== "production"
-  ) {
+    (process.env.NODE_ENV !== "production" &&
+      process.env.DEMO_BILLING !== "false");
+  if (demoBilling) {
     await updateUser(auth.recordId, { plan });
     try {
       const { upgradeEmailHtml } = await import("@/lib/email/theme");

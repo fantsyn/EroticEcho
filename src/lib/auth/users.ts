@@ -4,9 +4,12 @@ import { hashPassword, newId, newSalt, todayKey, verifyPassword } from "./crypto
 import type { PlanId, PublicUser, UserRecord } from "./types";
 import { getPlan } from "./plans";
 import { getDataDir, isServerlessRuntime } from "./data-path";
+import { hasRemoteKv, kvGet, kvSet } from "./remote-kv";
 
 /** Stable id so god sessions survive cold starts without a shared DB */
 export const GOD_USER_ID = "god-owner";
+
+const USERS_KV_KEY = "eroticecho:users:v1";
 
 type Store = { users: UserRecord[] };
 
@@ -55,6 +58,23 @@ async function canWriteFs(): Promise<boolean> {
 }
 
 async function ensureStore(): Promise<Store> {
+  // 1) Durable remote (Upstash) — survives Vercel cold starts
+  if (hasRemoteKv()) {
+    try {
+      const raw = await kvGet(USERS_KV_KEY);
+      if (raw) {
+        const parsed = JSON.parse(raw) as Store;
+        if (Array.isArray(parsed.users)) {
+          memoryStore().users = parsed.users;
+          return parsed;
+        }
+      }
+    } catch {
+      /* fall through */
+    }
+  }
+
+  // 2) Local /tmp or project data dir
   const writable = await canWriteFs();
   if (!writable) {
     return memoryStore();
@@ -67,11 +87,9 @@ async function ensureStore(): Promise<Store> {
       memoryStore().users = empty.users;
       return empty;
     }
-    // Keep memory mirror for fast path / partial FS failures
     memoryStore().users = parsed.users;
     return parsed;
   } catch {
-    // Seed from memory if we already have users there
     const mem = memoryStore();
     if (mem.users.length) return { users: [...mem.users] };
     const empty: Store = { users: [] };
@@ -88,7 +106,17 @@ async function writeStore(store: Store): Promise<void> {
   // Always update memory so god / register work even if disk fails
   memoryStore().users = store.users;
 
-  if (g.__eeFsWritable === false) return;
+  // Prefer remote KV on Vercel
+  if (hasRemoteKv()) {
+    try {
+      const ok = await kvSet(USERS_KV_KEY, JSON.stringify(store));
+      if (ok) return;
+    } catch {
+      /* fall through to disk */
+    }
+  }
+
+  if (g.__eeFsWritable === false && !hasRemoteKv()) return;
 
   try {
     const dir = getDataDir();
@@ -98,10 +126,8 @@ async function writeStore(store: Store): Promise<void> {
   } catch (e) {
     g.__eeFsWritable = false;
     if (!isServerlessRuntime() && !isFsError(e)) {
-      // Local unexpected errors — surface
       throw e;
     }
-    // Serverless / read-only: silent memory fallback
   }
 }
 

@@ -1,14 +1,20 @@
 /**
- * Server-side story cloud (filesystem).
- * Any device hitting this Next server can publish / claim by short code.
+ * Server-side story cloud.
+ * Prefers Upstash Redis REST when configured (survives Vercel cold starts),
+ * else /tmp or local data/cloud-stories.
  */
 import { promises as fs } from "fs";
 import path from "path";
 import type { ActiveStory } from "./types";
 import { getDataDir } from "@/lib/auth/data-path";
+import { hasRemoteKv, kvGet, kvKeys, kvSet } from "@/lib/auth/remote-kv";
 
 function cloudDir(): string {
   return path.join(getDataDir(), "cloud-stories");
+}
+
+function cloudKvKey(code: string): string {
+  return `eroticecho:cloud:${normalizeCode(code)}`;
 }
 
 /** Unambiguous alphabet (no 0/O, 1/I/L) */
@@ -95,7 +101,6 @@ export async function saveCloudStory(
   story: ActiveStory,
   existingCode?: string
 ): Promise<CloudPayload> {
-  await ensureDir();
   let code = existingCode ? normalizeCode(existingCode) : "";
 
   if (code) {
@@ -103,14 +108,22 @@ export async function saveCloudStory(
   } else if (story.shareCode) {
     code = normalizeCode(story.shareCode);
   } else {
-    // unique code
     for (let i = 0; i < 12; i++) {
       const candidate = generateShareCode(6);
-      try {
-        await fs.access(fileFor(candidate));
-      } catch {
-        code = candidate;
-        break;
+      if (hasRemoteKv()) {
+        const hit = await kvGet(cloudKvKey(candidate));
+        if (!hit) {
+          code = candidate;
+          break;
+        }
+      } else {
+        try {
+          await ensureDir();
+          await fs.access(fileFor(candidate));
+        } catch {
+          code = candidate;
+          break;
+        }
       }
     }
     if (!code) code = generateShareCode(8);
@@ -118,13 +131,8 @@ export async function saveCloudStory(
 
   const now = new Date().toISOString();
   let createdAt = now;
-  try {
-    const prev = await fs.readFile(fileFor(code), "utf8");
-    const parsed = JSON.parse(prev) as CloudPayload;
-    createdAt = parsed.createdAt || now;
-  } catch {
-    /* new */
-  }
+  const prevPayload = await loadCloudStory(code);
+  if (prevPayload?.createdAt) createdAt = prevPayload.createdAt;
 
   const payload: CloudPayload = {
     code,
@@ -137,7 +145,19 @@ export async function saveCloudStory(
     },
   };
 
-  await fs.writeFile(fileFor(code), JSON.stringify(payload), "utf8");
+  const json = JSON.stringify(payload);
+  if (hasRemoteKv()) {
+    const ok = await kvSet(cloudKvKey(code), json);
+    if (ok) return payload;
+  }
+
+  try {
+    await ensureDir();
+    await fs.writeFile(fileFor(code), json, "utf8");
+  } catch (e) {
+    // Last resort: still return payload so client keeps code in-session
+    console.warn("[cloud-store] write failed", e);
+  }
   return payload;
 }
 
@@ -146,6 +166,19 @@ export async function loadCloudStory(
 ): Promise<CloudPayload | null> {
   const code = normalizeCode(rawCode);
   if (code.length < 4) return null;
+
+  if (hasRemoteKv()) {
+    try {
+      const raw = await kvGet(cloudKvKey(code));
+      if (raw) {
+        const data = JSON.parse(raw) as CloudPayload;
+        if (data?.story) return data;
+      }
+    } catch {
+      /* fall through */
+    }
+  }
+
   try {
     const raw = await fs.readFile(fileFor(code), "utf8");
     const data = JSON.parse(raw) as CloudPayload;
@@ -159,6 +192,42 @@ export async function loadCloudStory(
 export async function listRecentCloud(limit = 20): Promise<
   { code: string; title: string; updatedAt: string; sceneCount: number }[]
 > {
+  const rows: {
+    code: string;
+    title: string;
+    updatedAt: string;
+    sceneCount: number;
+  }[] = [];
+
+  if (hasRemoteKv()) {
+    try {
+      const keys = await kvKeys("eroticecho:cloud:*");
+      for (const k of keys.slice(0, 80)) {
+        const raw = await kvGet(k);
+        if (!raw) continue;
+        try {
+          const data = JSON.parse(raw) as CloudPayload;
+          rows.push({
+            code: data.code,
+            title: data.story?.title || "Story",
+            updatedAt: data.updatedAt,
+            sceneCount: data.story?.scenes?.length || 0,
+          });
+        } catch {
+          /* skip */
+        }
+      }
+      return rows
+        .sort(
+          (a, b) =>
+            new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime()
+        )
+        .slice(0, limit);
+    } catch {
+      /* fall through to disk */
+    }
+  }
+
   await ensureDir();
   let files: string[] = [];
   try {
@@ -166,12 +235,6 @@ export async function listRecentCloud(limit = 20): Promise<
   } catch {
     return [];
   }
-  const rows: {
-    code: string;
-    title: string;
-    updatedAt: string;
-    sceneCount: number;
-  }[] = [];
   for (const f of files) {
     if (!f.endsWith(".json")) continue;
     try {

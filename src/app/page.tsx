@@ -69,6 +69,10 @@ export default function HomePage() {
   const [favorites, setFavorites] = useState<string[]>([]);
   const [quizTick, setQuizTick] = useState(0);
   const [showStarter, setShowStarter] = useState(false);
+  /** Onboarding: pick a vibe → 3 quick cards */
+  const [onboardMood, setOnboardMood] = useState<
+    "soft" | "filth" | "power" | "creative" | null
+  >(null);
 
   useEffect(() => {
     setFavorites(loadFavoritePresets());
@@ -121,6 +125,24 @@ export default function HomePage() {
       storyPresets.find((p) => p.id === id)
     ).filter(Boolean) as typeof storyPresets;
   }, []);
+
+  const onboardCards = useMemo(() => {
+    if (!onboardMood) return [];
+    const re =
+      onboardMood === "soft"
+        ? /soft|shy|romance|cute|melt|barista|massage|storm bunk/i
+        : onboardMood === "filth"
+          ? /filth|public|hot mic|threesome|slut|breeding|cnc|blackmail/i
+          : onboardMood === "power"
+            ? /you sub|domme|kneel|boss|vault|hired|princess|training/i
+            : /creative|loop|wrong key|escape|tattoo|yacht|body.?swap|drone|opera|garden/i;
+    const hits = storyPresets.filter((p) =>
+      re.test([p.title, p.tagline, p.blurb, ...p.tags].join(" "))
+    );
+    // Prefer unused variety
+    const shuffled = [...hits].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, 3);
+  }, [onboardMood]);
 
   const surpriseMe = () => {
     const { character, scenario } = randomizeSetup();
@@ -282,6 +304,64 @@ export default function HomePage() {
 
       <section className="card p-4 sm:p-5 max-w-xl">
         <ClaimCode />
+      </section>
+
+      {/* Onboarding: mood → 3 cards */}
+      <section className="card-immersive p-4 sm:p-6 space-y-3">
+        <div>
+          <p className="section-kicker mb-0.5">Start in 10 seconds</p>
+          <h2 className="panel-title text-xl sm:text-2xl">
+            What kind of night?
+          </h2>
+          <p className="text-xs text-ink-500 mt-1">
+            Pick a vibe — we show three ready presets. No setup required.
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          {(
+            [
+              ["soft", "Soft / shy"],
+              ["filth", "Filth / risk"],
+              ["power", "You are sub"],
+              ["creative", "Weird / creative"],
+            ] as const
+          ).map(([id, label]) => (
+            <button
+              key={id}
+              type="button"
+              onClick={() => {
+                setOnboardMood(id);
+                track("onboard_mood", { mood: id });
+              }}
+              className={clsx(
+                "rounded-full border px-3 py-2 text-xs min-h-10 touch-manipulation transition",
+                onboardMood === id
+                  ? "bg-rose-500/25 border-rose-400/50 text-rose-50"
+                  : "bg-black/25 border-white/10 text-ink-300 active:border-white/25"
+              )}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+        {onboardMood && onboardCards.length > 0 && (
+          <div className="grid sm:grid-cols-3 gap-3 pt-1 animate-fade-in">
+            {onboardCards.map((p) => (
+              <PresetCard
+                key={p.id}
+                preset={p}
+                favorited={favorites.includes(p.id)}
+                onFavoriteChange={setFavorites}
+                onPlay={() => playPreset(p.id)}
+              />
+            ))}
+          </div>
+        )}
+        {onboardMood && onboardCards.length === 0 && (
+          <p className="text-xs text-ink-500">
+            No matches — browse the full library below.
+          </p>
+        )}
       </section>
 
       {/* Starter 12 */}

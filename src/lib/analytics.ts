@@ -15,7 +15,8 @@ export type AnalyticsEvent =
   | "upgrade_complete"
   | "redeem_code"
   | "preset_play"
-  | "age_verify";
+  | "age_verify"
+  | "onboard_mood";
 
 const KEY = "ee_analytics_buf";
 

@@ -466,6 +466,83 @@ export const MOOD_CHIPS: MoodChip[] = [
       ),
     }),
   },
+  {
+    id: "next-confession",
+    label: "Next: confession",
+    description: "She admits something she has been hiding",
+    heat: 1,
+    apply: (s) => ({
+      mods: {
+        ...s.mods,
+        freeformNotes: appendNote(
+          s.mods.freeformNotes,
+          "Next scene beat: she confesses a hidden want/fear/jealousy mid-heat; emotional honesty without killing desire."
+        ),
+      },
+      memorySummary: appendNote(s.memorySummary, "Beat pending: confession."),
+    }),
+  },
+  {
+    id: "next-almost-caught",
+    label: "Next: almost caught",
+    description: "Near-miss interruption raises stakes",
+    heat: 2,
+    apply: (s) => ({
+      mods: {
+        ...s.mods,
+        freeformNotes: appendNote(
+          s.mods.freeformNotes,
+          "Next scene beat: someone almost walks in / door noise / phone buzz — freeze, quiet filth, then resume hotter."
+        ),
+        addedKinks: uniqKinks(s, ["public-risk", "almost-caught"]),
+      },
+      memorySummary: appendNote(
+        s.memorySummary,
+        "Beat pending: almost-caught scare."
+      ),
+    }),
+  },
+  {
+    id: "next-tender",
+    label: "Next: tender",
+    description: "Soft after the heat — still intimate",
+    heat: 1,
+    apply: (s) => ({
+      settings: {
+        ...s.settings,
+        intensity: clamp(s.settings.intensity - 1, 1, 10),
+        mode: "romance" as StoryModeId,
+      },
+      mods: {
+        ...s.mods,
+        freeformNotes: appendNote(
+          s.mods.freeformNotes,
+          "Next scene beat: tender interlude — water, forehead kiss, honest talk, hands still possessive."
+        ),
+        addedKinks: uniqKinks(s, ["aftercare", "romance", "kissing"]),
+      },
+    }),
+  },
+  {
+    id: "next-escalate",
+    label: "Next: escalate",
+    description: "One clear step filthier / bolder",
+    heat: 3,
+    apply: (s) => ({
+      settings: {
+        ...s.settings,
+        intensity: clamp(s.settings.intensity + 2, 1, 10),
+      },
+      mods: {
+        ...s.mods,
+        freeformNotes: appendNote(
+          s.mods.freeformNotes,
+          "Next scene beat: deliberate escalation — bolder language, riskier location, stronger lead from her or the reader."
+        ),
+      },
+      memorySummary: appendNote(s.memorySummary, "Beat pending: escalate."),
+    }),
+  },
 ];
 
 export function getMoodChip(id: string): MoodChip | undefined {
