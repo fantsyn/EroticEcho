@@ -389,6 +389,83 @@ export const MOOD_CHIPS: MoodChip[] = [
       },
     }),
   },
+  {
+    id: "public-risk",
+    label: "Public risk+",
+    description: "Almost-caught thrills, quiet filth",
+    heat: 2,
+    apply: (s) => ({
+      settings: {
+        ...s.settings,
+        intensity: clamp(s.settings.intensity + 1, 1, 10),
+      },
+      mods: {
+        ...s.mods,
+        freeformNotes: appendNote(
+          s.mods.freeformNotes,
+          "Emphasize public/semi-public risk: thin walls, footsteps, almost-caught tension; keep volume low, adrenaline high."
+        ),
+        locationOverride:
+          s.mods.locationOverride ||
+          "a place where someone could walk in any second",
+        addedKinks: uniqKinks(s, [
+          "public-risk",
+          "exhibition",
+          "semi-public",
+          "almost-caught",
+        ]),
+      },
+    }),
+  },
+  {
+    id: "blackmail-play",
+    label: "Blackmail play",
+    description: "CNC leverage fantasy — safeword sacred",
+    heat: 3,
+    apply: (s) => ({
+      settings: {
+        ...s.settings,
+        mode: "blackmail" as StoryModeId,
+        intensity: clamp(Math.max(s.settings.intensity, 7), 1, 10),
+      },
+      mods: {
+        ...s.mods,
+        freeformNotes: appendNote(
+          s.mods.freeformNotes,
+          `Blackmail/CNC fantasy framing only. Confirm colors; safeword "${s.settings.cncSafeword || "red"}" ends play. Leverage is erotic fiction, not real harm.`
+        ),
+        personalityNotes: appendNote(
+          s.mods.personalityNotes,
+          "She wields leverage playfully-to-cruel; still tracks consent architecture."
+        ),
+        addedKinks: uniqKinks(s, ["blackmail", "CNC", "control", "degradation"]),
+      },
+    }),
+  },
+  {
+    id: "switch-flip",
+    label: "Switch flip",
+    description: "Power flips mid-arc",
+    heat: 2,
+    apply: (s) => ({
+      mods: {
+        ...s.mods,
+        freeformNotes: appendNote(
+          s.mods.freeformNotes,
+          "Next scene: deliberate power flip — who was leading yields (or vice versa). Make the switch explicit and hot."
+        ),
+        personalityNotes: appendNote(
+          s.mods.personalityNotes,
+          "Fluid D/s: she enjoys both leading and melting; announce the flip in dialogue."
+        ),
+        addedKinks: uniqKinks(s, ["switch", "power-exchange", "teasing"]),
+      },
+      memorySummary: appendNote(
+        s.memorySummary,
+        "Power dynamic about to flip on purpose."
+      ),
+    }),
+  },
 ];
 
 export function getMoodChip(id: string): MoodChip | undefined {

@@ -12,6 +12,8 @@ import {
   Loader2,
   Maximize2,
   Minimize2,
+  BookOpen,
+  List,
   MoreHorizontal,
   Pause,
   Play,
@@ -60,6 +62,8 @@ import { UsageBanner } from "./UsageBanner";
 import { LimitReachedModal } from "./LimitReachedModal";
 import { track } from "@/lib/analytics";
 import { useAuthStore } from "@/store/useAuthStore";
+import { AmbientAudio } from "./AmbientAudio";
+import { unlockAmbient } from "@/lib/ambient";
 import clsx from "clsx";
 
 export function StoryReader() {
@@ -97,6 +101,8 @@ export function StoryReader() {
   const [panel, setPanel] = useState<
     null | "mood" | "clothes" | "more"
   >(null);
+  /** Continuous full-story reading (all scenes at once) */
+  const [fullStoryMode, setFullStoryMode] = useState(false);
 
   const togglePanel = (id: "mood" | "clothes" | "more") => {
     setPanel((p) => (p === id ? null : id));
@@ -115,8 +121,13 @@ export function StoryReader() {
   const isLatest = historyIndex === null || historyIndex === scenes.length - 1;
 
   // Mobile: skip typewriter so choices appear immediately (was blocking taps)
+  // Full-story mode never typewrites (continuous read)
   const useTypewriter =
-    !!story?.settings.typewriter && isLatest && !loading && !touchUi;
+    !!story?.settings.typewriter &&
+    isLatest &&
+    !loading &&
+    !touchUi &&
+    !fullStoryMode;
 
   useEffect(() => {
     mountedRef.current = true;
@@ -545,8 +556,20 @@ export function StoryReader() {
     setShowHardNos(false);
   };
 
+  const fullStoryText = useCallback(() => {
+    if (!story?.scenes?.length) return "";
+    return story.scenes
+      .map((sc, i) => {
+        const head = `Scene ${i + 1}`;
+        const action = sc.chosenAction ? `\nYou: ${sc.chosenAction}\n` : "\n";
+        return `${head}${action}${sc.narrative}`;
+      })
+      .join("\n\n——\n\n");
+  }, [story]);
+
   const toggleNarratePause = async () => {
-    if (!current) return;
+    if (!current && !(fullStoryMode && story?.scenes?.length)) return;
+    void unlockAmbient();
     // Allow re-tap even while loading (cancel + restart) on mobile
     if (voiceLoading) {
       speakTokenRef.current += 1;
@@ -572,6 +595,12 @@ export function StoryReader() {
       }
     }
 
+    if (fullStoryMode && story?.scenes?.length) {
+      const text = fullStoryText();
+      if (text) await speakScene(text, "full-story");
+      return;
+    }
+    if (!current) return;
     await speakScene(current.narrative, current.id);
   };
 
@@ -677,7 +706,10 @@ export function StoryReader() {
                   {scenes.length > 0 && (
                     <span>
                       {" "}
-                      · {viewIndex + 1}/{scenes.length}
+                      ·{" "}
+                      {fullStoryMode
+                        ? `Full · ${scenes.length} scenes`
+                        : `${viewIndex + 1}/${scenes.length}`}
                     </span>
                   )}
                   {moodFlash && (
@@ -689,7 +721,7 @@ export function StoryReader() {
 
             {/* Primary bar only — secondary tools collapse */}
             <div className="flex flex-wrap items-center gap-1.5 sticky top-[3.25rem] z-30 bg-black/55 backdrop-blur-md py-1.5 -mx-1 px-1 rounded-xl md:static md:bg-transparent md:p-0">
-              {current && (
+              {(current || (fullStoryMode && scenes.length > 0)) && (
                 <button
                   type="button"
                   className={clsx(
@@ -716,7 +748,8 @@ export function StoryReader() {
                     </>
                   ) : (
                     <>
-                      <Play className="h-3.5 w-3.5" /> Narrate
+                      <Play className="h-3.5 w-3.5" />{" "}
+                      {fullStoryMode ? "Narrate all" : "Narrate"}
                     </>
                   )}
                 </button>
@@ -733,6 +766,40 @@ export function StoryReader() {
               >
                 <Save className="h-4 w-4" />
               </button>
+              {scenes.length > 0 && (
+                <button
+                  type="button"
+                  className={clsx(
+                    "btn-ghost min-h-10 px-2.5 text-xs touch-manipulation gap-1",
+                    fullStoryMode && "border-echo-500/40 text-echo-200"
+                  )}
+                  title={
+                    fullStoryMode
+                      ? "Back to scene-by-scene"
+                      : "Read full story continuously"
+                  }
+                  onClick={() => {
+                    setFullStoryMode((v) => !v);
+                    if (!fullStoryMode) {
+                      setHistoryIndex(null);
+                      setTypingDone(true);
+                      setHint("Full story mode — scroll the whole arc");
+                    } else {
+                      setHint("Scene mode");
+                    }
+                  }}
+                >
+                  {fullStoryMode ? (
+                    <List className="h-3.5 w-3.5" />
+                  ) : (
+                    <BookOpen className="h-3.5 w-3.5" />
+                  )}
+                  <span className="hidden sm:inline">
+                    {fullStoryMode ? "Scenes" : "Full"}
+                  </span>
+                </button>
+              )}
+              <AmbientAudio story={story} compact />
               <button
                 type="button"
                 className={clsx(
@@ -744,7 +811,7 @@ export function StoryReader() {
                 onClick={() => togglePanel("mood")}
               >
                 <Sparkles className="h-3.5 w-3.5" />
-                <span className="hidden xs:inline sm:inline">Mood</span>
+                <span className="hidden sm:inline">Mood</span>
                 {panel === "mood" ? (
                   <ChevronUp className="h-3 w-3 opacity-60" />
                 ) : (
@@ -1003,6 +1070,86 @@ export function StoryReader() {
                   "Begin story"
                 )}
               </button>
+            </div>
+          ) : fullStoryMode ? (
+            <div className="space-y-6">
+              <div className="flex items-center justify-between gap-2 flex-wrap">
+                <p className="text-[11px] text-ink-500">
+                  Continuous read · {scenes.length} scene
+                  {scenes.length === 1 ? "" : "s"}
+                </p>
+                <button
+                  type="button"
+                  className="text-[11px] text-echo-300 hover:text-echo-100 underline-offset-2 hover:underline"
+                  onClick={() => {
+                    setFullStoryMode(false);
+                    setHistoryIndex(null);
+                  }}
+                >
+                  Back to scene mode
+                </button>
+              </div>
+              {displayImage && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={displayImage}
+                  alt={herName}
+                  className="max-h-[min(16rem,36vh)] w-full rounded-2xl object-cover object-top border border-white/10 shadow-lg"
+                  draggable={false}
+                />
+              )}
+              <div className="space-y-8">
+                {scenes.map((sc, i) => (
+                  <article
+                    key={sc.id}
+                    className="scroll-mt-24 border-t border-white/8 pt-5 first:border-0 first:pt-0"
+                  >
+                    <div className="flex items-center justify-between gap-2 mb-2">
+                      <p className="text-[10px] uppercase tracking-widest text-ink-500">
+                        Scene {i + 1}
+                      </p>
+                      <button
+                        type="button"
+                        className="text-[10px] text-ink-500 hover:text-ink-300"
+                        onClick={() => {
+                          setFullStoryMode(false);
+                          setHistoryIndex(i);
+                          setTypingDone(true);
+                        }}
+                      >
+                        Open scene
+                      </button>
+                    </div>
+                    {sc.chosenAction && (
+                      <p className="text-xs text-echo-300/90 italic mb-2 px-1 border-l-2 border-echo-500/40 pl-3">
+                        You: {sc.chosenAction}
+                      </p>
+                    )}
+                    <div
+                      className={clsx(
+                        "story-prose whitespace-pre-wrap",
+                        theater && "text-base sm:text-lg leading-relaxed"
+                      )}
+                    >
+                      {sc.narrative}
+                    </div>
+                    {sc.imageUrl && i !== viewIndex && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={sc.imageUrl}
+                        alt=""
+                        className="mt-3 max-h-40 w-full rounded-xl object-cover object-top border border-white/8 opacity-90"
+                        draggable={false}
+                      />
+                    )}
+                  </article>
+                ))}
+              </div>
+              {isLatest && !busy && current && (
+                <p className="text-[11px] text-ink-500 text-center pt-2">
+                  Scroll down for choices to continue the arc
+                </p>
+              )}
             </div>
           ) : (
             <>

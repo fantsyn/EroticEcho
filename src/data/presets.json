@@ -1,7 +1,187 @@
 {
-  "version": "1.3.0",
-  "description": "Large one-click library: shy masseuse/barista, shy→dom, reader-as-sub, confident bombshell melt arcs, plus classic filth.",
+  "version": "1.4.0",
+  "description": "Expanded library: arab princess taboo, blackmail CNC, public risk, humiliation, switch, threesomes, melt arcs, shy→dom, and more.",
   "presets": [
+    {
+      "id": "arab-princess-forbidden",
+      "title": "Forbidden Palace Hour",
+      "tagline": "Royal silk. Locked doors. A princess who should not want you.",
+      "blurb": "Layla is an arab princess fantasy with taboo secrecy, pride, and heat. Palace night, gold jewelry, and a dynasty's worth of 'we shouldn't.'",
+      "theme": "arcane-smoke",
+      "characterId": "arab-princess",
+      "scenarioId": "palace-forbidden-hour",
+      "role": "switch",
+      "mode": "slow-burn",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "Taboo",
+        "Princess",
+        "Forbidden"
+      ],
+      "coverGradient": "from-amber-950 via-rose-950 to-ink-950",
+      "accent": "amber"
+    },
+    {
+      "id": "arab-princess-commands",
+      "title": "Royal Orders",
+      "tagline": "You are the sub. She remembers she is royalty.",
+      "blurb": "Princess-as-domme energy: soft accent, hard rules, worship optional. Taboo power with court manners.",
+      "theme": "arcane-smoke",
+      "characterId": "arab-princess",
+      "scenarioId": "you-on-your-knees",
+      "role": "dom",
+      "mode": "immediate",
+      "intensity": 8,
+      "length": "medium",
+      "tags": [
+        "Princess",
+        "You sub",
+        "Power"
+      ],
+      "coverGradient": "from-yellow-950 via-rose-950 to-black",
+      "accent": "amber"
+    },
+    {
+      "id": "blackmail-photo-pre",
+      "title": "She Has the Photo",
+      "tagline": "CNC blackmail fantasy. Safeword is law. Heat is leverage.",
+      "blurb": "Vivian frames the night as blackmail — negotiated, explicit, intense. Degradation optional; green/yellow/red required.",
+      "theme": "blood-rose",
+      "characterId": "blackmail-queen",
+      "scenarioId": "blackmail-photo",
+      "role": "dom",
+      "mode": "blackmail",
+      "intensity": 8,
+      "length": "medium",
+      "tags": [
+        "Blackmail",
+        "CNC",
+        "You sub"
+      ],
+      "coverGradient": "from-red-950 via-black to-ink-950",
+      "accent": "red"
+    },
+    {
+      "id": "elevator-risk-pre",
+      "title": "Between Floors",
+      "tagline": "Public risk. Elevator pause. Quiet filth.",
+      "blurb": "Noa lives for almost-caught heat. Elevator stuck between floors — whispered rules and hands that do not wait.",
+      "theme": "neon-noir",
+      "characterId": "public-risk-girl",
+      "scenarioId": "elevator-risk",
+      "role": "switch",
+      "mode": "immediate",
+      "intensity": 6,
+      "length": "short",
+      "tags": [
+        "Public risk",
+        "Quick",
+        "Exhibition"
+      ],
+      "coverGradient": "from-slate-950 via-violet-950 to-ink-950",
+      "accent": "violet"
+    },
+    {
+      "id": "humiliation-say-it",
+      "title": "Say It Out Loud",
+      "tagline": "Consensual humiliation. Ugly words. Soft aftercare waiting.",
+      "blurb": "Kira runs a mean-sweet humiliation game with built-in colors. Shame as spice, not harm.",
+      "theme": "blood-rose",
+      "characterId": "humiliation-brat",
+      "scenarioId": "humiliation-game",
+      "role": "dom",
+      "mode": "pure-filth",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "Humiliation",
+        "Brat",
+        "You sub"
+      ],
+      "coverGradient": "from-rose-950 via-red-950 to-ink-950",
+      "accent": "rose"
+    },
+    {
+      "id": "switch-coin-pre",
+      "title": "Whoever Loses Leads",
+      "tagline": "Coin flip D/s. Fluid power. Playful heat.",
+      "blurb": "Avery is built for switch nights. Heads she owns you; tails you own her. Clean rules, filthy execution.",
+      "theme": "velvet-night",
+      "characterId": "switch-lover",
+      "scenarioId": "switch-coin-flip",
+      "role": "switch",
+      "mode": "full-consent",
+      "intensity": 6,
+      "length": "medium",
+      "tags": [
+        "Switch",
+        "Game",
+        "Power"
+      ],
+      "coverGradient": "from-violet-950 via-rose-950 to-ink-950",
+      "accent": "violet"
+    },
+    {
+      "id": "threesome-bestie-pre",
+      "title": "Her Best Friend Stays",
+      "tagline": "FFM. Clear consent. Shared heat and little jealous sparks.",
+      "blurb": "Threesome preset with enthusiastic adults: partner + best friend, rules spoken out loud, jealousy as seasoning.",
+      "theme": "sunset-glow",
+      "characterId": "best-friends-sis",
+      "scenarioId": "threesome-best-friend",
+      "role": "switch",
+      "mode": "pure-filth",
+      "intensity": 8,
+      "length": "long",
+      "tags": [
+        "Threesome",
+        "FFM",
+        "Filth"
+      ],
+      "coverGradient": "from-orange-950 via-rose-950 to-ink-950",
+      "accent": "orange"
+    },
+    {
+      "id": "taboo-roommate-pre",
+      "title": "We Said We Wouldn't",
+      "tagline": "Roommate taboo. Thin walls. Bad justifications.",
+      "blurb": "June in your hoodie, whispering 'just tonight' like a lie she wants to keep telling.",
+      "theme": "candle-library",
+      "characterId": "taboo-roommate",
+      "scenarioId": "taboo-roommate-night",
+      "role": "switch",
+      "mode": "slow-burn",
+      "intensity": 6,
+      "length": "medium",
+      "tags": [
+        "Taboo",
+        "Roommate",
+        "Home"
+      ],
+      "coverGradient": "from-stone-900 via-rose-950 to-ink-950",
+      "accent": "rose"
+    },
+    {
+      "id": "bombshell-melts-for-you",
+      "title": "Then She Melts",
+      "tagline": "Untouchable act drops. She falls for you mid-scene.",
+      "blurb": "Starts as pure confident bombshell hunger — then softens. She gets almost shy about how much she needs you. Heat plus real attachment.",
+      "theme": "velvet-night",
+      "characterId": "confident-bombshell",
+      "scenarioId": "bombshell-melts",
+      "role": "switch",
+      "mode": "romance",
+      "intensity": 6,
+      "length": "medium",
+      "tags": [
+        "Bombshell",
+        "Melt",
+        "Romance"
+      ],
+      "coverGradient": "from-pink-950 via-rose-950 to-ink-950",
+      "accent": "pink"
+    },
     {
       "id": "shy-masseuse-oil",
       "title": "Shy Hands, Warm Oil",
@@ -21,6 +201,26 @@
       ],
       "coverGradient": "from-teal-950 via-emerald-950/80 to-ink-950",
       "accent": "teal"
+    },
+    {
+      "id": "you-kneel-soft",
+      "title": "Kneel for Me (Soft)",
+      "tagline": "Reader is the sub. She is kind about it.",
+      "blurb": "Elise is a soft domme: clear rules, praise, firm hands. You get service, structure, and aftercare without cruelty.",
+      "theme": "velvet-night",
+      "characterId": "soft-domme",
+      "scenarioId": "soft-domme-rules",
+      "role": "dom",
+      "mode": "full-consent",
+      "intensity": 6,
+      "length": "medium",
+      "tags": [
+        "You sub",
+        "Soft domme",
+        "Romance"
+      ],
+      "coverGradient": "from-indigo-950 via-violet-950 to-ink-950",
+      "accent": "violet"
     },
     {
       "id": "shy-barista-hearts",
@@ -81,46 +281,6 @@
       ],
       "coverGradient": "from-rose-950 via-red-950 to-ink-950",
       "accent": "rose"
-    },
-    {
-      "id": "bombshell-melts-for-you",
-      "title": "Then She Melts",
-      "tagline": "Untouchable act drops. She falls for you mid-scene.",
-      "blurb": "Starts as pure confident bombshell hunger — then softens. She gets almost shy about how much she needs you. Heat plus real attachment.",
-      "theme": "velvet-night",
-      "characterId": "confident-bombshell",
-      "scenarioId": "bombshell-melts",
-      "role": "switch",
-      "mode": "romance",
-      "intensity": 6,
-      "length": "medium",
-      "tags": [
-        "Bombshell",
-        "Melt",
-        "Romance"
-      ],
-      "coverGradient": "from-pink-950 via-rose-950 to-ink-950",
-      "accent": "pink"
-    },
-    {
-      "id": "you-kneel-soft",
-      "title": "Kneel for Me (Soft)",
-      "tagline": "Reader is the sub. She is kind about it.",
-      "blurb": "Elise is a soft domme: clear rules, praise, firm hands. You get service, structure, and aftercare without cruelty.",
-      "theme": "velvet-night",
-      "characterId": "soft-domme",
-      "scenarioId": "soft-domme-rules",
-      "role": "dom",
-      "mode": "full-consent",
-      "intensity": 6,
-      "length": "medium",
-      "tags": [
-        "You sub",
-        "Soft domme",
-        "Romance"
-      ],
-      "coverGradient": "from-indigo-950 via-violet-950 to-ink-950",
-      "accent": "violet"
     },
     {
       "id": "reader-sub-training",
@@ -1741,6 +1901,206 @@
       ],
       "coverGradient": "from-emerald-950 via-teal-950 to-ink-950",
       "accent": "emerald"
+    },
+    {
+      "id": "arab-princess-veil",
+      "title": "Veil, Then Want",
+      "tagline": "She stops being a title. She starts being a woman.",
+      "blurb": "Softer royal taboo: curiosity, loneliness, and a princess asking to be seen. Pride and surrender trade places.",
+      "theme": "velvet-night",
+      "characterId": "arab-princess",
+      "scenarioId": "veil-and-vow-break",
+      "role": "switch",
+      "mode": "romance",
+      "intensity": 6,
+      "length": "medium",
+      "tags": [
+        "Princess",
+        "Romance",
+        "Taboo"
+      ],
+      "coverGradient": "from-rose-950 via-amber-950 to-ink-950",
+      "accent": "rose"
+    },
+    {
+      "id": "mutual-leverage-pre",
+      "title": "Mutual Leverage",
+      "tagline": "You both have dirt. Negotiation is the foreplay.",
+      "blurb": "Switchy blackmail fantasy: folders, terms, who folds first. Power as a game, not a real crime.",
+      "theme": "neon-noir",
+      "characterId": "blackmail-queen",
+      "scenarioId": "mutual-blackmail",
+      "role": "switch",
+      "mode": "enemies",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "Blackmail",
+        "Switch",
+        "Dark"
+      ],
+      "coverGradient": "from-violet-950 via-red-950 to-ink-950",
+      "accent": "violet"
+    },
+    {
+      "id": "fitting-room-pre",
+      "title": "Fitting Room Rule",
+      "tagline": "Thin curtain. Footsteps. Do not make a sound.",
+      "blurb": "Retail public-risk classic. She shops for adrenaline more than clothes.",
+      "theme": "sunset-glow",
+      "characterId": "public-risk-girl",
+      "scenarioId": "fitting-room-thrill",
+      "role": "switch",
+      "mode": "pure-filth",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "Public risk",
+        "Filth",
+        "Exhibition"
+      ],
+      "coverGradient": "from-orange-950 via-pink-950 to-ink-950",
+      "accent": "orange"
+    },
+    {
+      "id": "balcony-party-pre",
+      "title": "Balcony Above the Party",
+      "tagline": "They can see shapes. Not details. Make her careful.",
+      "blurb": "Semi-public party balcony heat — music below, risk above, whispered dare.",
+      "theme": "neon-noir",
+      "characterId": "public-risk-girl",
+      "scenarioId": "balcony-party",
+      "role": "switch",
+      "mode": "immediate",
+      "intensity": 6,
+      "length": "medium",
+      "tags": [
+        "Public risk",
+        "Party",
+        "Semi-public"
+      ],
+      "coverGradient": "from-fuchsia-950 via-indigo-950 to-ink-950",
+      "accent": "fuchsia"
+    },
+    {
+      "id": "brat-corrected-pre",
+      "title": "Brat Gets Corrected",
+      "tagline": "She starts mean. You flip it. She melts on the shame.",
+      "blurb": "Humiliation switch: her jabs fail, your control sticks, and she likes losing more than winning.",
+      "theme": "velvet-night",
+      "characterId": "humiliation-brat",
+      "scenarioId": "brat-flipped",
+      "role": "sub",
+      "mode": "corruption",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "Humiliation",
+        "Brat",
+        "Switch"
+      ],
+      "coverGradient": "from-pink-950 via-violet-950 to-ink-950",
+      "accent": "pink"
+    },
+    {
+      "id": "switch-flip-pre",
+      "title": "Mid-Scene Flip",
+      "tagline": "She leads… then begs you to take over.",
+      "blurb": "Power fluid on purpose. Start under her, end over her — or reverse. Communication is the kink.",
+      "theme": "neon-noir",
+      "characterId": "switch-lover",
+      "scenarioId": "switch-mid-scene",
+      "role": "switch",
+      "mode": "immediate",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "Switch",
+        "Power",
+        "Heat"
+      ],
+      "coverGradient": "from-indigo-950 via-fuchsia-950 to-ink-950",
+      "accent": "indigo"
+    },
+    {
+      "id": "threesome-rivals-pre",
+      "title": "Rival, Then Together",
+      "tagline": "Two women. One body. Temporary truce.",
+      "blurb": "Competitive threesome energy — they team up to wreck you, then compete for who makes you break first.",
+      "theme": "blood-rose",
+      "characterId": "bully-f",
+      "scenarioId": "threesome-rival-surrender",
+      "role": "dom",
+      "mode": "pure-filth",
+      "intensity": 8,
+      "length": "long",
+      "tags": [
+        "Threesome",
+        "You sub",
+        "Filth"
+      ],
+      "coverGradient": "from-red-950 via-fuchsia-950 to-black",
+      "accent": "red"
+    },
+    {
+      "id": "taboo-hallway-pre",
+      "title": "Wrong House, Right Heat",
+      "tagline": "Holiday-adjacent forbidden. Hallway secrecy.",
+      "blurb": "Social-taboo heat with an adult 'we shouldn't' dynamic — ice run alibis and dark hallways.",
+      "theme": "velvet-night",
+      "characterId": "sister-in-law",
+      "scenarioId": "taboo-family-reunion-adjacent",
+      "role": "switch",
+      "mode": "corruption",
+      "intensity": 7,
+      "length": "medium",
+      "tags": [
+        "Taboo",
+        "Forbidden",
+        "Home"
+      ],
+      "coverGradient": "from-rose-950 via-red-950/80 to-ink-950",
+      "accent": "rose"
+    },
+    {
+      "id": "office-closet-risk",
+      "title": "Afterparty Supply Closet",
+      "tagline": "Work event downstairs. You two, paper reams, ten minutes.",
+      "blurb": "Workplace public-risk: badges, toner jokes, and a closet that is not soundproof enough.",
+      "theme": "neon-noir",
+      "characterId": "coworker",
+      "scenarioId": "public-office-afterparty",
+      "role": "switch",
+      "mode": "immediate",
+      "intensity": 7,
+      "length": "short",
+      "tags": [
+        "Public risk",
+        "Office",
+        "Quick"
+      ],
+      "coverGradient": "from-slate-950 via-violet-950 to-ink-950",
+      "accent": "violet"
+    },
+    {
+      "id": "boss-blackmail-review",
+      "title": "Performance… or Exposure",
+      "tagline": "Boss blackmail fantasy. Door locked. Terms explicit.",
+      "blurb": "Office power + blackmail mode: she frames the review as leverage. CNC architecture, career-ruining dirty talk as fiction.",
+      "theme": "neon-noir",
+      "characterId": "boss",
+      "scenarioId": "blackmail-photo",
+      "role": "dom",
+      "mode": "blackmail",
+      "intensity": 8,
+      "length": "medium",
+      "tags": [
+        "Blackmail",
+        "Office",
+        "You sub"
+      ],
+      "coverGradient": "from-indigo-950 via-red-950 to-ink-950",
+      "accent": "indigo"
     }
   ]
 }

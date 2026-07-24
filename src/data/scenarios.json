@@ -1,5 +1,5 @@
 {
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Expanded wild scenarios. preferredCharacterIds are hints only.",
   "categories": [
     "Everyday",
@@ -819,19 +819,19 @@
       "title": "Balcony Above the Party",
       "category": "Public",
       "tags": [
+        "public-risk",
         "party",
-        "risk",
-        "height"
+        "semi-public",
+        "alcohol-vibes"
       ],
       "intensityHint": 6,
       "preferredCharacterIds": [
-        "school-crush",
-        "stranger-bar",
-        "coworker",
-        "bully-f"
+        "public-risk-girl",
+        "best-friends-sis",
+        "stranger-bar"
       ],
-      "setup": "Party roar below. Dark balcony above. She pulls you into the shadows while people laugh underneath.",
-      "openingHook": "City noise rises. Her back hits the railing. 'Quiet,' she mouths — then kisses you like silence is optional."
+      "setup": "Music thumps below. Above, a dark balcony and a girl who likes the idea of being almost seen.",
+      "openingHook": "Laughter rises from the yard. She braces on the railing, looking down, then back at you. 'They cannot see details. Only shapes. Make me careful.'"
     },
     {
       "id": "interview-private",
@@ -2180,6 +2180,293 @@
       ],
       "setup": "She asked to practice dominating you. She is blushing, holding a list, and deadly serious about doing it well.",
       "openingHook": "She reads from her phone, face red: 'Rule one… you call me… um.' She locks eyes with you, steadies, and tries again with a real edge. 'You call me what I tell you to.'"
+    },
+    {
+      "id": "palace-forbidden-hour",
+      "title": "Forbidden Hour in the Palace",
+      "category": "Taboo+",
+      "tags": [
+        "princess",
+        "taboo",
+        "royal",
+        "secrecy",
+        "power"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "arab-princess",
+        "goddess",
+        "sugar-client"
+      ],
+      "setup": "Guards change at midnight. She has ten minutes that could ruin a dynasty — and she spent them sending for you.",
+      "openingHook": "Silk whispers as she bolts the carved door. Gold catches the lamp light on her throat. 'If anyone asks, you were never here,' she says — then her pride falters. 'Touch me like the rules do not exist.'"
+    },
+    {
+      "id": "veil-and-vow-break",
+      "title": "Veil, Then Want",
+      "category": "Forbidden",
+      "tags": [
+        "princess",
+        "taboo",
+        "slow-burn",
+        "switch"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "arab-princess"
+      ],
+      "setup": "She lets the veil slip in a private courtyard. What starts as curiosity becomes a secret that owns both of you.",
+      "openingHook": "Her fingers pause at the edge of fabric. 'Look at me,' she orders softly — then softer: 'Please. I have been looked at as property. I want to be looked at as a woman.'"
+    },
+    {
+      "id": "blackmail-photo",
+      "title": "She Has the Photo",
+      "category": "Dark",
+      "tags": [
+        "blackmail",
+        "CNC",
+        "power",
+        "humiliation"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "blackmail-queen",
+        "boss",
+        "psycho-ex"
+      ],
+      "setup": "CNC blackmail fantasy: she shows you a photo that could end you — then names the price. Safeword ends everything instantly.",
+      "openingHook": "She turns her phone toward you, smiling like a verdict. 'Cute night. Bad judgment.' The photo vanishes. 'On your knees is cheaper than lawyers. Color?' She waits for green before the game hardens."
+    },
+    {
+      "id": "mutual-blackmail",
+      "title": "Mutual Leverage",
+      "category": "Dark",
+      "tags": [
+        "blackmail",
+        "switch",
+        "power",
+        "enemies"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "blackmail-queen",
+        "switch-lover",
+        "coworker"
+      ],
+      "setup": "You both have dirt. The negotiation becomes the foreplay — who folds first, who sets terms, who enjoys losing.",
+      "openingHook": "She slides a folder across the table; you slide yours back. Her laugh is low. 'So we are both monsters. Perfect. Tell me what you want from me that paperwork cannot buy.'"
+    },
+    {
+      "id": "elevator-risk",
+      "title": "Between Floors",
+      "category": "Public",
+      "tags": [
+        "public-risk",
+        "elevator",
+        "almost-caught",
+        "quick"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "public-risk-girl",
+        "coworker",
+        "stranger-bar"
+      ],
+      "setup": "The elevator hesitates between floors. She hits the button panel like a conspirator and mouths: quiet.",
+      "openingHook": "Numbers freeze mid-climb. Her back hits the wall, breath hot. 'If the doors open, you step away. If they stay closed…' Her hand finds your belt. 'You do not stop.'"
+    },
+    {
+      "id": "fitting-room-thrill",
+      "title": "Fitting Room Rule",
+      "category": "Public",
+      "tags": [
+        "public-risk",
+        "retail",
+        "exhibition",
+        "teasing"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "public-risk-girl",
+        "celebrity",
+        "roommate"
+      ],
+      "setup": "One stall, thin curtain, associates walking past. She tries on nothing she intends to buy.",
+      "openingHook": "Fabric whispers. Her laugh is a warning. 'If they ask if you need a size, say no.' Her eyes shine. 'If they pull the curtain, we are only talking. Until then — hands.'"
+    },
+    {
+      "id": "humiliation-game",
+      "title": "Say It Out Loud",
+      "category": "Intense",
+      "tags": [
+        "humiliation",
+        "degradation",
+        "praise",
+        "consensual"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "humiliation-brat",
+        "bully-f",
+        "soft-domme"
+      ],
+      "setup": "Consensual humiliation: mean words as heat, check-ins built in, praise waiting on the other side.",
+      "openingHook": "She tips your chin up, sweet and vicious. 'Tell me what you are tonight. Use the ugly words. If it is too much, yellow. If you like it…' Her smile sharpens. 'Louder.'"
+    },
+    {
+      "id": "brat-flipped",
+      "title": "Brat Gets Corrected",
+      "category": "Intense",
+      "tags": [
+        "humiliation",
+        "brat",
+        "switch",
+        "discipline"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "humiliation-brat",
+        "switch-lover"
+      ],
+      "setup": "She starts mean. You take the reins. The humiliation flips onto her — and she melts for it.",
+      "openingHook": "She opens with a jab that usually wins. You do not flinch. Something hungry flickers in her eyes. 'Oh,' she breathes. 'You are going to make me eat it. Fine. Try.'"
+    },
+    {
+      "id": "switch-coin-flip",
+      "title": "Whoever Loses Leads",
+      "category": "Home",
+      "tags": [
+        "switch",
+        "game",
+        "power-exchange",
+        "playful"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "switch-lover",
+        "roommate",
+        "coworker"
+      ],
+      "setup": "A coin, a grin, and a night where power flips every scene on purpose.",
+      "openingHook": "She catches the coin on her wrist. 'Heads I own you. Tails you own me. No arguing mid-round — only safewords.' Metal flashes. Her eyes already look different."
+    },
+    {
+      "id": "switch-mid-scene",
+      "title": "Mid-Scene Flip",
+      "category": "Intense",
+      "tags": [
+        "switch",
+        "power",
+        "fluid",
+        "heat"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "switch-lover",
+        "confident-bombshell",
+        "soft-domme"
+      ],
+      "setup": "She starts on top — voice, hands, rules — then she taps out of dominance with a kiss and begs you to take over.",
+      "openingHook": "Her command falters mid-sentence. She laughs against your mouth, breathless. 'Flip. Now. I want to feel you decide.' The bratty crown drops into your palm."
+    },
+    {
+      "id": "threesome-best-friend",
+      "title": "Her Best Friend Stays",
+      "category": "Intense",
+      "tags": [
+        "threesome",
+        "ffm",
+        "taboo",
+        "jealousy-heat"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "best-friends-sis",
+        "roommate",
+        "shy-bombshell",
+        "switch-lover"
+      ],
+      "setup": "FFM threesome fantasy: your partner (or crush) invites her best friend to stay. Jealousy, rules, and shared heat — all adults, all enthusiastic.",
+      "openingHook": "Two pairs of eyes. One shared breath. She squeezes your hand and nods at her friend. 'We talked. If you want this, you say it. If anyone is unsure, we stop.' Her friend bites her lip and steps closer anyway."
+    },
+    {
+      "id": "threesome-rival-surrender",
+      "title": "Rival, Then Together",
+      "category": "Intense",
+      "tags": [
+        "threesome",
+        "enemies",
+        "switch",
+        "filth"
+      ],
+      "intensityHint": 8,
+      "preferredCharacterIds": [
+        "bully-f",
+        "humiliation-brat",
+        "coworker"
+      ],
+      "setup": "Two women who compete over you stop competing long enough to ruin you together — then compete again with your body as the scoreboard.",
+      "openingHook": "She smirks at the other woman. 'Truce?' A beat. 'Temporary.' They both look at you like a dare. 'You do not pick yet. We do.'"
+    },
+    {
+      "id": "taboo-roommate-night",
+      "title": "We Said We Wouldn't",
+      "category": "Taboo+",
+      "tags": [
+        "taboo",
+        "roommate",
+        "guilt",
+        "home",
+        "quiet"
+      ],
+      "intensityHint": 6,
+      "preferredCharacterIds": [
+        "taboo-roommate",
+        "roommate",
+        "step-sis"
+      ],
+      "setup": "Roommate taboo night: shared wall, bad decisions, whispered justifications that keep failing.",
+      "openingHook": "She stands in your doorway wearing your hoodie like evidence. 'This is a terrible idea,' she whispers, already stepping in. 'If we are quiet… if it is just tonight…'"
+    },
+    {
+      "id": "taboo-family-reunion-adjacent",
+      "title": "Wrong House, Right Heat",
+      "category": "Forbidden",
+      "tags": [
+        "taboo",
+        "home",
+        "almost-family",
+        "secrecy"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "sister-in-law",
+        "step-mom",
+        "best-friends-mom",
+        "hot-aunt"
+      ],
+      "setup": "Holiday-adjacent forbidden heat with an adult relative-by-marriage / social-taboo figure — secrecy, guilt, and rooms that are too close together.",
+      "openingHook": "Laughter from the living room. She pulls you into the dark hallway, eyes bright with wrong. 'If they ask, I was getting ice. If you ask…' Her mouth finds your jaw. 'Do not ask.'"
+    },
+    {
+      "id": "public-office-afterparty",
+      "title": "Afterparty Supply Closet",
+      "category": "Office",
+      "tags": [
+        "public-risk",
+        "office",
+        "workplace",
+        "quick"
+      ],
+      "intensityHint": 7,
+      "preferredCharacterIds": [
+        "boss",
+        "coworker",
+        "public-risk-girl",
+        "secretary"
+      ],
+      "setup": "Work event downstairs. You and her vanish into a supply closet that smells like paper and bad decisions.",
+      "openingHook": "Badge light blinks. She braces against shelves of paper reams, laughing once. 'Ten minutes. If someone needs toner…' She kisses you hard. 'Then we look professional. Until then — not.'"
     }
   ]
 }
