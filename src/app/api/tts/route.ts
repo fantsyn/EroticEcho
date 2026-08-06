@@ -34,8 +34,8 @@ export async function POST(req: NextRequest) {
     const voiceId = String(
       body.voiceId || companion?.voiceId || "eve"
     ).toLowerCase();
-    // Natural conversation speed — slightly under 1.0 reads easily without dragging
-    const speed = Number(body.speed ?? companion?.speed ?? 0.96);
+    // Slightly brisk speech = shorter time-to-last-audio
+    const speed = Number(body.speed ?? companion?.speed ?? 1.02);
     const natural = body.naturalEnhance !== false && body.sexyEnhance !== false;
 
     const key = process.env.XAI_API_KEY;
@@ -46,7 +46,11 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const spoken = natural ? enhanceTextForNaturalTts(text) : text;
+    // Cap TTS payload for faster generation (story short mode is already tight)
+    const spoken = (natural ? enhanceTextForNaturalTts(text) : text).slice(
+      0,
+      2800
+    );
 
     const res = await fetch("https://api.x.ai/v1/tts", {
       method: "POST",
@@ -59,11 +63,11 @@ export async function POST(req: NextRequest) {
         voice_id: voiceId,
         language: "en",
         speed: Math.min(1.5, Math.max(0.7, speed)),
-        text_normalization: true,
+        text_normalization: false,
         output_format: {
           codec: "mp3",
           sample_rate: 24000,
-          bit_rate: 128000,
+          bit_rate: 96000,
         },
       }),
     });

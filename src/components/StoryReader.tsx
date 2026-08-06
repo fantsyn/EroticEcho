@@ -65,7 +65,34 @@ import { track } from "@/lib/analytics";
 import { useAuthStore } from "@/store/useAuthStore";
 import { AmbientAudio } from "./AmbientAudio";
 import { unlockAmbient } from "@/lib/ambient";
+import {
+  chemistryLabel,
+  chemistryOverall,
+  evolveChemistry,
+  getStoryChemistry,
+  herVibeFromChemistry,
+} from "@/lib/chemistry";
+import {
+  applyRelationshipFrame,
+  RELATIONSHIP_FRAME_GROUPS,
+  RELATIONSHIP_FRAMES,
+} from "@/lib/character-tweaks";
 import clsx from "clsx";
+
+/** Moods shown first — rest behind “More moods” so the drawer stays light */
+const FEATURED_MOOD_IDS = [
+  "softer",
+  "filthier",
+  "slow-burn",
+  "aftercare",
+  "she-melts",
+  "you-submit",
+  "public-risk",
+  "next-escalate",
+  "peg-her",
+  "piss-play",
+  "humiliate",
+];
 
 export function StoryReader() {
   const story = useAppStore((s) => s.activeStory);
@@ -104,6 +131,12 @@ export function StoryReader() {
   >(null);
   /** Continuous full-story reading (all scenes at once) */
   const [fullStoryMode, setFullStoryMode] = useState(false);
+  /** Expand full mood list only when asked */
+  const [allMoods, setAllMoods] = useState(false);
+  /** Mid-story relationship frame filter */
+  const [relGroupPlay, setRelGroupPlay] = useState<
+    (typeof RELATIONSHIP_FRAME_GROUPS)[number]["id"] | "all"
+  >("all");
 
   const togglePanel = (id: "mood" | "clothes" | "looks" | "more") => {
     setPanel((p) => (p === id ? null : id));
@@ -423,10 +456,19 @@ export function StoryReader() {
           chosenAction: isOpening ? undefined : action,
         };
 
+        const nextChem = isOpening
+          ? getStoryChemistry(storySnap)
+          : evolveChemistry(
+              getStoryChemistry(storySnap),
+              action,
+              storySnap.settings.intensity
+            );
+
         updateActiveStory((s) => ({
           ...s,
           scenes: [...s.scenes, scene],
           memorySummary: data.memoryUpdate || s.memorySummary,
+          chemistry: nextChem,
         }));
         setHistoryIndex(null);
         setCustomAction("");
@@ -667,6 +709,59 @@ export function StoryReader() {
     void generate(label);
   };
 
+  // Quiet shortcuts (no legend on screen)
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      const tag = (e.target as HTMLElement)?.tagName;
+      if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+
+      if (e.key === " " || e.key === "n" || e.key === "N") {
+        if (!current && !(fullStoryMode && scenes.length)) return;
+        e.preventDefault();
+        void toggleNarratePause();
+        return;
+      }
+      if ((e.key === "b" || e.key === "B") && current) {
+        e.preventDefault();
+        toggleBookmark();
+        return;
+      }
+      if (e.key === "f" || e.key === "F") {
+        e.preventDefault();
+        setFullStoryMode((v) => !v);
+        return;
+      }
+      if (e.key === "t" || e.key === "T") {
+        e.preventDefault();
+        setTheater((v) => !v);
+        return;
+      }
+      const num = Number(e.key);
+      if (
+        num >= 1 &&
+        num <= 5 &&
+        current &&
+        isLatest &&
+        typingDone &&
+        !loading &&
+        current.choices[num - 1]
+      ) {
+        e.preventDefault();
+        onChoice(current.choices[num - 1].label);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [
+    current,
+    fullStoryMode,
+    scenes.length,
+    isLatest,
+    typingDone,
+    loading,
+  ]);
+
   if (!story) {
     return (
       <div className="card-immersive p-10 text-center text-ink-400 animate-curtain">
@@ -693,6 +788,17 @@ export function StoryReader() {
   const imgLeft = imagesRemaining(story);
   const herName = story.character.customName || story.character.name;
   const busy = loading || generatingRef.current;
+  const chem = getStoryChemistry(story);
+  const chemScore = chemistryOverall(chem);
+  const chemLbl = chemistryLabel(chemScore);
+  const vibe = herVibeFromChemistry(chem);
+  const hotMoments = scenes.filter((s) => s.bookmarked);
+  const featuredMoods = MOOD_CHIPS.filter((m) =>
+    FEATURED_MOOD_IDS.includes(m.id)
+  );
+  const extraMoods = MOOD_CHIPS.filter(
+    (m) => !FEATURED_MOOD_IDS.includes(m.id)
+  );
 
   const applyMood = (moodId: string) => {
     const chip = MOOD_CHIPS.find((m) => m.id === moodId);
@@ -762,10 +868,30 @@ export function StoryReader() {
                         : `${viewIndex + 1}/${scenes.length}`}
                     </span>
                   )}
+                  {scenes.length > 0 && (
+                    <span className="text-echo-300/80"> · {vibe}</span>
+                  )}
                   {moodFlash && (
                     <span className="text-echo-300/90"> · {moodFlash}</span>
                   )}
                 </p>
+                {/* Slim chemistry bar — one glance, no panel clutter */}
+                {scenes.length > 0 && (
+                  <div
+                    className="mt-1.5 flex items-center gap-2 max-w-xs"
+                    title={`Desire ${chem.desire} · Bond ${chem.bond} · Tension ${chem.tension}`}
+                  >
+                    <div className="h-1 flex-1 rounded-full bg-white/10 overflow-hidden">
+                      <div
+                        className="h-full rounded-full bg-gradient-to-r from-echo-600/80 to-rose-400/90 transition-all duration-500"
+                        style={{ width: `${chemScore}%` }}
+                      />
+                    </div>
+                    <span className="text-[10px] text-ink-500 shrink-0 tabular-nums">
+                      {chemLbl}
+                    </span>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -916,7 +1042,10 @@ export function StoryReader() {
                   Mood for next scene
                 </p>
                 <div className="flex flex-wrap gap-1.5">
-                  {MOOD_CHIPS.map((m) => (
+                  {(allMoods
+                    ? [...featuredMoods, ...extraMoods]
+                    : featuredMoods
+                  ).map((m) => (
                     <button
                       key={m.id}
                       type="button"
@@ -938,6 +1067,17 @@ export function StoryReader() {
                     </button>
                   ))}
                 </div>
+                {extraMoods.length > 0 && (
+                  <button
+                    type="button"
+                    className="text-[10px] text-ink-500 hover:text-ink-300 px-0.5"
+                    onClick={() => setAllMoods((v) => !v)}
+                  >
+                    {allMoods
+                      ? "Show fewer"
+                      : `+ ${extraMoods.length} more moods`}
+                  </button>
+                )}
               </div>
             )}
 
@@ -1108,6 +1248,40 @@ export function StoryReader() {
                     <ShieldOff className="h-3.5 w-3.5" /> Hard nos
                   </button>
                 </div>
+                {hotMoments.length > 0 && (
+                  <div className="rounded-lg border border-white/8 bg-black/25 p-2 space-y-1">
+                    <p className="text-[10px] uppercase tracking-widest text-ink-500">
+                      Bookmarked ({hotMoments.length})
+                    </p>
+                    <ul className="space-y-0.5 max-h-28 overflow-y-auto">
+                      {hotMoments.map((s) => (
+                        <li key={s.id}>
+                          <button
+                            type="button"
+                            className="w-full text-left text-[11px] text-ink-400 hover:text-echo-200 truncate py-0.5"
+                            onClick={() => {
+                              const idx = scenes.findIndex((x) => x.id === s.id);
+                              if (idx >= 0) {
+                                setFullStoryMode(false);
+                                setHistoryIndex(idx);
+                                setPanel(null);
+                              }
+                            }}
+                          >
+                            ★ Scene {s.index}
+                            {s.chosenAction
+                              ? ` — ${s.chosenAction.slice(0, 36)}`
+                              : ""}
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                <p className="text-[10px] text-ink-600 px-0.5 leading-relaxed">
+                  Keys: Space narrate · 1–5 choices · B bookmark · F full · T
+                  theater
+                </p>
                 {showHardNos && (
                   <div className="rounded-lg border border-rose-500/25 bg-rose-950/30 p-2.5 space-y-2">
                     <p className="text-[11px] text-rose-100/90">
@@ -1544,6 +1718,90 @@ export function StoryReader() {
         {showMods && (
           <div className="card p-4 space-y-3">
             <h2 className="label">Modifications</h2>
+
+            <div>
+              <label className="label">Who she is to you</label>
+              <p className="text-[10px] text-ink-500 mb-1.5">
+                Reframe mid-story — face stays, relationship changes next scene.
+              </p>
+              <div className="flex flex-wrap gap-1 mb-1.5">
+                <button
+                  type="button"
+                  onClick={() => setRelGroupPlay("all")}
+                  className={clsx(
+                    "rounded-full border px-2 py-0.5 text-[10px]",
+                    relGroupPlay === "all"
+                      ? "border-echo-400/50 bg-echo-500/15 text-echo-100"
+                      : "border-white/10 text-ink-500"
+                  )}
+                >
+                  All
+                </button>
+                {RELATIONSHIP_FRAME_GROUPS.map((g) => (
+                  <button
+                    key={g.id}
+                    type="button"
+                    onClick={() => setRelGroupPlay(g.id)}
+                    className={clsx(
+                      "rounded-full border px-2 py-0.5 text-[10px]",
+                      relGroupPlay === g.id
+                        ? "border-echo-400/50 bg-echo-500/15 text-echo-100"
+                        : "border-white/10 text-ink-500"
+                    )}
+                  >
+                    {g.label}
+                  </button>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-1 max-h-24 overflow-y-auto">
+                {RELATIONSHIP_FRAMES.filter(
+                  (f) => relGroupPlay === "all" || f.group === relGroupPlay
+                ).map((f) => (
+                  <button
+                    key={f.id}
+                    type="button"
+                    title={f.hint}
+                    onClick={() => {
+                      updateActiveStory((s) => {
+                        const nextChar = applyRelationshipFrame(
+                          s.character,
+                          f.id
+                        );
+                        return {
+                          ...s,
+                          character: nextChar,
+                          mods: {
+                            ...s.mods,
+                            relationshipNotes: f.relationship,
+                            freeformNotes: [
+                              s.mods.freeformNotes,
+                              `Relationship reframed: she is now ${f.label.toLowerCase()} to you. Keep continuity of what already happened; adjust how she addresses you going forward.`,
+                            ]
+                              .filter(Boolean)
+                              .join("\n"),
+                          },
+                          memorySummary: [
+                            s.memorySummary,
+                            `Relationship updated mid-story: ${f.label}.`,
+                          ]
+                            .filter(Boolean)
+                            .join(" "),
+                        };
+                      });
+                      setHint(`She’s now: ${f.label} — applies next scene.`);
+                    }}
+                    className="rounded-full border border-white/10 bg-black/30 px-2 py-0.5 text-[10px] text-ink-300 hover:border-echo-400/40 hover:text-echo-100"
+                  >
+                    {f.label}
+                  </button>
+                ))}
+              </div>
+              <p className="text-[10px] text-ink-600 mt-1 line-clamp-2">
+                {story.character.customRelationship ||
+                  story.character.relationship}
+              </p>
+            </div>
+
             <div>
               <label className="label">Her appearance</label>
               <textarea
@@ -1600,8 +1858,16 @@ export function StoryReader() {
 
         <div className="card p-4 text-xs text-ink-500 space-y-1">
           <p>
-            <span className="text-ink-400">Role:</span>{" "}
+            <span className="text-ink-400">D/s:</span>{" "}
             {story.character.roleOverride || story.character.defaultRole}
+          </p>
+          <p className="line-clamp-2">
+            <span className="text-ink-400">To you:</span>{" "}
+            {(
+              story.character.customRelationship ||
+              story.character.relationship
+            ).slice(0, 80)}
+            …
           </p>
           <p className="line-clamp-3">
             <span className="text-ink-400">Memory:</span>{" "}

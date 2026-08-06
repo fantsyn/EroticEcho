@@ -543,6 +543,78 @@ export const MOOD_CHIPS: MoodChip[] = [
       memorySummary: appendNote(s.memorySummary, "Beat pending: escalate."),
     }),
   },
+  {
+    id: "peg-her",
+    label: "She pegs you",
+    description: "Strap-on / role-reversal heat",
+    heat: 3,
+    apply: (s) => ({
+      settings: {
+        ...s.settings,
+        intensity: clamp(Math.max(s.settings.intensity, 8), 1, 10),
+        length: "short",
+      },
+      mods: {
+        ...s.mods,
+        freeformNotes: appendNote(
+          s.mods.freeformNotes,
+          "Pegging/strap-on focus: she tops, harness, role-reversal, check-ins, pride in leading. Explicit adult content OK within hard nos."
+        ),
+        personalityNotes: appendNote(
+          s.mods.personalityNotes,
+          "She is topping: nervous or confident, but in charge of the pegging dynamic."
+        ),
+        addedKinks: uniqKinks(s, ["pegging", "role-reversal", "power-exchange"]),
+      },
+    }),
+  },
+  {
+    id: "piss-play",
+    label: "Watersports",
+    description: "Piss play with color/safeword",
+    heat: 3,
+    apply: (s) => ({
+      settings: {
+        ...s.settings,
+        intensity: clamp(Math.max(s.settings.intensity, 7), 1, 10),
+        mode: "cnc" as StoryModeId,
+        length: "short",
+      },
+      mods: {
+        ...s.mods,
+        freeformNotes: appendNote(
+          s.mods.freeformNotes,
+          `Watersports/piss-play fantasy. Negotiate colors; safeword "${s.settings.cncSafeword || "red"}" ends instantly. Keep it consensual CNC/edge play, not non-con IRL framing.`
+        ),
+        addedKinks: uniqKinks(s, ["watersports", "humiliation", "control"]),
+      },
+    }),
+  },
+  {
+    id: "humiliate",
+    label: "Humiliate me",
+    description: "Verbal degradation, mirror/public",
+    heat: 3,
+    apply: (s) => ({
+      settings: {
+        ...s.settings,
+        intensity: clamp(Math.max(s.settings.intensity, 7), 1, 10),
+        length: "short",
+      },
+      mods: {
+        ...s.mods,
+        freeformNotes: appendNote(
+          s.mods.freeformNotes,
+          "Humiliation focus: mean pet names, make him say it, mirror or public-whisper risk; keep safeword sacred."
+        ),
+        personalityNotes: appendNote(
+          s.mods.personalityNotes,
+          "Sharper tongue, degrading praise, enjoys watching him squirm."
+        ),
+        addedKinks: uniqKinks(s, ["humiliation", "degradation", "control"]),
+      },
+    }),
+  },
 ];
 
 export function getMoodChip(id: string): MoodChip | undefined {

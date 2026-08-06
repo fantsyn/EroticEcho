@@ -15,6 +15,7 @@ import type {
   DomSubRole,
   VibeKit,
 } from "./types";
+import { getMergedOutfitStyles } from "./character-tweaks";
 
 export const characters: Character[] = charactersData.characters as Character[];
 export const scenarios: Scenario[] = scenariosData.scenarios as Scenario[];
@@ -155,7 +156,7 @@ export function applyOutfitStyle(
   character: Character,
   styleId: string
 ): Character {
-  const style = (character.outfitStyles || []).find((s) => s.id === styleId);
+  const style = getMergedOutfitStyles(character).find((s) => s.id === styleId);
   if (!style) return character;
   return {
     ...character,
@@ -302,6 +303,48 @@ export const vibeKits: VibeKit[] = [
     kinkAdd: ["hypnosis", "mind-control", "control", "possession"],
     voiceHint: "Slow, rhythmic, every word a hook in your head.",
     bioHint: "She doesn't need ropes when her voice works better.",
+  },
+  {
+    id: "girl-next-door",
+    label: "Girl next door",
+    description: "Approachable, warm, still hot.",
+    heat: 1,
+    role: "switch",
+    personalityAdd: ["warm", "approachable", "playful", "sincere"],
+    kinkAdd: ["romance", "teasing", "first-kiss", "slow-seduction"],
+    outfitHint: "Cute casual: soft top, jeans or sundress, light makeup",
+    voiceHint: "Easy smile in her voice; flirty without trying too hard.",
+  },
+  {
+    id: "ice-queen",
+    label: "Ice queen",
+    description: "Cold exterior, molten underneath.",
+    heat: 2,
+    role: "dom",
+    personalityAdd: ["aloof", "precise", "controlled", "secretly-intense"],
+    kinkAdd: ["power-exchange", "teasing", "control", "praise"],
+    voiceHint: "Cool and clipped — heat only when she decides you've earned it.",
+    appearanceHint: "immaculate hair, sharp makeup, unreadable eyes",
+  },
+  {
+    id: "pillow-princess",
+    label: "Pillow princess",
+    description: "She receives; you worship.",
+    heat: 2,
+    role: "sub",
+    personalityAdd: ["receptive", "lazy-sensual", "demanding-soft", "spoiled"],
+    kinkAdd: ["body-worship", "oral", "praise", "service"],
+    voiceHint: "Soft orders: right there, slower, good — she barely moves.",
+  },
+  {
+    id: "switch-fluid",
+    label: "Fluid switch",
+    description: "Leads then melts mid-scene.",
+    heat: 2,
+    role: "switch",
+    personalityAdd: ["fluid", "playful", "adaptive", "curious"],
+    kinkAdd: ["switch", "power-exchange", "teasing"],
+    voiceHint: "She flips mid-sentence — orders one moment, whimpers the next.",
   },
 ];
 

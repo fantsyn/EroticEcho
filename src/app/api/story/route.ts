@@ -81,10 +81,15 @@ export async function POST(req: NextRequest) {
     const system = buildSystemPrompt(body.userProfile, body.story);
     const user = buildUserTurnPrompt(body);
 
-    // Prefer chat completions for broad compatibility with OpenAI SDK
+    // Prefer chat completions for broad compatibility with OpenAI SDK.
+    // Cap tokens + slightly lower temp for snappier hot beats.
+    const length = body.story?.settings?.length || "medium";
+    const maxTokens =
+      length === "short" ? 700 : length === "long" ? 1600 : 1000;
     const completion = await client.chat.completions.create({
       model,
-      temperature: 0.9,
+      temperature: 0.85,
+      max_tokens: maxTokens,
       messages: [
         { role: "system", content: system },
         { role: "user", content: user },

@@ -1,6 +1,6 @@
 {
-  "version": "1.5.0",
-  "description": "Creative library wave 2: time-loops, hot mics, vault drills, palace gardens, body-swap, wedding closets, and more — plus classic heat.",
+  "version": "1.6.0",
+  "description": "Creative library wave 2: time-loops, hot mics, vault drills, palace gardens, body-swap, wedding closets, and more — plus classic heat. Hot pack: pegging, watersports, humiliation, shy→dom risk, taboo.",
   "presets": [
     {
       "id": "loop-41-date",
@@ -2702,6 +2702,286 @@
       ],
       "coverGradient": "from-indigo-950 via-red-950 to-ink-950",
       "accent": "indigo"
+    },
+    {
+      "id": "peg-shy-harness",
+      "title": "She Bought a Harness",
+      "tagline": "Shy hands. Hard rules. You on your back.",
+      "blurb": "Classic peg fantasy: nervous first-time top energy that turns commanding. Strap-on, praise, role reversal.",
+      "theme": "velvet-night",
+      "characterId": "shy-library",
+      "scenarioId": "peg-first-try",
+      "role": "dom",
+      "mode": "full-consent",
+      "intensity": 8,
+      "length": "short",
+      "tags": [
+        "Pegging",
+        "Shy→dom",
+        "Filth"
+      ],
+      "coverGradient": "from-rose-950 via-violet-950 to-ink-950",
+      "accent": "rose"
+    },
+    {
+      "id": "peg-shy-orders",
+      "title": "Soft Voice, Hard Rules",
+      "tagline": "Please becomes an order.",
+      "blurb": "Shy girl learns to top — careful, filthy, addicted to being obeyed.",
+      "theme": "candle-library",
+      "characterId": "shy-bombshell",
+      "scenarioId": "peg-shy-orders",
+      "role": "dom",
+      "mode": "corruption",
+      "intensity": 8,
+      "length": "short",
+      "tags": [
+        "Pegging",
+        "Corruption",
+        "Shy→dom"
+      ],
+      "coverGradient": "from-amber-950 via-rose-950 to-ink-950",
+      "accent": "amber"
+    },
+    {
+      "id": "peg-boss-review",
+      "title": "Review With a Strap",
+      "tagline": "KPIs can wait. Kneel cannot.",
+      "blurb": "Office power pegging — locked door, desk, performance she actually cares about.",
+      "theme": "neon-noir",
+      "characterId": "boss",
+      "scenarioId": "peg-boss-desk",
+      "role": "dom",
+      "mode": "immediate",
+      "intensity": 9,
+      "length": "short",
+      "tags": [
+        "Pegging",
+        "Office",
+        "Power"
+      ],
+      "coverGradient": "from-violet-950 via-ink-950 to-black",
+      "accent": "violet"
+    },
+    {
+      "id": "piss-shower-green",
+      "title": "Shower Permission",
+      "tagline": "Color check. Then open.",
+      "blurb": "Consensual watersports with clear safeword. Domme energy, shower steam, negotiation first.",
+      "theme": "blood-rose",
+      "characterId": "bully-f",
+      "scenarioId": "watersports-shower",
+      "role": "dom",
+      "mode": "cnc",
+      "intensity": 8,
+      "length": "short",
+      "tags": [
+        "Watersports",
+        "Humiliation",
+        "CNC-aware"
+      ],
+      "coverGradient": "from-cyan-950 via-slate-900 to-ink-950",
+      "accent": "cyan"
+    },
+    {
+      "id": "piss-hold-it",
+      "title": "Hold It",
+      "tagline": "Beg with a full bladder.",
+      "blurb": "Desperation / watersports tease — she controls the bathroom key and your dignity.",
+      "theme": "neon-noir",
+      "characterId": "step-sis",
+      "scenarioId": "watersports-desperate",
+      "role": "brat",
+      "mode": "pure-filth",
+      "intensity": 7,
+      "length": "short",
+      "tags": [
+        "Watersports",
+        "Brat",
+        "Taboo"
+      ],
+      "coverGradient": "from-yellow-950 via-stone-950 to-ink-950",
+      "accent": "amber"
+    },
+    {
+      "id": "humil-mirror",
+      "title": "Mirror, Say It",
+      "tagline": "Look at yourself. Louder.",
+      "blurb": "Face-to-mirror humiliation and degradation with a mean, sexy lead.",
+      "theme": "blood-rose",
+      "characterId": "psycho-ex",
+      "scenarioId": "humiliation-mirror",
+      "role": "dom",
+      "mode": "pure-filth",
+      "intensity": 8,
+      "length": "short",
+      "tags": [
+        "Humiliation",
+        "Dark",
+        "Filth"
+      ],
+      "coverGradient": "from-red-950 via-black to-ink-950",
+      "accent": "red"
+    },
+    {
+      "id": "humil-public-ear",
+      "title": "Quiet Filth in Public",
+      "tagline": "Nobody else can hear what she calls you.",
+      "blurb": "Public-risk humiliation whispers — soft smile, ruined pride.",
+      "theme": "ember-cafe",
+      "characterId": "coworker",
+      "scenarioId": "humiliation-public-whisper",
+      "role": "dom",
+      "mode": "immediate",
+      "intensity": 7,
+      "length": "short",
+      "tags": [
+        "Humiliation",
+        "Public risk",
+        "Office"
+      ],
+      "coverGradient": "from-stone-900 via-rose-950 to-ink-950",
+      "accent": "rose"
+    },
+    {
+      "id": "shy-dom-stacks",
+      "title": "Stacks: She Leads",
+      "tagline": "Shy about noise. Not about you.",
+      "blurb": "Library after-hours shy-to-dom — quiet filth between shelves.",
+      "theme": "candle-library",
+      "characterId": "shy-library",
+      "scenarioId": "shy-dom-library-risk",
+      "role": "dom",
+      "mode": "corruption",
+      "intensity": 7,
+      "length": "short",
+      "tags": [
+        "Shy→dom",
+        "Public quiet",
+        "School"
+      ],
+      "coverGradient": "from-amber-950 via-orange-950 to-ink-950",
+      "accent": "amber"
+    },
+    {
+      "id": "shy-dom-class",
+      "title": "Classroom Rules Rewrite",
+      "tagline": "She practiced being brave.",
+      "blurb": "Empty classroom, door locked, soft girl with hard new rules.",
+      "theme": "neon-noir",
+      "characterId": "shy-bombshell",
+      "scenarioId": "shy-dom-classroom",
+      "role": "dom",
+      "mode": "corruption",
+      "intensity": 7,
+      "length": "short",
+      "tags": [
+        "Shy→dom",
+        "School",
+        "Risk"
+      ],
+      "coverGradient": "from-sky-950 via-violet-950 to-ink-950",
+      "accent": "sky"
+    },
+    {
+      "id": "shy-dom-car",
+      "title": "Parking Lot Domme",
+      "tagline": "Hands on the wheel. Voice shaking.",
+      "blurb": "Car risk + shy practice-domme — adrenaline and first-time orders.",
+      "theme": "sunset-glow",
+      "characterId": "shy-barista",
+      "scenarioId": "shy-dom-car",
+      "role": "dom",
+      "mode": "full-consent",
+      "intensity": 7,
+      "length": "short",
+      "tags": [
+        "Shy→dom",
+        "Public risk",
+        "Car"
+      ],
+      "coverGradient": "from-orange-950 via-ink-950 to-black",
+      "accent": "orange"
+    },
+    {
+      "id": "taboo-sis-shots",
+      "title": "Screenshots",
+      "tagline": "Do what I say or everyone sees.",
+      "blurb": "Adult step-sis blackmail fantasy — leverage, humiliation, heat.",
+      "theme": "blood-rose",
+      "characterId": "step-sis",
+      "scenarioId": "taboo-stepsister-blackmail",
+      "role": "brat",
+      "mode": "blackmail",
+      "intensity": 8,
+      "length": "short",
+      "tags": [
+        "Taboo",
+        "Blackmail",
+        "Humiliation"
+      ],
+      "coverGradient": "from-rose-950 via-red-950 to-black",
+      "accent": "rose"
+    },
+    {
+      "id": "taboo-mom-keys",
+      "title": "Keys in the Lock",
+      "tagline": "Quiet. Do not stop.",
+      "blurb": "Almost-caught step-mom taboo risk — pure adrenaline filth.",
+      "theme": "velvet-night",
+      "characterId": "step-mom",
+      "scenarioId": "taboo-caught-stepmom",
+      "role": "switch",
+      "mode": "pure-filth",
+      "intensity": 9,
+      "length": "short",
+      "tags": [
+        "Taboo",
+        "Almost caught",
+        "MILF"
+      ],
+      "coverGradient": "from-rose-950 via-fuchsia-950 to-ink-950",
+      "accent": "rose"
+    },
+    {
+      "id": "freeuse-bathroom",
+      "title": "Occupied",
+      "tagline": "Free-use house. No privacy.",
+      "blurb": "Free-use bathroom edge — available, humiliating, rule-bound.",
+      "theme": "neon-noir",
+      "characterId": "secretary",
+      "scenarioId": "freeuse-toilet-edge",
+      "role": "sub",
+      "mode": "free-use",
+      "intensity": 8,
+      "length": "short",
+      "tags": [
+        "Free use",
+        "Humiliation",
+        "Office"
+      ],
+      "coverGradient": "from-slate-900 via-rose-950 to-ink-950",
+      "accent": "violet"
+    },
+    {
+      "id": "peg-aftercare",
+      "title": "After She Tops",
+      "tagline": "Power hangover. Soft now.",
+      "blurb": "Pegging aftercare — she unbuckles, checks in, needs to be held.",
+      "theme": "ember-cafe",
+      "characterId": "shy-library",
+      "scenarioId": "peg-aftercare-flip",
+      "role": "switch",
+      "mode": "romance",
+      "intensity": 5,
+      "length": "short",
+      "tags": [
+        "Pegging",
+        "Aftercare",
+        "Soft"
+      ],
+      "coverGradient": "from-stone-900 via-amber-950 to-ink-950",
+      "accent": "amber"
     }
   ]
 }

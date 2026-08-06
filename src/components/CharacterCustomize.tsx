@@ -10,10 +10,31 @@ import {
   resolveOutfit,
   vibeKits,
 } from "@/lib/data";
+import {
+  applyQuirkPack,
+  applyRelationshipFrame,
+  applyTweak,
+  BODY_TWEAKS,
+  getMergedOutfitStyles,
+  getQuirkPacksForCharacter,
+  LOOK_TWEAKS,
+  RELATIONSHIP_FRAME_GROUPS,
+  RELATIONSHIP_FRAMES,
+} from "@/lib/character-tweaks";
 import { CharacterAvatar } from "./CharacterAvatar";
-import { RefreshCw, RotateCcw, Sparkles, Shirt } from "lucide-react";
+import {
+  ChevronDown,
+  ChevronUp,
+  Heart,
+  RefreshCw,
+  RotateCcw,
+  Sparkles,
+  Shirt,
+  UserRound,
+} from "lucide-react";
 import { useAuthStore } from "@/store/useAuthStore";
 import Link from "next/link";
+import clsx from "clsx";
 
 interface Props {
   character: Character;
@@ -23,12 +44,16 @@ interface Props {
 /**
  * Full description-based customization — keeps classy editorial look.
  * Avatar regenerates from the written description when requested.
- * Includes vibe kits, relationship/bio/voice, and per-character kinks.
+ * Includes vibe kits, body/look chips, character quirks, and kinks.
  */
 export function CharacterCustomize({ character, onChange }: Props) {
   const [refreshToken, setRefreshToken] = useState(0);
   const [avatarBusy, setAvatarBusy] = useState(false);
   const [showAllKinks, setShowAllKinks] = useState(false);
+  const [showAdvanced, setShowAdvanced] = useState(false);
+  const [relGroup, setRelGroup] = useState<
+    (typeof RELATIONSHIP_FRAME_GROUPS)[number]["id"] | "all"
+  >("all");
   const [genError, setGenError] = useState<string | null>(null);
   // Single selector — never short-circuit multiple hooks with ||
   const canGenImages = useAuthStore(
@@ -85,6 +110,15 @@ export function CharacterCustomize({ character, onChange }: Props) {
   const kinkList = showAllKinks
     ? popularKinkIds
     : popularKinkIds.slice(0, 18);
+
+  const outfitStyles = useMemo(
+    () => getMergedOutfitStyles(character),
+    [character]
+  );
+  const quirkPacks = useMemo(
+    () => getQuirkPacksForCharacter(character),
+    [character]
+  );
 
   const toggleKink = (id: string) => {
     const set = new Set(activeKinks);
@@ -257,43 +291,185 @@ export function CharacterCustomize({ character, onChange }: Props) {
             </div>
           )}
 
-          {/* Outfit styles */}
-          {(character.outfitStyles?.length ?? 0) > 0 && (
+          {/* Outfit styles (preset + universal extras) */}
+          <div>
+            <label className="label flex items-center gap-1.5">
+              <Shirt className="h-3.5 w-3.5 text-rose-400/80" />
+              Outfit / style
+            </label>
+            <p className="text-[11px] text-ink-500 mb-2">
+              Her looks + universal options. Story text follows the selection.
+            </p>
+            <div className="flex flex-wrap gap-1.5">
+              {outfitStyles.map((style) => {
+                const active =
+                  character.selectedOutfitStyleId === style.id ||
+                  (!character.selectedOutfitStyleId &&
+                    style.id === "default" &&
+                    !character.customOutfit);
+                return (
+                  <button
+                    key={style.id}
+                    type="button"
+                    title={style.outfit}
+                    onClick={() => onChange(applyOutfitStyle(character, style.id))}
+                    className={`rounded-full border px-2.5 py-1 text-[11px] transition ${
+                      active
+                        ? "bg-fuchsia-500/25 border-fuchsia-400/50 text-fuchsia-50"
+                        : "bg-black/30 border-white/10 text-ink-400 hover:border-white/25"
+                    }`}
+                  >
+                    {style.label}
+                    {style.vibe === "max-slut" ? " · 🔥" : ""}
+                    {style.vibe === "cute" ? " · 🎀" : ""}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Who she is to you — reframe any preset */}
+          <div>
+            <label className="label flex items-center gap-1.5">
+              <Heart className="h-3.5 w-3.5 text-rose-400/80" />
+              Who she is to you
+            </label>
+            <p className="text-[11px] text-ink-500 mb-2">
+              Keep her face and body — swap the relationship. Step-daughter →
+              step-sis, coworker, stranger, etc.
+            </p>
+            <div className="flex flex-wrap gap-1 mb-2">
+              <button
+                type="button"
+                onClick={() => setRelGroup("all")}
+                className={clsx(
+                  "rounded-full border px-2 py-0.5 text-[10px]",
+                  relGroup === "all"
+                    ? "border-echo-400/50 bg-echo-500/20 text-echo-100"
+                    : "border-white/10 text-ink-500"
+                )}
+              >
+                All
+              </button>
+              {RELATIONSHIP_FRAME_GROUPS.map((g) => (
+                <button
+                  key={g.id}
+                  type="button"
+                  onClick={() => setRelGroup(g.id)}
+                  className={clsx(
+                    "rounded-full border px-2 py-0.5 text-[10px]",
+                    relGroup === g.id
+                      ? "border-echo-400/50 bg-echo-500/20 text-echo-100"
+                      : "border-white/10 text-ink-500"
+                  )}
+                >
+                  {g.label}
+                </button>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-1.5 max-h-28 overflow-y-auto">
+              {RELATIONSHIP_FRAMES.filter(
+                (f) => relGroup === "all" || f.group === relGroup
+              ).map((f) => {
+                const active =
+                  (character.customRelationship || "").includes(
+                    f.relationship.slice(0, 40)
+                  ) ||
+                  (character.customTags || []).includes(`role:${f.id}`);
+                return (
+                  <button
+                    key={f.id}
+                    type="button"
+                    title={f.hint}
+                    onClick={() =>
+                      onChange(applyRelationshipFrame(character, f.id))
+                    }
+                    className={clsx(
+                      "rounded-full border px-2.5 py-1 text-[11px] transition",
+                      active
+                        ? "bg-echo-500/25 border-echo-400/50 text-echo-50"
+                        : f.heat === 3
+                          ? "border-rose-500/25 bg-rose-950/20 text-rose-100/90"
+                          : "border-white/10 bg-black/30 text-ink-300 hover:border-echo-400/35"
+                    )}
+                  >
+                    {f.label}
+                  </button>
+                );
+              })}
+            </div>
+            <p className="text-[10px] text-ink-600 mt-1.5 line-clamp-2">
+              Now:{" "}
+              <span className="text-ink-400">
+                {character.customRelationship || character.relationship}
+              </span>
+            </p>
+          </div>
+
+          {/* Body + look chips — compact */}
+          <div>
+            <label className="label flex items-center gap-1.5">
+              <UserRound className="h-3.5 w-3.5 text-rose-400/80" />
+              Body &amp; look
+            </label>
+            <p className="text-[11px] text-ink-500 mb-2">
+              One-tap tweaks on top of this preset. Stack freely.
+            </p>
+            <div className="flex flex-wrap gap-1.5 mb-1.5">
+              {BODY_TWEAKS.map((t) => (
+                <button
+                  key={t.id}
+                  type="button"
+                  title={t.hint}
+                  onClick={() => onChange(applyTweak(character, t))}
+                  className="rounded-full border border-white/10 bg-black/30 px-2.5 py-1 text-[11px] text-ink-300 hover:border-echo-400/40 hover:text-echo-100 transition"
+                >
+                  {t.label}
+                </button>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-1.5">
+              {LOOK_TWEAKS.map((t) => (
+                <button
+                  key={t.id}
+                  type="button"
+                  title={t.hint}
+                  onClick={() => onChange(applyTweak(character, t))}
+                  className="rounded-full border border-white/10 bg-black/25 px-2.5 py-1 text-[11px] text-ink-400 hover:border-violet-400/35 hover:text-violet-100 transition"
+                >
+                  {t.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Character-specific quirks */}
+          {quirkPacks.length > 0 && (
             <div>
-              <label className="label flex items-center gap-1.5">
-                <Shirt className="h-3.5 w-3.5 text-rose-400/80" />
-                Outfit / style
-              </label>
+              <label className="label">Her flavor (this character)</label>
               <p className="text-[11px] text-ink-500 mb-2">
-                Swap looks — portraits and story text follow the selected
-                outfit. Max-slut styles push NSFW fashion as far as the image
-                model allows (still covered).
+                Tailored to {character.aliases[0] || character.name} — stacks on
+                the base preset.
               </p>
               <div className="flex flex-wrap gap-1.5">
-                {character.outfitStyles!.map((style) => {
-                  const active =
-                    character.selectedOutfitStyleId === style.id ||
-                    (!character.selectedOutfitStyleId &&
-                      style.id === "default" &&
-                      !character.customOutfit);
-                  return (
-                    <button
-                      key={style.id}
-                      type="button"
-                      title={style.outfit}
-                      onClick={() => onChange(applyOutfitStyle(character, style.id))}
-                      className={`rounded-full border px-2.5 py-1 text-[11px] transition ${
-                        active
-                          ? "bg-fuchsia-500/25 border-fuchsia-400/50 text-fuchsia-50"
-                          : "bg-black/30 border-white/10 text-ink-400 hover:border-white/25"
-                      }`}
-                    >
-                      {style.label}
-                      {style.vibe === "max-slut" ? " · 🔥" : ""}
-                      {style.vibe === "cute" ? " · 🎀" : ""}
-                    </button>
-                  );
-                })}
+                {quirkPacks.map((q) => (
+                  <button
+                    key={q.id}
+                    type="button"
+                    title={q.hint}
+                    onClick={() => onChange(applyQuirkPack(character, q))}
+                    className={clsx(
+                      "rounded-full border px-2.5 py-1 text-[11px] transition",
+                      q.heat === 3
+                        ? "border-rose-500/30 bg-rose-950/25 text-rose-100/90 hover:border-rose-400/50"
+                        : q.heat === 2
+                          ? "border-amber-500/25 bg-amber-950/20 text-amber-100/90 hover:border-amber-400/40"
+                          : "border-white/10 bg-black/30 text-ink-300 hover:border-white/25"
+                    )}
+                  >
+                    {q.label}
+                  </button>
+                ))}
               </div>
             </div>
           )}
@@ -305,8 +481,7 @@ export function CharacterCustomize({ character, onChange }: Props) {
               Quick vibe kits
             </label>
             <p className="text-[11px] text-ink-500 mb-2">
-              One tap stacks personality, role, kinks, and optional voice/bio.
-              Tap multiple to layer.
+              One tap stacks personality, role, kinks, voice. Layer freely.
             </p>
             <div className="flex flex-wrap gap-1.5">
               {vibeKits.map((kit) => {
@@ -365,121 +540,138 @@ export function CharacterCustomize({ character, onChange }: Props) {
             </div>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-3">
-            <div>
-              <label className="label">Age range (18+)</label>
-              <input
-                className="input"
-                value={character.customAgeRange ?? character.ageRange}
-                onChange={(e) => patch({ customAgeRange: e.target.value })}
-                placeholder="24-30"
-              />
+          {/* Advanced text fields — collapsed by default */}
+          <button
+            type="button"
+            className="flex w-full items-center justify-between rounded-xl border border-white/8 bg-black/20 px-3 py-2 text-left text-xs text-ink-300 hover:border-white/15 transition"
+            onClick={() => setShowAdvanced((v) => !v)}
+          >
+            <span>Fine-tune text (bio, voice, body write-up…)</span>
+            {showAdvanced ? (
+              <ChevronUp className="h-3.5 w-3.5 opacity-60" />
+            ) : (
+              <ChevronDown className="h-3.5 w-3.5 opacity-60" />
+            )}
+          </button>
+
+          {showAdvanced && (
+            <div className="space-y-3 animate-fade-in">
+              <div className="grid sm:grid-cols-2 gap-3">
+                <div>
+                  <label className="label">Age range (18+)</label>
+                  <input
+                    className="input"
+                    value={character.customAgeRange ?? character.ageRange}
+                    onChange={(e) => patch({ customAgeRange: e.target.value })}
+                    placeholder="24-30"
+                  />
+                </div>
+                <div>
+                  <label className="label">Extra tags</label>
+                  <input
+                    className="input"
+                    value={tagText}
+                    onChange={(e) =>
+                      patch({
+                        customTags: e.target.value
+                          .split(",")
+                          .map((s) => s.trim())
+                          .filter(Boolean),
+                      })
+                    }
+                    placeholder="free-use, dark, milf…"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="label">Who she is to you</label>
+                <textarea
+                  className="input min-h-[64px] text-sm leading-relaxed"
+                  value={character.customRelationship ?? character.relationship}
+                  onChange={(e) => patch({ customRelationship: e.target.value })}
+                  placeholder="Your stepmother, your boss, a stranger who owns your building…"
+                />
+              </div>
+
+              <div>
+                <label className="label">Bio / setup vibe</label>
+                <textarea
+                  className="input min-h-[64px] text-sm leading-relaxed"
+                  value={character.customBio ?? character.bio}
+                  onChange={(e) => patch({ customBio: e.target.value })}
+                  placeholder="One-paragraph pitch for who she is in this fantasy…"
+                />
+              </div>
+
+              <div>
+                <label className="label">How she talks</label>
+                <textarea
+                  className="input min-h-[56px] text-sm leading-relaxed"
+                  value={character.customVoiceStyle ?? character.voiceStyle}
+                  onChange={(e) => patch({ customVoiceStyle: e.target.value })}
+                  placeholder="Warm and husky, pet names, filthy when alone…"
+                />
+              </div>
+
+              <div>
+                <label className="label">Look &amp; body (portraits + prose)</label>
+                <textarea
+                  className="input min-h-[88px] text-sm leading-relaxed"
+                  value={character.customBody ?? character.body}
+                  onChange={(e) => patch({ customBody: e.target.value })}
+                  placeholder="Hair, eyes, face, figure, skin…"
+                />
+              </div>
+
+              <div>
+                <label className="label">Outfit baseline</label>
+                <input
+                  className="input"
+                  value={character.customOutfit ?? resolveOutfit(character)}
+                  onChange={(e) =>
+                    patch({
+                      customOutfit: e.target.value,
+                      selectedOutfitStyleId: undefined,
+                    })
+                  }
+                  placeholder="Silk blouse, blazer, evening dress…"
+                />
+              </div>
+
+              <div>
+                <label className="label">Personality traits</label>
+                <input
+                  className="input"
+                  value={personalityText}
+                  onChange={(e) =>
+                    patch({
+                      customPersonality: e.target.value
+                        .split(",")
+                        .map((s) => s.trim())
+                        .filter(Boolean),
+                    })
+                  }
+                  placeholder="confident, teasing, soft-spoken…"
+                />
+              </div>
+
+              <div>
+                <label className="label">Extra appearance notes</label>
+                <textarea
+                  className="input min-h-[60px] text-sm"
+                  value={character.appearanceNotes || ""}
+                  onChange={(e) => patch({ appearanceNotes: e.target.value })}
+                  placeholder="Makeup, jewelry, freckles, expression…"
+                />
+              </div>
             </div>
-            <div>
-              <label className="label">Extra tags</label>
-              <input
-                className="input"
-                value={tagText}
-                onChange={(e) =>
-                  patch({
-                    customTags: e.target.value
-                      .split(",")
-                      .map((s) => s.trim())
-                      .filter(Boolean),
-                  })
-                }
-                placeholder="free-use, dark, milf…"
-              />
-            </div>
-          </div>
-
-          <div>
-            <label className="label">Who she is to you</label>
-            <textarea
-              className="input min-h-[64px] text-sm leading-relaxed"
-              value={character.customRelationship ?? character.relationship}
-              onChange={(e) => patch({ customRelationship: e.target.value })}
-              placeholder="Your stepmother, your boss, a stranger who owns your building…"
-            />
-          </div>
-
-          <div>
-            <label className="label">Bio / setup vibe</label>
-            <textarea
-              className="input min-h-[64px] text-sm leading-relaxed"
-              value={character.customBio ?? character.bio}
-              onChange={(e) => patch({ customBio: e.target.value })}
-              placeholder="One-paragraph pitch for who she is in this fantasy…"
-            />
-          </div>
-
-          <div>
-            <label className="label">How she talks</label>
-            <textarea
-              className="input min-h-[56px] text-sm leading-relaxed"
-              value={character.customVoiceStyle ?? character.voiceStyle}
-              onChange={(e) => patch({ customVoiceStyle: e.target.value })}
-              placeholder="Warm and husky, pet names, filthy when alone…"
-            />
-          </div>
-
-          <div>
-            <label className="label">Look &amp; body (used for portraits)</label>
-            <textarea
-              className="input min-h-[88px] text-sm leading-relaxed"
-              value={character.customBody ?? character.body}
-              onChange={(e) => patch({ customBody: e.target.value })}
-              placeholder="Hair, eyes, face, figure, skin — specific and realistic…"
-            />
-          </div>
-
-          <div>
-            <label className="label">Outfit baseline</label>
-            <input
-              className="input"
-              value={character.customOutfit ?? resolveOutfit(character)}
-              onChange={(e) =>
-                patch({
-                  customOutfit: e.target.value,
-                  selectedOutfitStyleId: undefined,
-                })
-              }
-              placeholder="Silk blouse, blazer, evening dress…"
-            />
-          </div>
-
-          <div>
-            <label className="label">Personality traits</label>
-            <input
-              className="input"
-              value={personalityText}
-              onChange={(e) =>
-                patch({
-                  customPersonality: e.target.value
-                    .split(",")
-                    .map((s) => s.trim())
-                    .filter(Boolean),
-                })
-              }
-              placeholder="confident, teasing, soft-spoken…"
-            />
-          </div>
-
-          <div>
-            <label className="label">Extra appearance notes</label>
-            <textarea
-              className="input min-h-[60px] text-sm"
-              value={character.appearanceNotes || ""}
-              onChange={(e) => patch({ appearanceNotes: e.target.value })}
-              placeholder="Makeup, jewelry, freckles, scars, expression…"
-            />
-          </div>
+          )}
 
           <div>
             <label className="label">Her kink lean</label>
             <p className="text-[11px] text-ink-500 mb-2">
-              What she&apos;s into this run — stacked with your profile kinks in
-              the story engine.
+              What she&apos;s into this run — stacked with your profile kinks.
             </p>
             <div className="flex flex-wrap gap-1.5">
               {kinkList.map((id) => {

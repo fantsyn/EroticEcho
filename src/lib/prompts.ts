@@ -11,6 +11,7 @@ import type {
 } from "./types";
 import { resolveCharacter } from "./data";
 import { clothingPrompt } from "./clothing-states";
+import { chemistryPromptLine, getStoryChemistry } from "./chemistry";
 
 const SAFETY_PREAMBLE = `
 You are EroticEcho, an expert erotic fiction writer for interactive stories.
@@ -33,11 +34,12 @@ HARD RULES (never break):
 function lengthGuide(length: ActiveStory["settings"]["length"]): string {
   switch (length) {
     case "short":
-      return "Write 120-200 words as her first-person voice.";
+      // Snappy beats for hot play + faster TTS turnaround
+      return "Write 80-140 words as her first-person voice. Tight, hot, no padding.";
     case "long":
-      return "Write 400-650 words as her rich, sensory first-person voice.";
+      return "Write 320-480 words as her rich, sensory first-person voice.";
     default:
-      return "Write 220-380 words as her first-person voice.";
+      return "Write 140-220 words as her first-person voice. Keep it moving.";
   }
 }
 
@@ -264,6 +266,7 @@ export function buildSystemPrompt(
 ## Continuity
 - Memory so far: ${story.memorySummary || "Story is just beginning."}
 - Scene count: ${story.scenes.length}
+- ${chemistryPromptLine(getStoryChemistry(story)) || "Chemistry: just meeting heat."}
 
 ## Role behavior (as me — ${name})
 - dom: I lead, command, take initiative.
@@ -282,11 +285,12 @@ NO nudity, NO sex acts, NO explicit anatomy — fashion-sexy / cinematic only.
 export function buildUserTurnPrompt(req: GenerateStoryRequest): string {
   const { story, action, isOpening } = req;
   const herName = story.character.customName || story.character.name;
+  // Slimmer context = faster replies; memorySummary carries continuity
   const recent = story.scenes
-    .slice(-4)
+    .slice(-2)
     .map(
-      (s, i) =>
-        `### Scene ${s.index || i + 1}\nYour (reader) action: ${s.chosenAction || "(opening)"}\n${s.narrative}`
+      (s) =>
+        `### Scene ${s.index}\nAction: ${s.chosenAction || "(opening)"}\n${s.narrative.slice(0, 700)}${s.narrative.length > 700 ? "…" : ""}`
     )
     .join("\n\n");
 
@@ -294,23 +298,24 @@ export function buildUserTurnPrompt(req: GenerateStoryRequest): string {
     return `Begin NOW. You are ${herName}. Write in FIRST PERSON as her ("I..."), addressing the reader as "you".
 Use the scenario opening hook and setup. Establish setting, my desire, and tension with you.
 Do not end the story. Leave room for your next move.
+Keep the narrative tight (match length guide). Prefer dialogue + action over long description.
 
-Return JSON:
+Return JSON only:
 {
   "narrative": "string — FIRST PERSON as ${herName} (I/me), reader is you",
   "choices": [
     { "id": "c1", "label": "You … (what the reader does next)" },
     { "id": "c2", "label": "You …" },
-    { "id": "c3", "label": "You …" },
-    { "id": "c4", "label": "You …" }
+    { "id": "c3", "label": "You …" }
   ],
-  "memoryUpdate": "2-4 sentences: location, relationship state, open threads",
-  "imagePromptSuggestion": "tasteful sexy portrait: my face, outfit, this location, cinematic light, no nudity"
+  "memoryUpdate": "2-3 short sentences: location, heat, open threads",
+  "imagePromptSuggestion": "tasteful sexy portrait: my face, outfit, this location, no nudity"
 }
-Choices are the READER's actions (start with "You"). Provide 3-5.`;
+Exactly 3 choices. Start with "You".`;
   }
 
   return `Continue as ${herName} in FIRST PERSON ("I..."). Reader is "you".
+Keep it tight and hot. Match length guide. React fast — dialogue + body language over essay prose.
 
 ## Recent scenes
 ${recent || "(none)"}
@@ -322,7 +327,7 @@ Write my next beat reacting to that. Stay in my voice. Keep continuity.
 Do not resolve the whole story unless you clearly end it.
 Escalate per mode/intensity.
 
-Return JSON:
+Return JSON only:
 {
   "narrative": "string — FIRST PERSON as ${herName} only",
   "choices": [
@@ -330,10 +335,10 @@ Return JSON:
     { "id": "c2", "label": "You …" },
     { "id": "c3", "label": "You …" }
   ],
-  "memoryUpdate": "updated summary under 250 words",
+  "memoryUpdate": "2-3 short sentences of continuity",
   "imagePromptSuggestion": "tasteful face portrait in THIS environment, outfit, mood, no nudity/sex"
 }
-Provide 3-5 choices as reader actions ("You …").`;
+Exactly 3 choices as reader actions ("You …").`;
 }
 
 export function buildImagePrompt(

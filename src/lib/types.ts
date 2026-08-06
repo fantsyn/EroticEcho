@@ -239,6 +239,13 @@ export type ClothingStateId =
   | "wet"
   | "uniform-loose";
 
+/** Relationship heat tracked quietly in play (slim UI bar) */
+export interface StoryChemistry {
+  desire: number;
+  bond: number;
+  tension: number;
+}
+
 export interface ActiveStory {
   id: string;
   title: string;
@@ -262,6 +269,8 @@ export interface ActiveStory {
    * can load the same story via Library → Enter code.
    */
   shareCode?: string;
+  /** Desire / bond / tension — evolves with choices */
+  chemistry?: StoryChemistry;
 }
 
 export interface SavedStoryMeta {

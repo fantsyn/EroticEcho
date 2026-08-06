@@ -11,6 +11,7 @@ import type {
 } from "./types";
 import { themeFromCategory } from "./themes";
 import { resolvePortraitUrl } from "./avatars";
+import { defaultChemistry } from "./chemistry";
 
 export function defaultMods(): MidStoryMods {
   return {
@@ -32,7 +33,8 @@ export function defaultStorySettings(
   return {
     mode: "slow-burn",
     intensity: 7,
-    length: "medium",
+    // Short default = faster AI + shorter TTS wait; user can bump in Create
+    length: "short",
     cncSafeword: "red",
     voiceMode: true,
     typewriter: true,
@@ -78,5 +80,6 @@ export function createStory(
     gallery: [],
     themeId: extra?.themeId || themeFromCategory(scenario.category),
     presetId: extra?.presetId,
+    chemistry: defaultChemistry(),
   };
 }

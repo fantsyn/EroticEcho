@@ -26,7 +26,8 @@ export const COMPANION_VOICES: CompanionVoice[] = [
     label: "Eve",
     accent: "american",
     vibe: "Natural conversation · warm · unforced",
-    speed: 0.96,
+    // Slightly brisker = less wait, still natural
+    speed: 1.02,
     recommended: true,
   },
   {
@@ -35,7 +36,7 @@ export const COMPANION_VOICES: CompanionVoice[] = [
     label: "Ara",
     accent: "british",
     vibe: "Natural conversation · clear · warm",
-    speed: 0.96,
+    speed: 1.02,
   },
   {
     id: "luna-us",
@@ -43,7 +44,7 @@ export const COMPANION_VOICES: CompanionVoice[] = [
     label: "Luna",
     accent: "american",
     vibe: "Soft natural · easy listening",
-    speed: 0.95,
+    speed: 1.0,
   },
 ];
 
